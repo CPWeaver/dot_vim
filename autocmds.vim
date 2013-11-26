@@ -34,15 +34,15 @@ if has("autocmd")
     autocmd filetype help nnoremap <buffer><cr> <c-]>
     autocmd filetype help nnoremap <buffer><bs> <c-T>
     autocmd filetype help nnoremap <buffer>q :q<CR>
-    
+
     " Enable JavaScript/CoffeeScript autocomplete with libraries support
     autocmd FileType javascript,coffee setlocal omnifunc=syntaxcomplete#Complete
 
     " Enable Rainbow Parentheses
-    autocmd VimEnter * RainbowParenthesesToggle
-    autocmd Syntax * RainbowParenthesesLoadRound
-    autocmd Syntax * RainbowParenthesesLoadSquare
-    autocmd Syntax * RainbowParenthesesLoadBraces
+    "autocmd VimEnter * RainbowParenthesesToggle
+    "autocmd Syntax * RainbowParenthesesLoadRound
+    "autocmd Syntax * RainbowParenthesesLoadSquare
+    "autocmd Syntax * RainbowParenthesesLoadBraces
 
     " Fix accidental indentation in html files
     " from http://morearty.com/blog/2013/01/22/fixing-vims-indenting-of-html-files.html
