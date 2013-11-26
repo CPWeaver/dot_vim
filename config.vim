@@ -7,15 +7,13 @@
 " ---------------
 set background=dark
 colorscheme jellybeans
-"colorscheme elflord
-"let hl_ColorColumn
 
 " -----------------------------
-" Backups, Tmp Files, and Undo
+" File Locations
 " -----------------------------
-set backup
 set backupdir=~/.vim/.backup
 set directory=~/.vim/.tmp
+set spellfile=~/.vim/spell/custom.en.utf-8.add
 " Persistent Undo
 if has('persistent_undo')
   set undofile
@@ -45,8 +43,6 @@ endif
 if exists('+ballooneval')
   " This doesn't seem to stop tooltips for Ruby files
   set noballooneval
-  " This should stop tooltips for Ruby files
-  autocmd FileType ruby setlocal balloonexpr=
   " 100 second delay seems to be the only way to disable the tooltips
   set balloondelay=100000
 endif
@@ -55,9 +51,9 @@ endif
 " Behaviors
 " ---------------
 syntax enable
+set backup             " Turn on backups
 set autoread           " Automatically reload changes if detected
 set wildmenu           " Turn on WiLd menu
-set wildmode=longest:list:longest "Longest match, then wildmenu
 set hidden             " Change buffer - without saving
 set history=768        " Number of things to remember in history.
 set cf                 " Enable error files & error jumping.
@@ -87,8 +83,8 @@ set expandtab
 " ---------------
 set ignorecase " Case insensitive search
 set smartcase  " Non-case sensitive search
-set incsearch
-set hlsearch
+set incsearch  " Incremental search
+set hlsearch   " Highlight search results
 set wildignore+=*/test-output/*,*/bin/*,*/target/*,*/build/*,*/node_modules/*,*.o,*.obj,*.exe,*.so,*.dll,*.pyc,.svn,.hg,.bzr,.git,
   \.sass-cache,*.class,*.scssc,*.cssc,sprockets%*,*.lessc
 

@@ -1,6 +1,7 @@
 " ----------------------------------------
-" Bindings
+" Mappings
 " ----------------------------------------
+
 " Set leader to ,
 " Note: This line MUST come before any <leader> mappings
 let mapleader=","
@@ -64,12 +65,6 @@ noremap <silent><Leader>/ :nohls<CR>
 " Highlight search word under cursor without jumping to next
 nnoremap <leader>h *<C-O>
 
-" Search and replace word under cursor
-nnoremap <leader>sr :%s/\<<c-r><c-w>\>//g<left><left>
-
-" Smart insert semicolon
-noremap <leader>; mqA;<Esc>`q
-
 " ---------------
 " Leader Commands
 " ---------------
@@ -80,10 +75,6 @@ nnoremap <silent> <leader>s :set spell!<CR>
 nnoremap <silent> <leader>v :e ~/.vim/vimrc<CR>
 " Quickly switch to last buffer
 nnoremap <leader>, :e#<CR>
-" Change to the directory of the currently open file
-nmap <silent> <leader>cd :cd %:p:h<CR>
-" Change the directory only for the current window
-nmap <silent> <leader>lcd :lcd %:p:h<CR>
 
 " Window Movement
 " Here's a visual guide for moving between window splits.
@@ -114,7 +105,7 @@ nnoremap <silent> g3 :wincmd t<Bar>:wincmd j<CR>
 nnoremap <silent> g4 :wincmd b<CR>
 
 " Top Middle
-nnoremap <silent> gm g2<Bar>:wincmd h<CR>
+nnoremap <silent> gt g2<Bar>:wincmd h<CR>
 " Bottom Middle
 nnoremap <silent> gb g3<Bar>:wincmd l<CR>
 
@@ -131,8 +122,6 @@ nnoremap <silent> <leader>vs :vsplit<Bar>:wincmd l<CR>
 
 " Close the current window
 nnoremap <silent> <leader>sc :close<CR>
-" Maximize the current window
-nnoremap <silent> <leader>on :only<CR>
 
 " -----------------------
 " Escape / Write Bindings

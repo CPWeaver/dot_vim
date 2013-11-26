@@ -1,5 +1,6 @@
 /bundle
 /sessions
 .DS_Store
-extra.vim
-/netrwhist
+
+/.netrwhist
+/spell/custom.en.utf-8.add.spl
