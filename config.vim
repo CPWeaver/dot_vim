@@ -7,6 +7,8 @@
 " ---------------
 set background=dark
 colorscheme jellybeans
+"colorscheme elflord
+"let hl_ColorColumn
 
 " -----------------------------
 " Backups, Tmp Files, and Undo
@@ -19,6 +21,11 @@ if has('persistent_undo')
   set undofile
   set undodir=~/.vim/.undo
 endif
+
+"
+" Tags
+"
+set tags=~/.vim/tags
 
 " ---------------
 " UI
@@ -50,6 +57,7 @@ endif
 syntax enable
 set autoread           " Automatically reload changes if detected
 set wildmenu           " Turn on WiLd menu
+set wildmode=longest:list:longest "Longest match, then wildmenu
 set hidden             " Change buffer - without saving
 set history=768        " Number of things to remember in history.
 set cf                 " Enable error files & error jumping.

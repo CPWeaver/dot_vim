@@ -131,6 +131,8 @@ nnoremap <silent> <leader>vs :vsplit<Bar>:wincmd l<CR>
 
 " Close the current window
 nnoremap <silent> <leader>sc :close<CR>
+" Maximize the current window
+nnoremap <silent> <leader>on :only<CR>
 
 " -----------------------
 " Escape / Write Bindings

@@ -160,30 +160,48 @@ nnoremap <silent> <leader>p :PasteWithPasteMode<CR>
 " Writes the current buffer unless we're the in QuickFix mode.
 " ---------------
 
-function WriteBuffer()
-  if &filetype == "qf"
-    execute "normal! \<enter>"
-  else
-    :write
-  endif
-endfunction
+if !exists("*WriteBuffer")
+  function WriteBuffer()
+    if &filetype == "qf"
+      execute "normal! \<enter>"
+    else
+      :write
+    endif
+  endfunction
+endif
 
 nnoremap <silent> <enter> :call WriteBuffer()<CR>
 
 " ---------------
 " Run the current file as a Maven test
 " ---------------
-function MavenTest()
-  !mvn test -Dtest=%:t:r -DfailIfNoTests=true
-endfunction
+if !exists("*MavenTest")
+  function MavenTest()
+    !mvn test -Dtest=%:t:r -DfailIfNoTests=true
+  endfunction
+endif
 command! MavenTest call MavenTest()
 nnoremap <silent> <leader>mt :MavenTest<CR>
 
 " ---------------
+" Run the current file as a Maven failsafe integration test
+" ---------------
+if !exists("*MavenFailsafeTest")
+  function MavenFailsafeTest()
+    !echo mvn verify -Dit.test=%:t:r -DfailIfNoTests=true && mvn verify -Dit.test=%:t:r -DfailIfNoTests=true
+  endfunction
+endif
+command! MavenFailsafeTest call MavenFailsafeTest()
+nnoremap <silent> <leader>mit :MavenFailsafeTest<CR>
+
+
+" ---------------
 " Run the current file as a Gradle test
 " ---------------
-function GradleTest()
-  !gw test -Dtest.single=%:t:r -i
-endfunction
+if !exists("*GradleTest")
+  function GradleTest()
+    !gw test -Dtest.single=%:t:r -i
+  endfunction
+endif
 command! GradleTest call GradleTest()
 nnoremap <silent> <leader>gt :GradleTest<CR>
