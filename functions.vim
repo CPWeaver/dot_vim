@@ -208,3 +208,11 @@ if !exists("*GradleTest")
 endif
 command! GradleTest call GradleTest()
 nnoremap <silent> <leader>gt :GradleTest<CR>
+
+if !exists("*CucumberCurrent")
+  function CucumberCurrent()
+     :Junit %
+  endfunction
+endif
+nnoremap <silent> <leader>cit :CucumberCurrent<cr>
+

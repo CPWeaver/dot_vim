@@ -39,7 +39,7 @@ Bundle 'nanotech/jellybeans.vim'
 "" Commands
 Bundle 'dansomething/vim-eclim'
 Bundle 'scrooloose/nerdcommenter'
-"Bundle 'tpope/vim-surround'
+Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-fugitive'
 "Bundle 'godlygeek/tabular'
 Bundle 'rking/ag.vim'
