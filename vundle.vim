@@ -21,7 +21,7 @@ Bundle 'regedarek/ZoomWin'
 "Bundle 'christoomey/vim-space'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'kien/ctrlp.vim'
-"Bundle 'christoomey/vim-tmux-navigator'
+Bundle 'christoomey/vim-tmux-navigator'
 
 Bundle 'majutsushi/tagbar'
 
@@ -95,7 +95,7 @@ Bundle 'groenewege/vim-less'
 Bundle 'tpope/vim-cucumber'
 Bundle 'dansomething/ftl-vim-syntax'
 Bundle 'tfnico/vim-gradle'
-"Bundle 'andersoncustodio/vim-tmux'
+Bundle 'andersoncustodio/vim-tmux'
 "" MatchIt
 "Bundle 'matchit.zip'
 "Bundle 'kana/vim-textobj-user'
