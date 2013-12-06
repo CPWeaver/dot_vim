@@ -277,13 +277,13 @@ nnoremap <leader>sag :Ag <c-r><c-w>
 "let g:html_indent_script1 = "inc"
 "let g:html_indent_style1 = "inc"
 "
-"" ---------------
-"" Unconditional Paste
-"" ---------------
-"let g:UnconditionalPaste_NoDefaultMappings=1
-"nnoremap gcP <Plug>UnconditionalPasteCharBefore
-"nnoremap gcp <Plug>UnconditionalPasteCharAfter
-"
+" ---------------
+" Unconditional Paste
+" ---------------
+let g:UnconditionalPaste_NoDefaultMappings=1
+nnoremap gcP <Plug>UnconditionalPasteCharBefore
+nnoremap gcp <Plug>UnconditionalPasteCharAfter
+
 "" ---------------
 "" Gist.vim
 "" ---------------
