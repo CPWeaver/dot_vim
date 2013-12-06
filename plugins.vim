@@ -21,10 +21,12 @@ set completeopt+=longest
 " Vundle
 " ---------------
 command! ReloadVundle source ~/.vim/vundle.vim
-function BundleReloadAndRun(command)
-  :ReloadVundle
-  execute a:command
-endfunction
+if !exists("*BundleReloadAndRun")
+  function BundleReloadAndRun(command)
+    :ReloadVundle
+    execute a:command
+  endfunction
+endif
 
 nnoremap <Leader>bi :call BundleReloadAndRun("BundleInstall")<CR>
 nnoremap <Leader>bu :call BundleReloadAndRun("BundleInstall!")<CR>
