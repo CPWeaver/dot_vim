@@ -33,7 +33,7 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'nanotech/jellybeans.vim'
 "Bundle 'mhinz/vim-signify'
 "Bundle 'mhinz/vim-startify'
-"Bundle 'mbbill/undotree'
+Bundle 'mbbill/undotree'
 "Bundle 'jszakmeister/vim-togglecursor'
 Bundle 'kien/rainbow_parentheses.vim'
 "" Commands

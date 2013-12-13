@@ -32,6 +32,11 @@ nnoremap <Leader>bi :call BundleReloadAndRun("BundleInstall")<CR>
 nnoremap <Leader>bu :call BundleReloadAndRun("BundleInstall!")<CR>
 nnoremap <Leader>bc :call BundleReloadAndRun("BundleClean")<CR>
 
+" ----------
+" UndoTree
+" ----------
+nnoremap <Leader>ut :UndotreeToggle<CR>
+
 "" ---------------
 "" space.vim
 "" ---------------
