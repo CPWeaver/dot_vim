@@ -13,6 +13,10 @@ nnoremap <Leader>eg :JavaSearchContext<CR>
 nnoremap <Leader>et :JavaHierarchy<CR>
 nnoremap <Leader>er :JavaRename
 nnoremap <Leader>ec :JavaCorrect<CR>
+nnoremap <Leader>esr :JavaSearch -x references -s all -p <cword><CR>
+nnoremap <Leader>eot :JavaSearch -t type -s all -p
+nnoremap <Leader>eor :LocateFile
+
 " Disable autocmoplete scratch buffer
 set completeopt-=preview
 set completeopt+=longest
