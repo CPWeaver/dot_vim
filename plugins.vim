@@ -16,6 +16,7 @@ nnoremap <Leader>ec :JavaCorrect<CR>
 nnoremap <Leader>esr :JavaSearch -x references -s all -p <cword><CR>
 nnoremap <Leader>eot :JavaSearch -t type -s all -p
 nnoremap <Leader>eor :LocateFile
+nnoremap <Leader>ep :ProjectProblems!<CR>
 
 " Disable autocmoplete scratch buffer
 set completeopt-=preview
