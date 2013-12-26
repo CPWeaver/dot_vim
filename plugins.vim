@@ -17,6 +17,8 @@ nnoremap <Leader>esr :JavaSearch -x references -s all -p <cword><CR>
 nnoremap <Leader>eot :JavaSearch -t type -s all -p
 nnoremap <Leader>eor :LocateFile
 nnoremap <Leader>ep :ProjectProblems!<CR>
+nnoremap <Leader>era :ProjectRefreshAll<CR>
+nnoremap <Leader>eo :JavaImpl<CR>
 
 " Disable autocmoplete scratch buffer
 set completeopt-=preview
@@ -125,8 +127,8 @@ if !exists("*ToggleNERDTreeAndTagbar")
       TagbarClose
       NERDTreeToggle
     else
-      NERDTreeToggle
-      "TagbarOpen
+      "NERDTreeToggle
+      TagbarOpen
     endif
 
     " Jump back to the original window
@@ -180,6 +182,12 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType")
 " ---------------
 let g:indent_guides_enable_on_vim_startup = 1
 
+"---------
+" Cosco
+"---------
+nmap <silent> ,; :call cosco#commaOrSemiColon()<CR>
+inoremap <silent> ,; <ESC>:call cosco#commaOrSemiColon()"<CR>a"
+
 " ---------------
 "" Session
 "" ---------------
@@ -187,15 +195,15 @@ let g:indent_guides_enable_on_vim_startup = 1
 "let g:session_autoload=0
 "nnoremap <leader>os :OpenSession<CR>
 "
-"" ---------------
-"" Tabular
-"" ---------------
-"nnoremap <Leader>t= :Tabularize assignment<CR>
-"vnoremap <Leader>t= :Tabularize assignment<CR>
-"nnoremap <Leader>t: :Tabularize symbol<CR>
-"vnoremap <Leader>t: :Tabularize symbol<CR>
-"nnoremap <Leader>t, :Tabularize comma<CR>
-"vnoremap <Leader>t, :Tabularize comma<CR>
+" ---------------
+" Tabular
+" ---------------
+nnoremap <Leader>t= :Tabularize assignment<CR>
+vnoremap <Leader>t= :Tabularize assignment<CR>
+nnoremap <Leader>t: :Tabularize symbol<CR>
+vnoremap <Leader>t: :Tabularize symbol<CR>
+nnoremap <Leader>t, :Tabularize comma<CR>
+vnoremap <Leader>t, :Tabularize comma<CR>
 
 " ---------------
 " Fugitive
