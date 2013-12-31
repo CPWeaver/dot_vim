@@ -13,9 +13,9 @@ nnoremap <Leader>eg :JavaSearchContext<CR>
 nnoremap <Leader>et :JavaHierarchy<CR>
 nnoremap <Leader>er :JavaRename
 nnoremap <Leader>ec :JavaCorrect<CR>
-nnoremap <Leader>esr :JavaSearch -x references -s all -p <cword><CR>
+nnoremap <Leader>esr :JavaSearch -x references -s all<CR>
 nnoremap <Leader>eot :JavaSearch -t type -s all -p
-nnoremap <Leader>eor :LocateFile
+nnoremap <Leader>eor :LocateFile<CR>
 nnoremap <Leader>ep :ProjectProblems!<CR>
 nnoremap <Leader>era :ProjectRefreshAll<CR>
 nnoremap <Leader>eo :JavaImpl<CR>
