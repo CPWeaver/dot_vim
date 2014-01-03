@@ -1,7 +1,7 @@
-"" ----------------------------------------
-"" Plugin Configuration
-"" ----------------------------------------
-"
+" ----------------------------------------
+" Plugin Configuration
+" ----------------------------------------
+
 " -------
 " Eclim
 " -------
@@ -334,17 +334,17 @@ nnoremap gcp <Plug>UnconditionalPasteCharAfter
 "  let g:gist_clip_command = 'pbcopy'
 "endif
 "let g:gist_post_private=1
-"
-"" ---------------
-"" MatchTagAlways
-"" ---------------
-"let g:mta_filetypes = {
-"    \ 'html' : 1,
-"    \ 'xhtml' : 1,
-"    \ 'xml' : 1,
-"    \ 'handlebars' : 1,
-"    \ 'eruby' : 1,
-"    \}
+
+" ---------------
+" MatchTagAlways
+" ---------------
+let g:mta_filetypes = {
+    \ 'html' : 1,
+    \ 'xhtml' : 1,
+    \ 'xml' : 1,
+    \ 'handlebars' : 1,
+    \ 'eruby' : 1,
+    \}
 "
 "" ----------
 "" SuperTab

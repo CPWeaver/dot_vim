@@ -66,7 +66,7 @@ Bundle 'vim-scripts/SyntaxComplete'
 Bundle 'Raimondi/delimitMate'
 Bundle 'scrooloose/syntastic'
 "Bundle 'ervandew/supertab'
-"Bundle 'Valloric/MatchTagAlways'
+Bundle 'Valloric/MatchTagAlways'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'SirVer/ultisnips'
 
@@ -99,7 +99,7 @@ Bundle 'dansomething/ftl-vim-syntax'
 Bundle 'tfnico/vim-gradle'
 Bundle 'andersoncustodio/vim-tmux'
 "" MatchIt
-"Bundle 'matchit.zip'
+Bundle 'matchit.zip'
 "Bundle 'kana/vim-textobj-user'
 "Bundle 'nelstrom/vim-textobj-rubyblock'
 " Libraries
