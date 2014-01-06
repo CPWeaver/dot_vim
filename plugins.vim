@@ -14,11 +14,10 @@ nnoremap <Leader>et :JavaHierarchy<CR>
 nnoremap <Leader>er :JavaRename
 nnoremap <Leader>ec :JavaCorrect<CR>
 nnoremap <Leader>esr :JavaSearch -x references -s all<CR>
+nnoremap <Leader>eo :JavaImpl<CR>
 nnoremap <Leader>eot :JavaSearch -t type -s all -p
-nnoremap <Leader>eor :LocateFile<CR>
 nnoremap <Leader>ep :ProjectProblems!<CR>
 nnoremap <Leader>era :ProjectRefreshAll<CR>
-nnoremap <Leader>eo :JavaImpl<CR>
 
 " Disable autocmoplete scratch buffer
 set completeopt-=preview
@@ -229,6 +228,24 @@ command! Gcundo :Git reset HEAD~1
 " Zoom Window to Full Size
 nnoremap <silent> <leader>wo :ZoomWin<CR>
 
+""---------------
+"" unite.vim
+""---------------
+"let g:unite_enable_start_insert = 1
+"let g:unite_winheight = 10
+"let g:unite_enable_short_source_names = 1
+"let g:unite_source_file_rec_max_cache_files=1000
+
+"call unite#filters#matcher_default#use(['matcher_fuzzy'])
+"call unite#custom#source('file_rec', 'ignore_pattern',  '/build/')
+      "\'\~$\|\.\%(bak\|sw[po]\)$\|'.
+      "\'\%(^\|/\)\.\%(hg\|git\|bzr\|svn\)\%($\|/\)')
+""}}}
+
+"set wildignore+=*/test-output/*,*/bin/*,*/target/*,*/build/*,*/node_modules/*,*.o,*.obj,*.exe,*.so,*.dll,*.pyc,.svn,.hg,.bzr,.git,
+  "\.sass-cache,*.class,*.scssc,*.cssc,sprockets%*,*.lessc
+"nnoremap <leader>t :<C-u>Unite file_rec/async:!<CR>
+
 " ---------------
 " ctrlp.vim
 " ---------------
@@ -243,6 +260,13 @@ nnoremap <leader>t :CtrlPRoot<CR>
 nnoremap <leader>b :CtrlPBuffer<CR>
 nnoremap <leader>u :CtrlPCurFile<CR>
 nnoremap <leader>m :CtrlPMRUFiles<CR>
+
+" ---------------
+" Ag.vim
+" ---------------
+nnoremap <silent> <leader>as :AgFromSearch<CR>
+nnoremap <leader>ag :Ag<space>
+nnoremap <leader>sag :Ag <c-r><c-w>
 
 " ---------------
 " airline
@@ -284,13 +308,6 @@ let g:rbpt_colorpairs = [
     \ ['125',  '#d33682'],
     \ ['64',   '#859900'],
     \ ]
-
-" ---------------
-" Ag.vim
-" ---------------
-nnoremap <silent> <leader>as :AgFromSearch<CR>
-nnoremap <leader>ag :Ag<space>
-nnoremap <leader>sag :Ag <c-r><c-w>
 
 "" ---------------
 "" surround.vim
