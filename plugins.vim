@@ -231,13 +231,13 @@ nnoremap <silent> <leader>wo :ZoomWin<CR>
 ""---------------
 "" unite.vim
 ""---------------
-"let g:unite_enable_start_insert = 1
+let g:unite_enable_start_insert = 1
 "let g:unite_winheight = 10
-"let g:unite_enable_short_source_names = 1
-"let g:unite_source_file_rec_max_cache_files=1000
-
-"call unite#filters#matcher_default#use(['matcher_fuzzy'])
-"call unite#custom#source('file_rec', 'ignore_pattern',  '/build/')
+let g:unite_enable_short_source_names = 1
+let g:unite_source_file_rec_max_cache_files=10000
+let g:unite_source_rec_async_command= 'ag --nocolor --nogroup --hidden -g ""'
+"call unite#filters#matcher_default#use(['matcher_glob'])
+call unite#custom#source('file_rec', 'ignore_pattern',  '.*\(build/\|bin/\).*')
       "\'\~$\|\.\%(bak\|sw[po]\)$\|'.
       "\'\%(^\|/\)\.\%(hg\|git\|bzr\|svn\)\%($\|/\)')
 ""}}}
