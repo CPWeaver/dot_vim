@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-VUNDLE="http://github.com/gmarik/vundle.git"
+VUNDLE="https://github.com/gmarik/vundle.git"
 VUNDLE_TARGET="$HOME/.vim/bundle/vundle"
 
 if [ -s $VUNDLE_TARGET ]; then
