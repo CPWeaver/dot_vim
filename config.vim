@@ -20,10 +20,6 @@ if has('persistent_undo')
   set undodir=~/.vim/.undo
 endif
 
-"
-" Tags
-"
-set tags=~/.vim/tags
 
 " ---------------
 " UI
