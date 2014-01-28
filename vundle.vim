@@ -27,13 +27,11 @@ Bundle 'Shougo/vimproc.vim'
 Bundle 'Shougo/unite.vim'
 
 Bundle 'christoomey/vim-tmux-navigator'
-
-Bundle 'majutsushi/tagbar'
-
 " UI Additions
 Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'bling/vim-airline'
 Bundle 'scrooloose/nerdtree'
+Bundle 'majutsushi/tagbar'
 "Bundle 'Rykka/colorv.vim'
 Bundle 'nanotech/jellybeans.vim'
 "Bundle 'mhinz/vim-signify'
@@ -47,7 +45,7 @@ Bundle 'scrooloose/nerdcommenter'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-fugitive'
 Bundle 'godlygeek/tabular'
-Bundle 'lfilho/cosco.vim'
+
 "Bundle 'milkypostman/vim-togglelist'
 "Bundle 'AndrewRadev/sideways.vim'
 "Bundle 'tpope/vim-abolish'
@@ -73,7 +71,7 @@ Bundle 'scrooloose/syntastic'
 Bundle 'Valloric/MatchTagAlways'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'SirVer/ultisnips'
-
+Bundle 'szw/vim-tags'
 " Language Additions
 "   Clojure
 "Bundle 'tpope/vim-fireplace'
