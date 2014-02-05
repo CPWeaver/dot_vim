@@ -468,3 +468,13 @@ let g:ycm_collect_identifiers_from_comments_and_strings=1
 "" ------
 "let g:colorv_preview_ftype = 'css,html,javascript,scss,stylus'
 
+"-----------------
+" EasyMotion
+"-----------------
+let g:EasyMotion_smartcase=1
+map / <Plug>(easymotion-sn)
+omap / <Plug>(easymotion-tn)
+map n <Plug>(easymotion-next)
+map N <Plug>(easymotion-prev)
+nmap s <Plug>(easymotion-s)
+
