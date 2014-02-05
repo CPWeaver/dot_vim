@@ -273,6 +273,8 @@ nnoremap <leader>m :CtrlPMRUFiles<CR>
 nnoremap <silent> <leader>as :AgFromSearch<CR>
 nnoremap <leader>ag :Ag<space>
 nnoremap <leader>sag :Ag <c-r><c-w>
+vnoremap <leader>ag "xy :Ag "<c-r>x"
+let g:aghighlight=1
 
 " ---------------
 " airline
@@ -299,7 +301,7 @@ let g:airline_mode_map = {
 " ---------------
 " Make cssAttrs (center, block, etc.) the same color as units
 hi! link cssAttr Constant
-
+''
 " ------------------------------------
 " Rainbow parens (solarized palette)
 " ------------------------------------
@@ -465,3 +467,4 @@ let g:ycm_collect_identifiers_from_comments_and_strings=1
 "" ColorV
 "" ------
 "let g:colorv_preview_ftype = 'css,html,javascript,scss,stylus'
+

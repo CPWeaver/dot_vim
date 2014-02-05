@@ -106,5 +106,5 @@ Bundle 'matchit.zip'
 "Bundle 'nelstrom/vim-textobj-rubyblock'
 " Libraries
 "Bundle 'L9'
-"Bundle 'tpope/vim-repeat'
+Bundle 'tpope/vim-repeat'
 "Bundle 'mattn/webapi-vim'
