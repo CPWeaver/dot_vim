@@ -121,7 +121,7 @@ nnoremap <silent> <leader>hs :split<Bar>:wincmd j<CR>
 nnoremap <silent> <leader>vs :vsplit<Bar>:wincmd l<CR>
 
 " Close the current window
-nnoremap <silent> <leader>sc :close<CR>
+nnoremap <silent> <leader>c :close<CR>
 
 " -----------------------
 " Escape / Write Bindings
