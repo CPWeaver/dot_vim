@@ -275,6 +275,7 @@ nnoremap <leader>ag :Ag<space>
 nnoremap <leader>sag :Ag <c-r><c-w>
 vnoremap <leader>ag "xy :Ag "<c-r>x"
 let g:aghighlight=1
+let g:agprg="ag --column --smart-case"
 
 " ---------------
 " airline
