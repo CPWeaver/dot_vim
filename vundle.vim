@@ -54,6 +54,8 @@ Bundle 'godlygeek/tabular'
 "Bundle 'AndrewRadev/switch.vim'
 "Bundle 'tpope/vim-eunuch'
 Bundle 'mutewinter/UnconditionalPaste'
+" TODO: This guy steps on p by default.
+"Bundle 'sickill/vim-pasta'
 "Bundle 'skalnik/vim-vroom'
 "Bundle 'HelpClose'
 "Bundle 'mattn/gist-vim'
