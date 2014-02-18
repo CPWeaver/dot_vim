@@ -385,9 +385,15 @@ let g:ycm_collect_identifiers_from_comments_and_strings=1
 " This runs me out of RAM
 "let g:ycm_collect_identifiers_from_tags_files = 1
 
-"" ---------------
-"" Ultisnips
-"" ---------------
+"-----------------
+" DelimitMate
+"-----------------
+let g:delimitMate_expand_cr=1
+
+
+" ---------------
+" Ultisnips
+" ---------------
 "let g:UltiSnipsExpandTrigger="<leader><Enter>"
 "let g:UltiSnipsListSnippets="<leader><tab>"
 "
