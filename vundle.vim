@@ -74,6 +74,7 @@ Bundle 'Valloric/MatchTagAlways'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'SirVer/ultisnips'
 Bundle 'szw/vim-tags'
+Bundle 'airblade/vim-rooter'
 " Language Additions
 "   Clojure
 "Bundle 'tpope/vim-fireplace'

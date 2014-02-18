@@ -43,6 +43,14 @@ nnoremap <Leader>bc :call BundleReloadAndRun("BundleClean")<CR>
 " ----------
 nnoremap <Leader>ut :UndotreeToggle<CR>
 
+"------------
+" vim-rooter
+"------------
+" enable for java filetypes
+autocmd BufEnter *.java,*.xml,*.js,*.jsp,*.coffee :Rooter
+" Look for gradle build files
+let g:rooter_patterns = ['.git', 'build.gradle', 'pom.xml', '.git/', '_darcs/', '.hg/', '.bzr/', '.svn/']
+
 "" ---------------
 "" space.vim
 "" ---------------
