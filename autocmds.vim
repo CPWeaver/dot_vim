@@ -48,9 +48,15 @@ if has("autocmd")
     " from http://morearty.com/blog/2013/01/22/fixing-vims-indenting-of-html-files.html
     autocmd FileType html setlocal indentkeys-=*<Return>
 
+
     " Leave the return key alone when in command line windows, since it's used
     " to run commands there.
     autocmd! CmdwinEnter * :unmap <cr>
     autocmd! CmdwinLeave * :call MapCR()
+  augroup END
+
+  " Use java.groovy file type for groovy
+  augroup filetypedetect
+    autocmd BufNew,BufNewFile,BufRead *.groovy set filetype=java.groovy
   augroup END
 endif

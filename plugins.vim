@@ -17,7 +17,9 @@ nnoremap <Leader>esr :JavaSearch -x references -s all<CR>
 nnoremap <Leader>eo :JavaImpl<CR>
 nnoremap <Leader>eot :JavaSearch -t type -s all -p
 nnoremap <Leader>ep :ProjectProblems!<CR>
+nnoremap <Leader>erp :ProjectRefresh<CR>
 nnoremap <Leader>era :ProjectRefreshAll<CR>
+nnoremap <Leader>ej :JUnit %<CR>
 
 " Disable autocmoplete scratch buffer
 set completeopt-=preview
@@ -138,7 +140,7 @@ if !exists("*ToggleNERDTreeAndTagbar")
       TagbarOpen
     elseif tagbar_open
       TagbarClose
-      NERDTreeToggle
+      NERDTreeFind
     else
       "NERDTreeToggle
       TagbarOpen
