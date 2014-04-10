@@ -49,7 +49,7 @@ nnoremap <Leader>ut :UndotreeToggle<CR>
 " vim-rooter
 "------------
 " enable for java filetypes
-autocmd BufEnter *.java,*.xml,*.js,*.jsp,*.coffee :Rooter
+"autocmd BufEnter *.java,*.xml,*.js,*.jsp,*.coffee :Rooter
 " Look for gradle build files
 let g:rooter_patterns = ['.git', 'build.gradle', 'pom.xml', '.git/', '_darcs/', '.hg/', '.bzr/', '.svn/']
 
@@ -336,12 +336,12 @@ let g:rbpt_colorpairs = [
 "" Thanks to http://git.io/_XqKzQ
 "let g:surround_35  = "#{\r}"
 "
-"" ------------
-"" sideways.vim
-"" ------------
-"noremap gs :SidewaysRight<cr>
-"noremap gS :SidewaysLeft<cr>
-"
+" ------------
+" sideways.vim
+" ------------
+noremap gs :SidewaysRight<cr>
+noremap gS :SidewaysLeft<cr>
+
 "" ---------------
 "" switch.vim
 "" ---------------
