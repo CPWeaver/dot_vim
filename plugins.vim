@@ -342,6 +342,12 @@ let g:rbpt_colorpairs = [
 noremap gs :SidewaysRight<cr>
 noremap gS :SidewaysLeft<cr>
 
+" ------------
+" dbext.vim
+" ------------
+let g:dbext_default_profile_docbrown='type=PGSQL:user=tomcat:host=localhost:dbname=docbrown'
+let g:dbext_default_profile = 'docbrown'
+
 "" ---------------
 "" switch.vim
 "" ---------------
