@@ -413,17 +413,17 @@ let g:delimitMate_expand_cr=1
 "let g:UltiSnipsExpandTrigger="<leader><Enter>"
 "let g:UltiSnipsListSnippets="<leader><tab>"
 "
-"" ---------------
-"" vim-signify
-"" ---------------
-"let g:signify_mapping_next_hunk = '<leader>gj'
-"let g:signify_mapping_prev_hunk = '<leader>gk'
-"let g:signify_mapping_toggle_highlight="<nop>"
-"let g:signify_mapping_toggle="<nop>"
-"" Makes switching buffers in large repos have no delay
-"let g:signify_update_on_bufenter = 0
-"let g:signify_sign_overwrite = 0
-"
+" ---------------
+" vim-signify
+" ---------------
+let g:signify_mapping_next_hunk = '<leader>gj'
+let g:signify_mapping_prev_hunk = '<leader>gk'
+let g:signify_mapping_toggle_highlight="<nop>"
+let g:signify_mapping_toggle="<nop>"
+" Makes switching buffers in large repos have no delay
+let g:signify_update_on_bufenter = 0
+let g:signify_sign_overwrite = 0
+
 "" ---------------
 "" vim-abolish
 "" ---------------
