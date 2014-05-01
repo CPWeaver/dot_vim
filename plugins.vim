@@ -170,7 +170,7 @@ if !exists("*ShowNERDTree")
     if tagbar_open
       TagbarClose
     endif
-    NERDTreeToggle
+    NERDTreeFind
 
     " Jump back to the original window
     for window in range(1, winnr('$'))
@@ -183,8 +183,7 @@ if !exists("*ShowNERDTree")
   endfunction
 endif
 
-nnoremap <leader>nn :call ShowNERDTree()<CR>
-nnoremap <leader>nf :NERDTreeFind<CR>
+nnoremap <leader>nf :call ShowNERDTree()<CR>
 let g:NERDTreeWinSize = 40
 let g:NERDTreeShowBookmarks=1
 let g:NERDTreeChDirMode=2 " Change the NERDTree directory to the root node
@@ -233,6 +232,8 @@ nnoremap <Leader>gu :Git pull<CR>
 nnoremap <Leader>gd :Gdiff<CR>
 " Exit a diff by closing the diff window
 nnoremap <Leader>gx :wincmd h<CR>:q<CR>
+" Show commit log of current file
+nnoremap <Leader>gl :Glog<CR>
 " Start git command
 nnoremap <leader>gi :Git<space>
 " Undo the last commit

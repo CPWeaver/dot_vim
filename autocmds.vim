@@ -13,6 +13,9 @@ if has("autocmd")
     " No more complaining about untitled documents
     autocmd FocusLost silent! :wa
 
+    " Auto open a quick fix window for grep
+    autocmd QuickFixCmdPost *grep* cwindow
+
     "" No more complaining about untitled documents
     "autocmd FocusLost silent! :wa
 
