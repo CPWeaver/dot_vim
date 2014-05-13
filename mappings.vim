@@ -76,6 +76,10 @@ nnoremap <silent> <leader>v :e ~/.vim/vimrc<CR>
 " Quickly switch to last buffer
 nmap <leader>. :e#<CR>
 
+
+" Redraw
+nnoremap <leader>rd :redraw!<CR>
+
 " Window Movement
 " Here's a visual guide for moving between window splits.
 "   4 Window Splits
