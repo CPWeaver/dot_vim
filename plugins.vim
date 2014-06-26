@@ -81,6 +81,12 @@ else
   let g:syntastic_javascript_jsl_conf=$HOME.'/.vim/config/unix/syntastic/jsl.conf'
 endif
 
+"let g:syntastic_java_checkers = ['javac', 'checkstyle']
+"let g:syntastic_java_checkstyle_classpath = '/usr/share/java/checkstyle.jar'
+"let g:syntastic_java_checkstyle_conf = '~/dev/chatws/config/checkstyle/checkstyle.xml'
+
+
+
 "--------
 " Tagbar
 "--------
@@ -271,6 +277,15 @@ let g:ctrlp_map = ''
 
 " Ensure max height isn't too large. (for performance)
 let g:ctrlp_max_height = 10
+
+" Use The Silver Searcher
+if executable('ag')
+  " Use Ag over Grep
+  set grepprg=ag\ --nogroup\ --nocolor
+
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+  let g:ctrlp_user_caching = 0
+endif
 
 " Leader Commands
 nnoremap <leader>t :CtrlPRoot<CR>

@@ -45,6 +45,7 @@ Bundle 'eclim'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-dispatch'
 Bundle 'godlygeek/tabular'
 
 "Bundle 'milkypostman/vim-togglelist'
