@@ -112,7 +112,7 @@ inoremap jK <Esc>
 " ---------------
 
 " Change to the directory of the currently open file
-nmap <silent> <leader>cd :cd %:p:h<CR>
+"nmap <silent> <leader>cd :cd %:p:h<CR>
 
 " Change the directory only for the current window
 nmap <silent> <leader>lcd :lcd %:p:h<CR>
@@ -212,4 +212,3 @@ vnoremap K k
 map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
 \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
 \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
->>>>>>> upstream/master:.vim/mappings.vim
