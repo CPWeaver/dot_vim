@@ -6,6 +6,7 @@
 " Eclim
 " -------
 let g:EclimCompletionMethod='omnifunc'
+let g:EclimLoggingDisabled=1
 nnoremap <Leader>ef :JavaFormat<CR>
 nnoremap <Leader>ei :JavaImport<CR>
 nnoremap <Leader>eio :JavaImportOrganize<CR>
