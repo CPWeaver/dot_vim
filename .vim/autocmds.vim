@@ -27,9 +27,9 @@ if has("autocmd")
           \ endif
 
     " Fix trailing whitespace in my most used programming langauges
-    autocmd BufWritePre *.py,*.css,*.less,*.js,*.coffee,*.rb,*.erb,*.groovy,*.java,*.php,*.ftl*.md,*.scss,*.vim,Cakefile,
-          \*.hbs
-          \ silent! :StripTrailingWhiteSpace
+    autocmd BufWritePre *.py,*.coffee,*.css,*.less,*.js,
+	  \*.rb,*.erb,*.groovy,*.java,*.php,*.ftl,*.md,*.vim,Cakefile,*.hbs 
+	  \ silent! :StripTrailingWhiteSpace
 
     " Help mode bindings
     " <enter> to follow tag, <bs> to go back, and q to quit.
@@ -38,8 +38,10 @@ if has("autocmd")
     autocmd filetype help nnoremap <buffer><bs> <c-T>
     autocmd filetype help nnoremap <buffer>q :q<CR>
 
-    " Enable JavaScript/CoffeeScript autocomplete with libraries support
-    autocmd FileType javascript,coffee setlocal omnifunc=syntaxcomplete#Complete
+    " Enable autocomplete based on syntax
+    autocmd FileType css,coffee,javascript,html setlocal omnifunc=syntaxcomplete#Complete
+
+    autocmd BufRead,BufNewFile .jshintrc,.bowerrc set filetype=json
 
     " Enable Rainbow Parentheses
     autocmd VimEnter * RainbowParenthesesToggle

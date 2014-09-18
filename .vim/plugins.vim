@@ -2,69 +2,62 @@
 " Plugin Configuration
 " ----------------------------------------
 
+" ---------------
+" Vundle
+" ---------------
+command! ReloadVundle source ~/.vim/vundle.vim
+function PluginReloadAndRun(command)
+  :ReloadVundle
+  execute a:command
+endfunction
+
+nnoremap <Leader>pi :call PluginReloadAndRun("PluginInstall")<CR>
+nnoremap <Leader>pu :call PluginReloadAndRun("PluginInstall!")<CR>
+nnoremap <Leader>pc :call PluginReloadAndRun("PluginClean")<CR>
+
 " -------
 " Eclim
 " -------
 let g:EclimCompletionMethod='omnifunc'
-let g:EclimLoggingDisabled=1
 nnoremap <Leader>ef :JavaFormat<CR>
 nnoremap <Leader>ei :JavaImport<CR>
 nnoremap <Leader>eio :JavaImportOrganize<CR>
 nnoremap <Leader>eg :JavaSearchContext<CR>
 nnoremap <Leader>et :JavaHierarchy<CR>
 nnoremap <Leader>er :JavaRename
+nnoremap <Leader>ej :JUnit<CR>
+nnoremap <Leader>ejf :JUnit %<CR>
 nnoremap <Leader>ec :JavaCorrect<CR>
 nnoremap <Leader>esr :JavaSearch -x references -s all<CR>
-nnoremap <Leader>eo :JavaImpl<CR>
 nnoremap <Leader>eot :JavaSearch -t type -s all -p
+nnoremap <Leader>eor :LocateFile<CR>
 nnoremap <Leader>ep :ProjectProblems!<CR>
-nnoremap <Leader>erp :ProjectRefresh<CR>
 nnoremap <Leader>era :ProjectRefreshAll<CR>
-nnoremap <Leader>ej :JUnit %<CR>
+nnoremap <Leader>eo :JavaImpl<CR>
 
 " Disable autocmoplete scratch buffer
 set completeopt-=preview
 set completeopt+=longest
 
-" ---------------
-" Vundle
-" ---------------
-command! ReloadVundle source ~/.vim/vundle.vim
-if !exists("*BundleReloadAndRun")
-  function BundleReloadAndRun(command)
-    :ReloadVundle
-    execute a:command
-  endfunction
-endif
-
-nnoremap <Leader>bi :call BundleReloadAndRun("BundleInstall")<CR>
-nnoremap <Leader>bu :call BundleReloadAndRun("BundleInstall!")<CR>
-nnoremap <Leader>bc :call BundleReloadAndRun("BundleClean")<CR>
-
-" ----------
-" UndoTree
-" ----------
-nnoremap <Leader>ut :UndotreeToggle<CR>
-
 "------------
-" vim-rooter
+" EasyMotion
 "------------
-" enable for java filetypes
-"autocmd BufEnter *.java,*.xml,*.js,*.jsp,*.coffee :Rooter
-" Look for gradle build files
-let g:rooter_patterns = ['.git', 'build.gradle', 'pom.xml', '.git/', '_darcs/', '.hg/', '.bzr/', '.svn/']
+let g:EasyMotion_smartcase = 1
+let g:EasyMotion_use_smartsign_us = 1
 
-"" ---------------
-"" space.vim
-"" ---------------
-"" Disables space mappings in select mode to fix snipMate.
-"let g:space_disable_select_mode=1
-"
+nmap <Leader>s <Plug>(easymotion-sn)
+
+" ---------------
+" space.vim
+" ---------------
+" Disables space mappings in select mode to fix snipMate.
+let g:space_disable_select_mode = 1
+
 " ---------------
 " Syntastic
 " ---------------
-let g:syntastic_enable_signs=1
-let g:syntastic_auto_loc_list=1
+let g:syntastic_enable_signs = 1
+let g:syntastic_auto_loc_list = 1
 let g:syntastic_mode_map = { 'mode': 'active',
                            \ 'active_filetypes': [],
                            \ 'passive_filetypes': ['scss'] }
@@ -82,17 +75,19 @@ else
   let g:syntastic_javascript_jsl_conf=$HOME.'/.vim/config/unix/syntastic/jsl.conf'
 endif
 
-"let g:syntastic_java_checkers = ['javac', 'checkstyle']
-"let g:syntastic_java_checkstyle_classpath = '/usr/share/java/checkstyle.jar'
-"let g:syntastic_java_checkstyle_conf = '~/dev/chatws/config/checkstyle/checkstyle.xml'
+" ---------------
+" Tags
+" ---------------
+let g:vim_tags_auto_generate = 1
+let g:vim_tags_use_vim_dispatch = 1
 
-
-
-"--------
+" ---------------
 " Tagbar
-"--------
-nnoremap <Leader>ol :Tagbar<CR>
-let g:tagbar_left = 1
+" ---------------
+nnoremap <leader>tt :TagbarToggle<CR>
+nnoremap <leader>ta :TagbarOpenAutoClose<CR>
+let g:tagbar_compact = 1
+let g:tagbar_width = 60
 
 let g:tagbar_type_coffee = {
     \ 'ctagstype' : 'coffee',
@@ -114,87 +109,35 @@ let g:tagbar_type_groovy = {
         \ 'f:function',
         \ 'v:variables',
     \ ]
-    \ }
+\ }
 
+let g:tagbar_type_cucumber = {
+    \ 'ctagstype': 'cucumber',
+    \ 'kinds': [
+        \'d:definition'
+      \]
+    \}
 
-"--------------------
-" vim-tags
-"--------------------
-let g:vim_tags_project_tags_command = "find `pwd` -maxdepth 4 -type d -wholename '*src' | xargs ctags -R {OPTIONS} 2>/dev/null"
+let g:tagbar_type_less = {
+    \ 'ctagstype' : 'less',
+    \ 'kinds'     : [
+        \ 'c:class',
+        \ 'i:id',
+        \ 'm:media',
+        \ 't:tag',
+        \ 'v:variables',
+    \ ]
+\ }
 
-"" ---------------
+" ---------------
 " NERDTree
 " ---------------
-
-if !exists("*ToggleNERDTreeAndTagbar")
-  function! ToggleNERDTreeAndTagbar()
-    let w:jumpbacktohere = 1
-
-    " Detect which plugins are open
-    if exists('t:NERDTreeBufName')
-      let nerdtree_open = bufwinnr(t:NERDTreeBufName) != -1
-    else
-      let nerdtree_open = 0
-    endif
-    let tagbar_open = bufwinnr('__Tagbar__') != -1
-
-    " Perform the appropriate action
-    if nerdtree_open && tagbar_open
-      NERDTreeClose
-      TagbarClose
-    elseif nerdtree_open
-      NERDTreeClose
-      TagbarOpen
-    elseif tagbar_open
-      TagbarClose
-      NERDTreeFind
-    else
-      "NERDTreeToggle
-      TagbarOpen
-    endif
-
-    " Jump back to the original window
-    for window in range(1, winnr('$'))
-      execute window . 'wincmd w'
-      if exists('w:jumpbacktohere')
-        unlet w:jumpbacktohere
-        break
-      endif
-    endfor
-  endfunction
-endif
-nnoremap <leader>ss :call ToggleNERDTreeAndTagbar()<CR>
-
-
-if !exists("*ShowNERDTree")
-  function! ShowNERDTree()
-    let w:jumpbacktohere = 1
-
-    " Detect which plugins are open
-    let tagbar_open = bufwinnr('__Tagbar__') != -1
-
-    " Perform the appropriate action
-    if tagbar_open
-      TagbarClose
-    endif
-    NERDTreeFind
-
-    " Jump back to the original window
-    for window in range(1, winnr('$'))
-      execute window . 'wincmd w'
-      if exists('w:jumpbacktohere')
-        unlet w:jumpbacktohere
-        break
-      endif
-    endfor
-  endfunction
-endif
-
-nnoremap <leader>nf :call ShowNERDTree()<CR>
+nnoremap <leader>nn :NERDTreeToggle<CR>
+nnoremap <leader>nf :NERDTreeFind<CR>
 let g:NERDTreeWinSize = 40
-let g:NERDTreeShowBookmarks=1
-let g:NERDTreeChDirMode=2 " Change the NERDTree directory to the root node
-let g:NERDTreeMinimalUI=1
+let g:NERDTreeShowBookmarks = 1
+let g:NERDTreeChDirMode = 2 " Change the NERDTree directory to the root node
+let g:NERDTreeMinimalUI = 1
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType")
   \&& b:NERDTreeType == "primary") | q | endif
 
@@ -202,45 +145,47 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType")
 " Indent Guides
 " ---------------
 let g:indent_guides_enable_on_vim_startup = 1
-
-"---------
-" Cosco
-"---------
-nmap <silent> ,; :call cosco#commaOrSemiColon()<CR>
-inoremap <silent> ,; <ESC>:call cosco#commaOrSemiColon()"<CR>a"
+let g:indent_guides_exclude_filetypes = ['help', 'nerdtree']
 
 " ---------------
-"" Session
-"" ---------------
-"let g:session_autosave=0
-"let g:session_autoload=0
-"nnoremap <leader>os :OpenSession<CR>
-"
+" Session
+" ---------------
+let g:session_autosave = 0
+let g:session_autoload = 0
+nnoremap <leader>os :OpenSession<CR>
+
 " ---------------
 " Tabular
 " ---------------
-nnoremap <Leader>t= :Tabularize assignment<CR>
-vnoremap <Leader>t= :Tabularize assignment<CR>
-nnoremap <Leader>t: :Tabularize symbol<CR>
-vnoremap <Leader>t: :Tabularize symbol<CR>
-nnoremap <Leader>t, :Tabularize comma<CR>
-vnoremap <Leader>t, :Tabularize comma<CR>
+nnoremap <Leader>t& :Tabularize /&<CR>
+vnoremap <Leader>t& :Tabularize /&<CR>
+nnoremap <Leader>t= :Tabularize /=<CR>
+vnoremap <Leader>t= :Tabularize /=<CR>
+nnoremap <Leader>t: :Tabularize /:<CR>
+vnoremap <Leader>t: :Tabularize /:<CR>
+nnoremap <Leader>t:: :Tabularize /:\zs<CR>
+vnoremap <Leader>t:: :Tabularize /:\zs<CR>
+nnoremap <Leader>t, :Tabularize /,<CR>
+vnoremap <Leader>t, :Tabularize /,<CR>
+nnoremap <Leader>t,, :Tabularize /,\zs<CR>
+vnoremap <Leader>t,, :Tabularize /,\zs<CR>
+nnoremap <Leader>t<Bar> :Tabularize /<Bar><CR>
+vnoremap <Leader>t<Bar> :Tabularize /<Bar><CR>
 
 " ---------------
 " Fugitive
 " ---------------
+nnoremap <Leader>gb :Gblame<CR>
+nnoremap <Leader>gl :Glog --graph --pretty=oneline --abbrev-commit -n 20<CR>
 nnoremap <Leader>gc :Gcommit -v<CR>
 nnoremap <Leader>gw :Gwrite<CR>
 nnoremap <Leader>gs :Gstatus<CR>
 nnoremap <Leader>gp :Git push<CR>
-nnoremap <Leader>gb :Gblame<CR>
  " Mnemonic, gu = Git Update
 nnoremap <Leader>gu :Git pull<CR>
-nnoremap <Leader>gd :Gdiff<CR>
+nnoremap <Leader>gd :Gvdiff<CR>
 " Exit a diff by closing the diff window
 nnoremap <Leader>gx :wincmd h<CR>:q<CR>
-" Show commit log of current file
-nnoremap <Leader>gl :Glog<CR>
 " Start git command
 nnoremap <leader>gi :Git<space>
 " Undo the last commit
@@ -252,41 +197,20 @@ command! Gcundo :Git reset HEAD~1
 " Zoom Window to Full Size
 nnoremap <silent> <leader>wo :ZoomWin<CR>
 
-""---------------
-"" unite.vim
-""---------------
-let g:unite_enable_start_insert = 1
-"let g:unite_winheight = 10
-let g:unite_enable_short_source_names = 1
-let g:unite_source_file_rec_max_cache_files=10000
-let g:unite_source_rec_async_command= 'ag --nocolor --nogroup --hidden -g ""'
-"call unite#filters#matcher_default#use(['matcher_glob'])
-call unite#custom#source('file_rec', 'ignore_pattern',  '.*\(build/\|bin/\).*')
-      "\'\~$\|\.\%(bak\|sw[po]\)$\|'.
-      "\'\%(^\|/\)\.\%(hg\|git\|bzr\|svn\)\%($\|/\)')
-""}}}
-
-"set wildignore+=*/test-output/*,*/bin/*,*/target/*,*/build/*,*/node_modules/*,*.o,*.obj,*.exe,*.so,*.dll,*.pyc,.svn,.hg,.bzr,.git,
-  "\.sass-cache,*.class,*.scssc,*.cssc,sprockets%*,*.lessc
-"nnoremap <leader>t :<C-u>Unite file_rec/async:!<CR>
-
 " ---------------
 " ctrlp.vim
 " ---------------
 " Ensure Ctrl-P isn't bound by default
 let g:ctrlp_map = ''
-
+" Default to filename mode
+let g:ctrlp_by_filename = 1
 " Ensure max height isn't too large. (for performance)
 let g:ctrlp_max_height = 10
-
-" Use The Silver Searcher
-if executable('ag')
-  " Use Ag over Grep
-  set grepprg=ag\ --nogroup\ --nocolor
-
-  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-  let g:ctrlp_user_caching = 0
-endif
+let g:ctrlp_show_hidden = 1
+" Fix new windows opening in split from startify
+let g:ctrlp_reuse_window = 'startify'
+let g:ctrlp_mruf_max = 350
+let g:ctrlp_mruf_default_order = 0
 
 " Leader Commands
 nnoremap <leader>t :CtrlPRoot<CR>
@@ -294,26 +218,26 @@ nnoremap <leader>b :CtrlPBuffer<CR>
 nnoremap <leader>u :CtrlPCurFile<CR>
 nnoremap <leader>m :CtrlPMRUFiles<CR>
 
-" ---------------
-" Ag.vim
-" ---------------
-nnoremap <silent> <leader>as :AgFromSearch<CR>
-nnoremap <leader>ag :Ag<space>
-nnoremap <leader>sag :Ag <c-r><c-w>
-vnoremap <leader>ag "xy :Ag "<c-r>x"
-let g:aghighlight=1
-let g:agprg="ag --column --smart-case"
+if executable('ag')
+  " Use Ag over Grep
+  set grepprg=ag\ --nogroup\ --nocolor
+
+  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+  let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
+
+  " ag is fast enough that CtrlP doesn't need to cache
+  let g:ctrlp_use_caching = 0
+endif
 
 " ---------------
 " airline
 " ---------------
-let g:airline#extensions#eclim#enabled = 1
 let g:airline_theme = 'jellybeans'
 let g:airline_powerline_fonts = 1
 let g:airline_detect_modified = 1
-let g:airline#extensions#whitespace#enabled = 1
+let g:airline#extensions#eclim#enabled = 0
 let g:airline#extensions#hunks#enabled = 0
-let g:airline#extensions#tagbar#enabled = 1
+let g:airline#extensions#whitespace#enabled = 1
 let g:airline_mode_map = {
       \ 'n'  : 'N',
       \ 'i'  : 'I',
@@ -323,13 +247,15 @@ let g:airline_mode_map = {
       \ 'c'  : 'CMD',
       \ '' : 'VB',
       \ }
+" Just show the file name
+let g:airline_section_c = '%t'
 
 " ---------------
 " jellybeans.vim colorscheme tweaks
 " ---------------
 " Make cssAttrs (center, block, etc.) the same color as units
 hi! link cssAttr Constant
-''
+
 " ------------------------------------
 " Rainbow parens (solarized palette)
 " ------------------------------------
@@ -345,54 +271,53 @@ let g:rbpt_colorpairs = [
     \ ['64',   '#859900'],
     \ ]
 
-"" ---------------
-"" surround.vim
-"" ---------------
-"" Use # to get a variable interpolation (inside of a string)}
-"" ysiw#   Wrap the token under the cursor in #{}
-"" Thanks to http://git.io/_XqKzQ
-"let g:surround_35  = "#{\r}"
-"
+" ---------------
+" Ag.vim
+" ---------------
+nnoremap <silent> <leader>as :AgFromSearch<CR>
+nnoremap <leader>ag :Ag<space>
+vnoremap <leader>ag "xy :Ag "<c-r>x"
+nnoremap <leader>sag :Ag <c-r><c-w>
+
+" ---------------
+" surround.vim
+" ---------------
+" Use # to get a variable interpolation (inside of a string)}
+" ysiw#   Wrap the token under the cursor in #{}
+" Thanks to http://git.io/_XqKzQ
+let g:surround_35  = "#{\r}"
+
 " ------------
 " sideways.vim
 " ------------
 noremap gs :SidewaysRight<cr>
 noremap gS :SidewaysLeft<cr>
 
-" ------------
-" dbext.vim
-" ------------
-let g:dbext_default_profile_docbrown='type=PGSQL:user=tomcat:host=localhost:dbname=docbrown'
-let g:dbext_default_profile = 'docbrown'
+omap aa <Plug>SidewaysArgumentTextobjA
+xmap aa <Plug>SidewaysArgumentTextobjA
+omap ia <Plug>SidewaysArgumentTextobjI
+xmap ia <Plug>SidewaysArgumentTextobjI
 
-"" ---------------
-"" switch.vim
-"" ---------------
-"nnoremap - :Switch<cr>
-"
-"" ---------------
-"" indenthtml
-"" ---------------
-"" Setup indenthtml to propertly indent html. Without this, formatting doesn't
-"" work on html.
-"let g:html_indent_inctags = "html,body,head,tbody"
-"let g:html_indent_script1 = "inc"
-"let g:html_indent_style1 = "inc"
-"
+" ---------------
+" switch.vim
+" ---------------
+nnoremap - :Switch<cr>
+
+" ---------------
+" indenthtml
+" ---------------
+" Setup indenthtml to propertly indent html. Without this, formatting doesn't
+" work on html.
+let g:html_indent_inctags = "html,body,head,tbody"
+let g:html_indent_script1 = "inc"
+let g:html_indent_style1 = "inc"
+
 " ---------------
 " Unconditional Paste
 " ---------------
-let g:UnconditionalPaste_NoDefaultMappings=1
+let g:UnconditionalPaste_NoDefaultMappings = 1
 nnoremap gcP <Plug>UnconditionalPasteCharBefore
 nnoremap gcp <Plug>UnconditionalPasteCharAfter
-
-"" ---------------
-"" Gist.vim
-"" ---------------
-"if has('macunix') || has('mac')
-"  let g:gist_clip_command = 'pbcopy'
-"endif
-"let g:gist_post_private=1
 
 " ---------------
 " MatchTagAlways
@@ -404,32 +329,26 @@ let g:mta_filetypes = {
     \ 'handlebars' : 1,
     \ 'eruby' : 1,
     \}
-"
-"" ----------
-"" SuperTab
-"" ----------
-"let g:SuperTabClosePreviewOnPopupClose = 1
+
+" ----------
+" SuperTab
+" ----------
+let g:SuperTabClosePreviewOnPopupClose = 1
 
 " ---------------
 " YouCompleteMe
 " ---------------
-let g:ycm_complete_in_comments_and_strings=1
-let g:ycm_collect_identifiers_from_comments_and_strings=1
-" This runs me out of RAM
-"let g:ycm_collect_identifiers_from_tags_files = 1
-
-"-----------------
-" DelimitMate
-"-----------------
-let g:delimitMate_expand_cr=1
-
+let g:ycm_min_num_of_chars_for_completion = 1
+let g:ycm_seed_identifiers_with_syntax = 1
+let g:ycm_complete_in_comments_and_strings = 1
+let g:ycm_collect_identifiers_from_comments_and_strings = 1
 
 " ---------------
 " Ultisnips
 " ---------------
 let g:UltiSnipsExpandTrigger="<leader><Enter>"
 let g:UltiSnipsListSnippets="<leader><tab>"
-"
+
 " ---------------
 " vim-signify
 " ---------------
@@ -441,81 +360,68 @@ let g:signify_mapping_toggle="<nop>"
 let g:signify_update_on_bufenter = 0
 let g:signify_sign_overwrite = 0
 
-"" ---------------
-"" vim-abolish
-"" ---------------
-"nnoremap <leader>su :Subvert/
-"nnoremap <leader>ss :%Subvert/
-"
-"" ---------------
-"" vim-startify
-"" ---------------
-"let g:startify_list_order = ['files', 'dir', 'bookmarks', 'sessions']
-"let g:startify_files_number = 5
-"let g:startify_session_dir = '~/.vim/sessions'
-"
-"" ---------------
-"" vim-togglecursor
-"" ---------------
-"let g:togglecursor_leave='line'
-"
-"" ---------------
-"" rails.vim
-"" ---------------
-"command! Remigrate :Rake db:drop | Rake db:create | Rake db:migrate | Rake test:prepare
-"
-"" Add custom commands for Rails.vim
-"" Thanks to http://git.io/_cBVeA and http://git.io/xIKnCw
-"let g:rails_projections = {
-"      \ 'app/models/*.rb': {'keywords': 'validates_conditional'},
-"      \ 'db/seeds/*.rb': {'command': 'seeds'},
-"      \ 'db/seeds.rb': {'command': 'seeds'},
-"      \ 'spec/factories.rb': {'command': 'factory'},
-"      \ 'spec/factories/*_factory.rb': {
-"      \   'command': 'factory',
-"      \   'affinity': 'model',
-"      \   'alternate': 'app/models/%s.rb',
-"      \   'related': 'db/schema.rb#%p',
-"      \   'test': 'spec/models/%s_spec.rb',
-"      \   'template': "FactoryGirl.define do\n  factory :%s do\n  end\nend",
-"      \   'keywords': 'factory sequence'
-"      \ },
-"      \ 'spec/factories/*.rb': {
-"      \   'command': 'factory',
-"      \   'affinity': 'collection',
-"      \   'alternate': 'app/models/%o.rb',
-"      \   'related': 'db/schema.rb#%s',
-"      \   'test': 'spec/models/%o_spec.rb',
-"      \   'template': "FactoryGirl.define do\n  factory :%o do\n  end\nend",
-"      \   'keywords': 'factory sequence'
-"      \ },
-"      \ 'spec/fabricators/*_fabricator.rb': {
-"      \   'command': 'fabricator',
-"      \   'affinity': 'model',
-"      \   'alternate': 'app/models/%s.rb',
-"      \   'related': 'db/schema.rb#%p',
-"      \   'test': 'spec/models/%s_spec.rb',
-"      \   'template': "Fabricator(:%s) do\nend",
-"      \   'keywords': 'sequence initialize_with on_init transient after_build before_validation after_validation before_save before_create after_create after_save'
-"      \ },
-"      \ 'spec/support/*.rb': {'command': 'support'},
-"      \ 'features/*.feature': {'command': 'feature'},
-"      \ 'features/step_definitions/*_steps.rb': {'command': 'steps'},
-"      \ 'features/support/*.rb': {'command': 'support'}}
-"
-"" ------
-"" ColorV
-"" ------
-"let g:colorv_preview_ftype = 'css,html,javascript,scss,stylus'
+" ---------------
+" vim-startify
+" ---------------
+let g:startify_list_order = [
+        \ ['   Last modified'],
+        \ 'dir',
+        \ ['   Recent'],
+        \ 'files',
+        \ ]
+let g:startify_skiplist = [
+            \ 'COMMIT_EDITMSG',
+            \ $VIMRUNTIME .'/doc',
+            \ 'bundle/.*/doc',
+            \ ]
+let g:startify_files_number = 10
+let g:startify_custom_indices = ['a', 'd', 'f', 'g', 'h']
+let g:startify_change_to_dir = 0
 
-"-----------------
-" EasyMotion
-"-----------------
-let g:EasyMotion_smartcase=1
-let g:EasyMotion_enter_jump_first=1
-map <leader><leader>/ <Plug>(easymotion-sn)
-omap <leader><leader>/ <Plug>(easymotion-tn)
-map <leader><leader>n <Plug>(easymotion-next)
-map <leader><leader>N <Plug>(easymotion-prev)
-nmap s <Plug>(easymotion-s)
+hi StartifyBracket ctermfg=240
+hi StartifyFooter  ctermfg=111
+hi StartifyHeader  ctermfg=203
+hi StartifyPath    ctermfg=245
+hi StartifySlash   ctermfg=240
 
+" ---------------
+" vim-abolish
+" ---------------
+nnoremap <leader>su :Subvert/
+nnoremap <leader>ss :%Subvert/
+
+" ---------------
+" vim-togglecursor
+" ---------------
+let g:togglecursor_leave='line'
+
+" ------
+" ColorV
+" ------
+let g:colorv_preview_ftype = 'css,html,javascript,scss,stylus,less'
+
+"---------
+" Clojure
+"---------
+nnoremap <silent> <leader>sh :Slamhound<CR>
+
+"-------------
+" CoffeeScript
+"-------------
+nnoremap <silent> <leader>vc :CoffeeWatch vert<CR>
+
+"-------
+" Tasks
+"-------
+nnoremap <silent> <leader>tx :call Toggle_task_status()<CR>
+vnoremap <silent> tx :call Toggle_task_status()<CR>
+
+"------
+" Dash
+"------
+nmap <silent> <leader>d <Plug>DashSearch
+" Make CoffeeScript use the same docsets as JavaScript
+let g:dash_map = {
+    \ 'coffee' :  ['coffee', 'javascript', 'jquery', 'jqueryui', 'jquerym', 'angularjs', 'backbone', 'marionette', 'meteor', 'sproutcore', 'moo', 'prototype', 'bootstrap', 'foundation', 'lodash', 'underscore', 'ember', 'sencha', 'extjs', 'titanium', 'knockout', 'zepto', 'yui', 'd3', 'svg', 'dojo', 'coffee', 'nodejs', 'express', 'grunt', 'mongoose', 'moment', 'require', 'awsjs', 'jasmine', 'sinon', 'chai', 'html', 'css', 'cordova', 'phonegap', 'unity3d'],
+    \ 'less' : 'css'
+    \ }

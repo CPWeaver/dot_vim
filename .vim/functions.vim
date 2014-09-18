@@ -136,7 +136,7 @@ function! StripTrailingWhiteSpaceAndSave()
   :write
 endfunction
 command! StripTrailingWhiteSpaceAndSave :call StripTrailingWhiteSpaceAndSave()<CR>
-nnoremap <silent>stw :silent! StripTrailingWhiteSpaceAndSave<CR>
+nnoremap <silent> <leader>stw :silent! StripTrailingWhiteSpaceAndSave<CR>
 
 " ---------------
 " Paste using Paste Mode
@@ -158,23 +158,77 @@ command! PasteWithPasteMode call PasteWithPasteMode()
 nnoremap <silent> <leader>p :PasteWithPasteMode<CR>
 
 " ---------------
-" Write Buffer
+" Write Buffer if Necessary
 "
-" Writes the current buffer unless we're the in QuickFix mode.
+" Writes the current buffer if it's needed, unless we're the in QuickFix mode.
 " ---------------
 
-if !exists("*WriteBuffer")
-function WriteBuffer()
+if !exists("*WriteBufferIfNecessary")
+function WriteBufferIfNecessary()
+  if &modified && !&readonly
+    :write
+  endif
+endfunction
+command! WriteBufferIfNecessary call WriteBufferIfNecessary()
+
+function CRWriteIfNecessary()
   if &filetype == "qf"
+    " Execute a normal enter when in Quickfix list.
     execute "normal! \<enter>"
   else
-    :write
+    WriteBufferIfNecessary
   endif
 endfunction
 endif
 
-nnoremap <silent> <enter> :call WriteBuffer()<CR>
+" Clear the search buffer when hitting return
+" Idea for MapCR from http://git.io/pt8kjA
+function! MapCR()
+  nnoremap <silent> <enter> :call CRWriteIfNecessary()<CR>
+endfunction
+call MapCR()
 
+" ---------------
+" Make a scratch buffer with all of the leader keybindings.
+"
+" Adapted from http://ctoomey.com/posts/an-incremental-approach-to-vim/
+" ---------------
+function! ListLeaders()
+  silent! redir @b
+  silent! nmap <LEADER>
+  silent! redir END
+  silent! new
+  silent! set buftype=nofile
+  silent! set bufhidden=hide
+  silent! setlocal noswapfile
+  silent! put! b
+  silent! g/^s*$/d
+  silent! %s/^.*,//
+  silent! normal ggVg
+  silent! sort
+  silent! let lines = getline(1,"$")
+  silent! normal <esc>
+endfunction
+
+command! ListLeaders :call ListLeaders()
+
+function! CopyMatches(reg)
+  let hits = []
+  %s//\=len(add(hits, submatch(0))) ? submatch(0) : ''/ge
+  let reg = empty(a:reg) ? '+' : a:reg
+  execute 'let @'.reg.' = join(hits, "\n") . "\n"'
+endfunction
+command! -register CopyMatches call CopyMatches(<q-reg>)
+
+function! YankLineWithoutNewline()
+  let l = line(".")
+  let c = col(".")
+  normal ^y$
+  " Clean up: restore previous search history, and cursor position
+  call cursor(l, c)
+endfunction
+
+nnoremap <silent>yl :call YankLineWithoutNewline()<CR>
 " ---------------
 " Run the current file as a Maven test
 " ---------------
@@ -216,3 +270,27 @@ if !exists("*CucumberCurrent")
 endif
 nnoremap <silent> <leader>cit :CucumberCurrent<cr>
 
+" ---------------
+" Disable one diff window during a three-way diff allowing you to cut out the
+" noise of a three-way diff and focus on just the changes between two versions
+" at a time. Inspired by Steve Losh's Splice
+" ---------------
+function! DiffToggle(window)
+  " Save the cursor position and turn on diff for all windows
+  let l:save_cursor = getpos('.')
+  windo :diffthis
+  " Turn off diff for the specified window (but keep scrollbind) and move
+  " the cursor to the left-most diff window
+  exe a:window . "wincmd w"
+  diffoff
+  set scrollbind
+  set cursorbind
+  exe a:window . "wincmd " . (a:window == 1 ? "l" : "h")
+  " Update the diff and restore the cursor position
+  diffupdate
+  call setpos('.', l:save_cursor)
+endfunction
+" Toggle diff view on the left, center, or right windows
+nmap <silent> <leader>dl :call DiffToggle(1)<cr>
+nmap <silent> <leader>dc :call DiffToggle(2)<cr>
+nmap <silent> <leader>dr :call DiffToggle(3)<cr>

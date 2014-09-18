@@ -1,7 +1,30 @@
 #!/usr/bin/env bash
 
-VUNDLE="https://github.com/gmarik/vundle.git"
+DOT_VIM="https://github.com/dansomething/dot_vim.git"
+CMDS="git vim"
+
+VUNDLE="https://github.com/gmarik/Vundle.vim.git"
 VUNDLE_TARGET="$HOME/.vim/bundle/vundle"
+
+# Check for necessary commands
+for cmd in $CMDS; do
+  hash $cmd >/dev/null 2>&1 || {
+    echo "$cmd command not found. Please install $cmd."
+    exit 1
+  }
+done
+
+# Install Homeshick
+if [ ! -s "$HOME/.homesick/repos/homeshick" ]; then
+  echo "Installing Homeshick to manage dotfiles..."
+  git clone git://github.com/andsens/homeshick.git $HOME/.homesick/repos/homeshick
+fi
+
+source "$HOME/.homesick/repos/homeshick/homeshick.sh"
+
+# Install dot_vim files
+homeshick clone $DOT_VIM
+homeshick symlink dot_vim
 
 if [ -s $VUNDLE_TARGET ]; then
   echo "Vundle exists, skipping install."
@@ -10,17 +33,5 @@ else
   git clone $VUNDLE $VUNDLE_TARGET
 fi
 
-declare -a filesToLink=(vimrc gvimrc)
-
-for file in ${filesToLink[@]}; do
-  dotFile="$HOME/.$file"
-  if [ -s $dotFile ]; then
-    echo "${dotFile} already exists, skipping link."
-  else
-    ln -s $HOME/.vim/$file $dotFile
-    echo "Created link for #{file} in your home folder."
-  fi
-done
-
 echo "Installing vim plugins via Vundle"
-vim +BundleInstall! +qall
+vim +PluginInstall! +qall

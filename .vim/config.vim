@@ -7,6 +7,10 @@
 " ---------------
 set background=dark
 colorscheme jellybeans
+" Force 256 color mode if available
+if $TERM =~ "-256color"
+   set t_Co=256
+endif
 
 " -----------------------------
 " File Locations
@@ -50,7 +54,6 @@ syntax enable
 set backup             " Turn on backups
 set autoread           " Automatically reload changes if detected
 set wildmenu           " Turn on WiLd menu
-set wildmode=longest:full,full
 set hidden             " Change buffer - without saving
 set history=768        " Number of things to remember in history.
 set cf                 " Enable error files & error jumping.
@@ -63,13 +66,16 @@ set formatoptions=crql
 set iskeyword+=\$,-   " Add extra characters that are valid parts of variables
 set nostartofline      " Don't go to the start of the line after some commands
 set scrolloff=3        " Keep three lines below the last line when scrolling
+set gdefault           " this makes search/replace global by default
+set switchbuf=useopen  " Switch to an existing buffer if one exists
 
 " ---------------
 " Text Format
 " ---------------
 set tabstop=2
-set backspace=2  " Delete everything with backspace
+set backspace=indent,eol,start " Delete everything with backspace
 set shiftwidth=2 " Tabs under smart indent
+set shiftround
 set cindent
 set autoindent
 set smarttab
@@ -82,8 +88,9 @@ set ignorecase " Case insensitive search
 set smartcase  " Non-case sensitive search
 set incsearch  " Incremental search
 set hlsearch   " Highlight search results
-set wildignore+=*/test-output/*,*/bin/*,*/target/*,*/build/*,*/node_modules/*,*.o,*.obj,*.exe,*.so,*.dll,*.pyc,.svn,.hg,.bzr,.git,
-  \.sass-cache,*.class,*.scssc,*.cssc,sprockets%*,*.lessc
+set wildignore+=*/.tmp/*,*/test-output/*,*/bin/*,*/target/*,*/build/*,
+      \*/node_modules/*,*.o,*.obj,*.exe,*.so,*.dll,*.pyc,.svn,.hg,.bzr,.git,
+      \.sass-cache,*.class,*.scssc,*.cssc,sprockets%*,*.lessc
 
 " ---------------
 " Visual
@@ -92,6 +99,8 @@ set showmatch   " Show matching brackets.
 set matchtime=2 " How many tenths of a second to blink
 " Show invisible characters
 set list
+" Ignore whitespace changes in vimdiff
+set diffopt+=iwhite
 
 " Show trailing spaces as dots and carrots for extended lines.
 " From Janus, http://git.io/PLbAlw

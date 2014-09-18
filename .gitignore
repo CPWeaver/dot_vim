@@ -1,6 +1,7 @@
-.vim/bundle
-/sessions
+bundle
+sessions
 .DS_Store
+extra.vim
 /.netrwhist
 /spell/custom.en.utf-8.add.spl
 tags

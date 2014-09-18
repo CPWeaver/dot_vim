@@ -1,9 +1,3 @@
-" ===========================================
-" Who: Jeremy Mack (@mutewinter)
-" What: .vimrc of champions
-" Version: 2.0 - Now individual config files!
-" ===========================================
-
 " All of the plugins are installed with Vundle from this file.
 source ~/.vim/vundle.vim
 
