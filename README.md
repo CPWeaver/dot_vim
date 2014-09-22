@@ -3,12 +3,12 @@
 ## Installation
 
 
-1. `bash <(curl -s https://raw.githubusercontent.com/dansomething/dot_vim/master/install)`
+1. `bash <(curl -s https://raw.githubusercontent.com/CPWeaver/dot_vim/master/install)`
 2. Enjoy enhanced productivity, increased levitation, reduced
    watermelon-related accidents, and startling sex appeal.
 
 ### Manual Install
-1. `git clone http://github.com/dansomething/dot_vim.git ~/.vim`
+1. `git clone http://github.com/CPWeaver/dot_vim.git ~/.vim`
 2. `ln -s ~/.vim/vimrc ~/.vimrc`
 3. `ln -s ~/.vim/gvimrc ~/.gvimrc`
 4. Install [Vundle](https://github.com/gmarik/vundle) with `git clone
@@ -16,10 +16,11 @@
 5. `vim +PluginInstall +qall` _installs all of the plugins_
 
 ## Screenshot
+* Screenshot goes here
 
-[![MacVim][ss]][ss]
+<!--[![MacVim][ss]][ss]-->
 
-[ss]: https://github.com/mutewinter/dot_vim/raw/master/screenshots/MacVim.png
+<!--[ss]: https://github.com/mutewinter/dot_vim/raw/master/screenshots/MacVim.png-->
 
 ## Mappings
 
