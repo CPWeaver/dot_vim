@@ -91,7 +91,7 @@ endif
 "--------------------
 " vim-tags
 "--------------------
-let g:vim_tags_project_tags_command = "find `pwd` -maxdepth 4 -type d -wholename '*src' | xargs ctags -R {OPTIONS} 2>/dev/null"
+"let g:vim_tags_project_tags_command = "find `pwd` -maxdepth 4 -type d -wholename '*src' | xargs ctags -R {OPTIONS} 2>/dev/null"
 
 
 "--------
@@ -548,6 +548,10 @@ let g:signify_sign_overwrite = 0
 "" ------
 "let g:colorv_preview_ftype = 'css,html,javascript,scss,stylus'
 "
+"-------------
+" CoffeeScript
+"-------------
+nnoremap <silent> <leader>vc :CoffeeWatch vert<CR>
 " ----------
 " UndoTree
 " ----------
