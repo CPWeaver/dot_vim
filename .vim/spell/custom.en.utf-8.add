@@ -118,8 +118,6 @@ dev
 phantomjs
 ShowGap
 Appcache
-<<<<<<< HEAD
-=======
 ipad
 iPhone
 y
@@ -144,4 +142,4 @@ OAuth
 SEO
 QUnit
 Testem
->>>>>>> upstream/master
+emailAddress/!
