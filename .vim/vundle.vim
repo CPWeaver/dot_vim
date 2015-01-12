@@ -27,6 +27,7 @@ Bundle 'Shougo/vimproc.vim'
 Bundle 'Shougo/unite.vim'
 
 Bundle 'christoomey/vim-tmux-navigator'
+Bundle 'edkolev/tmuxline.vim'
 " UI Additions
 Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'bling/vim-airline'
