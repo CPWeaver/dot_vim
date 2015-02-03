@@ -185,6 +185,7 @@ if !exists("*ToggleNERDTreeAndTagbar")
   endfunction
 endif
 nnoremap <leader>ss :call ToggleNERDTreeAndTagbar()<CR>
+nnoremap <leader>nn :call NERDTreeToggle()<CR>
 
 
 if !exists("*ShowNERDTree")
@@ -224,6 +225,11 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType")
 " ---------------
 let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_exclude_filetypes = ['help', 'nerdtree']
+" have to do this for hybrid
+let g:indent_guides_auto_colors = 0
+hi IndentGuidesOdd  ctermbg=235
+hi IndentGuidesEven ctermbg=236
+
 
 
 " ---------------
@@ -334,7 +340,8 @@ endif
 " ---------------
 " airline
 " ---------------
-let g:airline_theme = 'jellybeans'
+"let g:airline_solarized_bg = 'dark'
+let g:airline_theme = 'hybrid'
 let g:airline_powerline_fonts = 1
 let g:airline_detect_modified = 1
 let g:airline#extensions#eclim#enabled = 1
@@ -358,6 +365,8 @@ let g:airline_section_c = '%t'
 " ---------------
 " Make cssAttrs (center, block, etc.) the same color as units
 hi! link cssAttr Constant
+"let g:jellybeans_use_lowcolor_black = 0
+
 ''
 " ------------------------------------
 " Rainbow parens (solarized palette)
