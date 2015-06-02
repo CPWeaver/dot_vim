@@ -5,12 +5,12 @@
 " ---------------
 " Color
 " ---------------
+syntax enable
+"let g:solarized_termcolors=256
+"let base16colorspace=256
 set background=dark
-colorscheme jellybeans
-" Force 256 color mode if available
-if $TERM =~ "-256color"
-   set t_Co=256
-endif
+"let g:hybrid_use_Xresources = 1
+colorscheme hybrid
 
 " -----------------------------
 " File Locations
@@ -50,7 +50,6 @@ endif
 " ---------------
 " Behaviors
 " ---------------
-syntax enable
 set backup             " Turn on backups
 set autoread           " Automatically reload changes if detected
 set wildmenu           " Turn on WiLd menu
@@ -101,6 +100,8 @@ set matchtime=2 " How many tenths of a second to blink
 set list
 " Ignore whitespace changes in vimdiff
 set diffopt+=iwhite
+
+set cursorline
 
 " Show trailing spaces as dots and carrots for extended lines.
 " From Janus, http://git.io/PLbAlw
