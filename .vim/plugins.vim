@@ -417,15 +417,15 @@ let g:dbext_default_profile = 'docbrown'
 "" switch.vim
 "" ---------------
 "nnoremap - :Switch<cr>
-"
-"" ---------------
-"" indenthtml
-"" ---------------
-"" Setup indenthtml to propertly indent html. Without this, formatting doesn't
-"" work on html.
-"let g:html_indent_inctags = "html,body,head,tbody"
-"let g:html_indent_script1 = "inc"
-"let g:html_indent_style1 = "inc"
+
+" ---------------
+" indenthtml
+" ---------------
+" Setup indenthtml to propertly indent html. Without this, formatting doesn't
+" work on html.
+let g:html_indent_inctags = "html,body,head,tbody"
+let g:html_indent_script1 = "inc"
+let g:html_indent_style1 = "inc"
 "
 " ---------------
 " Unconditional Paste
@@ -555,7 +555,7 @@ let g:signify_sign_overwrite = 0
 "" ------
 "" ColorV
 "" ------
-"let g:colorv_preview_ftype = 'css,html,javascript,scss,stylus'
+let g:colorv_preview_ftype = 'css,html,javascript,scss,stylus'
 "
 "-------------
 " CoffeeScript
