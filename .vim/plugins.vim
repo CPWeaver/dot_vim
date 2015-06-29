@@ -88,6 +88,8 @@ endif
 "let g:syntastic_java_checkstyle_classpath = '/usr/share/java/checkstyle.jar'
 "let g:syntastic_java_checkstyle_conf = '~/dev/chatws/config/checkstyle/checkstyle.xml'
 
+let g:syntastic_html_checkers=['']
+
 "--------------------
 " vim-tags
 "--------------------

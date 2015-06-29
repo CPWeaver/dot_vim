@@ -103,6 +103,7 @@ Bundle 'indenthtml.vim'
 "   Other Languages
 Bundle 'hail2u/vim-css3-syntax'
 Bundle 'groenewege/vim-less'
+Bundle 'wavded/vim-stylus'
 Bundle 'tpope/vim-cucumber'
 Bundle 'dansomething/ftl-vim-syntax'
 Bundle 'tfnico/vim-gradle'
