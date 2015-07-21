@@ -77,7 +77,7 @@ Bundle 'Valloric/YouCompleteMe'
 Bundle 'SirVer/ultisnips'
 Bundle 'honza/vim-snippets'
 Bundle 'szw/vim-tags'
-"Bundle 'airblade/vim-rooter'
+Bundle 'airblade/vim-rooter'
 Bundle 'vim-scripts/dbext.vim'
 " Language Additions
 "   Clojure
