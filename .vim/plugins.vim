@@ -170,9 +170,12 @@ if !exists("*ToggleNERDTreeAndTagbar")
       TagbarOpen
     elseif tagbar_open
       TagbarClose
-      NERDTreeFind
+      if &filetype == ""
+        NERDTree
+      else
+        NERDTreeFind
+      endif
     else
-      "NERDTreeToggle
       TagbarOpen
     endif
 
@@ -187,7 +190,6 @@ if !exists("*ToggleNERDTreeAndTagbar")
   endfunction
 endif
 nnoremap <leader>ss :call ToggleNERDTreeAndTagbar()<CR>
-nnoremap <leader>nn :call NERDTreeToggle()<CR>
 
 
 if !exists("*ShowNERDTree")
@@ -201,7 +203,11 @@ if !exists("*ShowNERDTree")
     if tagbar_open
       TagbarClose
     endif
-    NERDTreeFind
+    if &filetype == ""
+      NERDTree
+    else
+      NERDTreeFind
+    endif
 
     " Jump back to the original window
     for window in range(1, winnr('$'))
