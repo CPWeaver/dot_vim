@@ -594,3 +594,12 @@ let g:tmuxline_preset = {
     \ 'z'    : "Net:#(~/.tmux/plugins/tmux-online-status/scripts/online_status_icon.sh)Bat:#(~/.tmux/plugins/tmux-battery/scripts/battery_icon.sh)#(~/.tmux/plugins/tmux-battery/scripts/battery_percentage.sh) CPU:#(~/.tmux/plugins/tmux-cpu/scripts/cpu_percentage.sh)"
     \ }
 
+" --------
+" vim-move
+" --------
+
+let g:move_map_keys = 0
+nmap j <Plug>MoveLineDown
+nmap k <Plug>MoveLineUp
+vmap j <Plug>MoveBlockDown
+vmap k <Plug>MoveBlockUp
