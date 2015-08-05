@@ -603,3 +603,15 @@ nmap j <Plug>MoveLineDown
 nmap k <Plug>MoveLineUp
 vmap j <Plug>MoveBlockDown
 vmap k <Plug>MoveBlockUp
+" osx mappings, option+j/k with option mapped to ESC+
+nmap ∆ <Plug>MoveLineDown
+nmap ˚ <Plug>MoveLineUp
+vmap ∆ <Plug>MoveBlockDown
+vmap ˚ <Plug>MoveBlockUp
+
+
+
+"" ------
+"" AnsiEsc
+"" ------
+nnoremap <Leader>a :AnsiEsc<CR>
