@@ -604,10 +604,10 @@ nmap k <Plug>MoveLineUp
 vmap j <Plug>MoveBlockDown
 vmap k <Plug>MoveBlockUp
 " osx mappings, option+j/k with option mapped to ESC+
-nmap ∆ <Plug>MoveLineDown
-nmap ˚ <Plug>MoveLineUp
-vmap ∆ <Plug>MoveBlockDown
-vmap ˚ <Plug>MoveBlockUp
+nmap ê <Plug>MoveLineDown
+nmap ë <Plug>MoveLineUp
+vmap ê <Plug>MoveBlockDown
+vmap ë <Plug>MoveBlockUp
 
 
 
