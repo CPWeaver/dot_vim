@@ -10,7 +10,12 @@ syntax enable
 "let base16colorspace=256
 set background=dark
 "let g:hybrid_use_Xresources = 1
+"let g:hybrid_custom_term_colors=1
 colorscheme hybrid
+
+"if has("nvim")
+  "let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+"endif
 
 " -----------------------------
 " File Locations
@@ -56,7 +61,12 @@ set wildmenu           " Turn on WiLd menu
 set hidden             " Change buffer - without saving
 set history=768        " Number of things to remember in history.
 set cf                 " Enable error files & error jumping.
-set clipboard=autoselect,exclude:cons\|linux,unnamed " Yanks go on clipboard instead.
+
+if !has("nvim")
+  " not supported yet
+  set clipboard=autoselect,exclude:cons\|linux,unnamed
+endif
+
 set autowrite          " Writes on make/shell commands
 set timeoutlen=450     " Time to wait for a command (after leader for example).
 set nofoldenable       " Disable folding entirely.

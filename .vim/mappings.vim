@@ -40,6 +40,12 @@ nnoremap go o<Esc>k
 nnoremap gO O<Esc>j
 
 " ---------------
+" Tabs Movement
+" ---------------
+nnoremap <silent> <leader>ts :tab split<CR>
+nnoremap <silent> <leader>tc :tabclose<CR>
+
+" ---------------
 " Window Movement
 " ---------------
 nnoremap <silent> gh :WriteBufferIfNecessary<CR>:wincmd h<CR>
@@ -80,7 +86,7 @@ nnoremap <silent> g3 :wincmd t<Bar>:wincmd j<CR>
 nnoremap <silent> g4 :wincmd b<CR>
 
 " Top Middle
-nnoremap <silent> gt :wincmd t<Bar>:wincmd l<CR>
+"nnoremap <silent> gt :wincmd t<Bar>:wincmd l<CR>
 " Bottom Middle
 nnoremap <silent> gb :wincmd b<Bar>:wincmd h<CR>
 

@@ -26,7 +26,7 @@ let g:EclimLoggingDisabled=1
 nnoremap <Leader>ef :JavaFormat<CR>
 nnoremap <Leader>ei :JavaImport<CR>
 nnoremap <Leader>eio :JavaImportOrganize<CR>
-nnoremap <Leader>eg :JavaSearchContext<CR>
+nnoremap <Leader>eg :JavaSearchContext -a tabnew<CR>
 nnoremap <Leader>et :JavaHierarchy<CR>
 nnoremap <Leader>er :JavaRename
 nnoremap <Leader>ej :JUnit<CR>
@@ -290,7 +290,7 @@ command! Gcundo :Git reset HEAD~1
 " Zoomwin
 " ---------------
 " Zoom Window to Full Size
-nnoremap <silent> <leader>wo :ZoomWin<CR>
+"nnoremap <silent> <leader>wo :ZoomWin<CR>
 
 ""---------------
 "" unite.vim
