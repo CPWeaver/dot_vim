@@ -65,6 +65,8 @@ set cf                 " Enable error files & error jumping.
 if !has("nvim")
   " not supported yet
   set clipboard=autoselect,exclude:cons\|linux,unnamed
+else
+  set clipboard+=unnamedplus
 endif
 
 set autowrite          " Writes on make/shell commands
