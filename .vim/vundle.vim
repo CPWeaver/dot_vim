@@ -27,7 +27,7 @@ Bundle 'Shougo/vimproc.vim'
 Bundle 'Shougo/unite.vim'
 
 Bundle 'christoomey/vim-tmux-navigator'
-Bundle 'edkolev/tmuxline.vim'
+"Bundle 'edkolev/tmuxline.vim'
 " UI Additions
 Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'vim-airline/vim-airline'
@@ -126,3 +126,4 @@ Bundle 'ajh17/Spacegray.vim'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'chriskempson/base16-vim'
 Bundle 'matze/vim-move'
+Bundle 'ChrisHonniball/vim-task'

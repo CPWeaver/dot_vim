@@ -8,15 +8,15 @@
 syntax enable
 "let g:solarized_termcolors=256
 "let base16colorspace=256
+
+if has("nvim")
+  let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+endif
+
 set background=dark
 "let g:hybrid_use_Xresources = 1
 "let g:hybrid_custom_term_colors=1
 colorscheme hybrid
-
-"if has("nvim")
-  "let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-"endif
-
 " -----------------------------
 " File Locations
 " -----------------------------

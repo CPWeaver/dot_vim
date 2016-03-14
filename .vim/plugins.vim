@@ -599,15 +599,16 @@ let g:tmuxline_preset = {
 " --------
 
 let g:move_map_keys = 0
+
 nmap j <Plug>MoveLineDown
 nmap k <Plug>MoveLineUp
 vmap j <Plug>MoveBlockDown
 vmap k <Plug>MoveBlockUp
 " osx mappings, option+j/k with option mapped to ESC+
-nmap ê <Plug>MoveLineDown
-nmap ë <Plug>MoveLineUp
-vmap ê <Plug>MoveBlockDown
-vmap ë <Plug>MoveBlockUp
+nmap ∆ <Plug>MoveLineDown
+nmap ˚ <Plug>MoveLineUp
+vmap Ô <Plug>MoveBlockDown
+vmap  <Plug>MoveBlockUp
 
 
 
