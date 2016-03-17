@@ -111,6 +111,7 @@ Bundle 'tpope/vim-cucumber'
 Bundle 'dansomething/ftl-vim-syntax'
 Bundle 'tfnico/vim-gradle'
 Bundle 'andersoncustodio/vim-tmux'
+Bundle 'tmux-plugins/vim-tmux-focus-events'
 "" MatchIt
 Bundle 'matchit.zip'
 "Bundle 'kana/vim-textobj-user'

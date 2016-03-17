@@ -483,8 +483,10 @@ let g:delimitMate_expand_cr=1
 " ---------------
 " Ultisnips
 " ---------------
-let g:UltiSnipsExpandTrigger="<leader><Enter>"
+let g:UltiSnipsExpandTrigger="<C-l>"
 let g:UltiSnipsListSnippets="<leader><tab>"
+let g:UltiSnipsJumpForwardTrigger="<C-j>"
+let g:UltiSnipsJumpBackwardTrigger="<C-k>"
 
 " ---------------
 " vim-signify
@@ -607,8 +609,8 @@ vmap k <Plug>MoveBlockUp
 " osx mappings, option+j/k with option mapped to ESC+
 nmap ∆ <Plug>MoveLineDown
 nmap ˚ <Plug>MoveLineUp
-vmap Ô <Plug>MoveBlockDown
-vmap  <Plug>MoveBlockUp
+vmap ∆ <Plug>MoveBlockDown
+vmap ˚ <Plug>MoveBlockUp
 
 
 
