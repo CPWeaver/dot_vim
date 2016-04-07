@@ -84,6 +84,8 @@ else
   let g:syntastic_javascript_jsl_conf=$HOME.'/.vim/config/unix/syntastic/jsl.conf'
 endif
 
+let g:syntastic_javascript_checkers=['jshint', 'jscs']
+
 "let g:syntastic_java_checkers = ['javac', 'checkstyle']
 "let g:syntastic_java_checkstyle_classpath = '/usr/share/java/checkstyle.jar'
 "let g:syntastic_java_checkstyle_conf = '~/dev/chatws/config/checkstyle/checkstyle.xml'
@@ -234,9 +236,9 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType")
 let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_exclude_filetypes = ['help', 'nerdtree']
 " have to do this for hybrid
-let g:indent_guides_auto_colors = 0
-hi IndentGuidesOdd  ctermbg=235
-hi IndentGuidesEven ctermbg=236
+"let g:indent_guides_auto_colors = 0
+"hi IndentGuidesOdd  ctermbg=235
+"hi IndentGuidesEven ctermbg=236
 
 
 
