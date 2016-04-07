@@ -28,7 +28,7 @@ if has("autocmd")
 
     " Fix trailing whitespace in my most used programming langauges
     autocmd BufWritePre *.py,*.coffee,*.css,*.less,*.js,
-	  \*.rb,*.erb,*.groovy,*.java,*.php,*.ftl,*.md,*.vim,Cakefile,*.hbs 
+	  \*.rb,*.erb,*.groovy,*.java,*.php,*.ftl,*.md,*.vim,Cakefile,*.hbs
 	  \ silent! :StripTrailingWhiteSpace
 
     " Help mode bindings
@@ -43,11 +43,8 @@ if has("autocmd")
 
     autocmd BufRead,BufNewFile .jshintrc,.bowerrc set filetype=json
 
-    " Enable Rainbow Parentheses
-    autocmd VimEnter * RainbowParenthesesToggle
-    autocmd Syntax * RainbowParenthesesLoadRound
-    autocmd Syntax * RainbowParenthesesLoadSquare
-    autocmd Syntax * RainbowParenthesesLoadBraces
+    " This breaks Rainbow Parentheses for js
+    autocmd FileType javascript syntax clear jsFuncBlock
 
     " Fix accidental indentation in html files
     " from http://morearty.com/blog/2013/01/22/fixing-vims-indenting-of-html-files.html

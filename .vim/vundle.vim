@@ -41,7 +41,7 @@ Bundle 'mhinz/vim-startify'
 Bundle 'tpope/vim-obsession'
 Bundle 'mbbill/undotree'
 "Bundle 'jszakmeister/vim-togglecursor'
-Bundle 'kien/rainbow_parentheses.vim'
+Bundle 'oblitum/rainbow'
 "" Commands
 "Bundle 'dansomething/vim-eclim'
 Bundle 'eclim'
