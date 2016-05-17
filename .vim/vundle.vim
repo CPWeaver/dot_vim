@@ -27,7 +27,7 @@ Bundle 'Shougo/vimproc.vim'
 Bundle 'Shougo/unite.vim'
 
 Bundle 'christoomey/vim-tmux-navigator'
-"Bundle 'edkolev/tmuxline.vim'
+Bundle 'edkolev/tmuxline.vim'
 " UI Additions
 Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'vim-airline/vim-airline'
@@ -41,7 +41,7 @@ Bundle 'mhinz/vim-startify'
 Bundle 'tpope/vim-obsession'
 Bundle 'mbbill/undotree'
 "Bundle 'jszakmeister/vim-togglecursor'
-Bundle 'oblitum/rainbow'
+Bundle 'luochen1990/rainbow'
 "" Commands
 "Bundle 'dansomething/vim-eclim'
 Bundle 'eclim'
