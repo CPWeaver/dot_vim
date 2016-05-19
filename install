@@ -3,9 +3,6 @@
 DOT_VIM="https://github.com/CPWeaver/dot_vim.git"
 CMDS="git vim"
 
-VUNDLE="https://github.com/gmarik/Vundle.vim.git"
-VUNDLE_TARGET="$HOME/.vim/bundle/vundle"
-
 # Check for necessary commands
 for cmd in $CMDS; do
   hash $cmd >/dev/null 2>&1 || {
@@ -25,13 +22,3 @@ source "$HOME/.homesick/repos/homeshick/homeshick.sh"
 # Install dot_vim files
 homeshick clone $DOT_VIM
 homeshick symlink dot_vim
-
-if [ -s $VUNDLE_TARGET ]; then
-  echo "Vundle exists, skipping install."
-else
-  echo "Installing Vundle"
-  git clone $VUNDLE $VUNDLE_TARGET
-fi
-
-echo "Installing vim plugins via Vundle"
-vim +PluginInstall! +qall
