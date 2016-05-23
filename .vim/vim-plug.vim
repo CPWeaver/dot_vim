@@ -74,6 +74,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'scrooloose/syntastic'
   "Plug 'ervandew/supertab'
   Plug 'Valloric/MatchTagAlways'
+  Plug 'FooSoft/vim-argwrap', { 'on': 'ArgWrap' }
 
   function! BuildYCM(info)
     if a:info.status == 'installed' || a:info.force
@@ -81,7 +82,7 @@ call plug#begin('~/.vim/plugged')
     endif
   endfunction
 
-  Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
+  Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM'), 'commit': 'cb57569' }
   Plug 'SirVer/ultisnips'
   Plug 'honza/vim-snippets'
   Plug 'airblade/vim-rooter'
@@ -102,7 +103,6 @@ call plug#begin('~/.vim/plugged')
   Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
   Plug 'elzr/vim-json', { 'for': 'json' }
   Plug 'othree/javascript-libraries-syntax.vim', { 'for': ['javascript', 'coffee'] }
-  Plug 'claco/jasmine.vim'
     "HTML
   Plug 'nono/vim-handlebars', { 'for' : ['html', 'hbs'] }
   Plug 'othree/html5.vim', { 'for' : ['html', 'hbs'] }
