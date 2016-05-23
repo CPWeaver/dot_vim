@@ -24,7 +24,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'Shougo/unite.vim'
 
   Plug 'christoomey/vim-tmux-navigator'
-  Plug 'edkolev/tmuxline.vim'
+  Plug 'edkolev/tmuxline.vim', {'on' : []}
 
   " UI Additions
   Plug 'nathanaelkane/vim-indent-guides'
