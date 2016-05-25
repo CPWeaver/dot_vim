@@ -5,18 +5,19 @@
 " ---------------
 " Vundle
 " ---------------
-command! ReloadVundle source ~/.vim/vundle.vim
+command! ReloadVimPlug source ~/.vim/vim-plug.vim
 if !exists("*PluginReloadAndRun")
 function PluginReloadAndRun(command)
-    :ReloadVundle
+    :ReloadVimPlug
     execute a:command
   endfunction
 endif
 
 
-nnoremap <Leader>pi :call PluginReloadAndRun("PluginInstall")<CR>
-nnoremap <Leader>pu :call PluginReloadAndRun("PluginInstall!")<CR>
-nnoremap <Leader>pc :call PluginReloadAndRun("PluginClean")<CR>
+nnoremap <Leader>pi :call PluginReloadAndRun("PlugInstall")<CR>
+nnoremap <Leader>pu :call PluginReloadAndRun("PlugUpdate!")<CR>
+nnoremap <Leader>pc :call PluginReloadAndRun("PlugClean")<CR>
+nnoremap <Leader>ps :call PluginReloadAndRun("PlugStatus")<CR>
 
 " -------
 " Eclim
