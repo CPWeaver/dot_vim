@@ -25,6 +25,7 @@ call plug#begin('~/.vim/plugged')
 
   Plug 'christoomey/vim-tmux-navigator'
   Plug 'edkolev/tmuxline.vim', {'on' : []}
+  Plug 'edkolev/promptline.vim'
 
   " UI Additions
   Plug 'nathanaelkane/vim-indent-guides'
@@ -53,7 +54,7 @@ call plug#begin('~/.vim/plugged')
   "Plug 'tpope/vim-abolish'
   "Plug 'scratch.vim'
   Plug 'mattn/emmet-vim'
-  "Plug 'AndrewRadev/switch.vim'
+  Plug 'AndrewRadev/switch.vim'
   "Plug 'tpope/vim-eunuch'
   Plug 'mutewinter/UnconditionalPaste'
   "TODO: This guy steps on p by default.
@@ -78,11 +79,12 @@ call plug#begin('~/.vim/plugged')
 
   function! BuildYCM(info)
     if a:info.status == 'installed' || a:info.force
-      !./install.py --clang-completer
+      !./install.py --clang-completer --tern-completer
     endif
   endfunction
 
-  Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM'), 'commit': 'cb57569' }
+  "Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM'), 'commit': 'cb57569' }
+  Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
   Plug 'SirVer/ultisnips'
   Plug 'honza/vim-snippets'
   Plug 'airblade/vim-rooter'
