@@ -82,7 +82,7 @@ call plug#begin('~/.vim/plugged')
     endif
   endfunction
 
-  Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM'), 'commit': 'cb57569' }
+  Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
   Plug 'SirVer/ultisnips'
   Plug 'honza/vim-snippets'
   Plug 'airblade/vim-rooter'
