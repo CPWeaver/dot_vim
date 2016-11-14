@@ -10,6 +10,7 @@ syntax enable
 "let base16colorspace=256
 
 if has("nvim")
+  set termguicolors
   let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 endif
 

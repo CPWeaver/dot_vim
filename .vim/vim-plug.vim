@@ -115,6 +115,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'tfnico/vim-gradle', { 'for': 'groovy'}
   Plug 'andersoncustodio/vim-tmux', { 'for': 'tmux' }
   Plug 'tmux-plugins/vim-tmux-focus-events'
+  Plug 'hashivim/vim-terraform'
   " MatchIt
   Plug 'matchit.zip'
   "Plug 'kana/vim-textobj-user'
