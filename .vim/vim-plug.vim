@@ -24,7 +24,8 @@ call plug#begin('~/.vim/plugged')
   Plug 'Shougo/unite.vim'
 
   Plug 'christoomey/vim-tmux-navigator'
-  Plug 'edkolev/tmuxline.vim', {'on' : []}
+  " This fork supports true colors!
+  Plug 'weihanglo/tmuxline.vim'
   Plug 'edkolev/promptline.vim'
 
   " UI Additions
