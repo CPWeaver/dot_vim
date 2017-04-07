@@ -42,6 +42,7 @@ if has("autocmd")
     autocmd FileType css,coffee,javascript,html setlocal omnifunc=syntaxcomplete#Complete
 
     autocmd BufRead,BufNewFile .jshintrc,.bowerrc set filetype=json
+    autocmd BufRead,BufNewFile *.tmux set filetype=tmux
 
     " This breaks Rainbow Parentheses for js
     autocmd FileType javascript syntax clear jsFuncBlock

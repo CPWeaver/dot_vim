@@ -114,7 +114,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'groenewege/vim-less', { 'for' : 'less' }
   Plug 'tpope/vim-cucumber', { 'for' : ['feature', 'story'] }
   Plug 'tfnico/vim-gradle', { 'for': 'groovy'}
-  Plug 'andersoncustodio/vim-tmux', { 'for': 'tmux' }
+  Plug 'tmux-plugins/vim-tmux', { 'for': 'tmux' }
   Plug 'tmux-plugins/vim-tmux-focus-events'
   Plug 'hashivim/vim-terraform'
   " MatchIt
