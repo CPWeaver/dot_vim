@@ -515,10 +515,8 @@ let g:delimitMate_expand_cr=1
 " ---------------
 " Ultisnips
 " ---------------
-let g:UltiSnipsExpandTrigger="<C-l>"
+let g:UltiSnipsExpandTrigger="<C-j>"
 let g:UltiSnipsListSnippets="<leader><tab>"
-let g:UltiSnipsJumpForwardTrigger="<C-j>"
-let g:UltiSnipsJumpBackwardTrigger="<C-k>"
 
 " ---------------
 " vim-signify
