@@ -72,6 +72,7 @@ let g:syntastic_mode_map = { 'mode': 'active',
                            \ 'active_filetypes': [],
                            \ 'passive_filetypes': ['scss'] }
 
+let g:syntastic_javascript_checkers = ['eslint']
 " Hat tip http://git.io/SPIBfg
 let g:syntastic_error_symbol = '✗'
 let g:syntastic_warning_symbol = '⚠'
@@ -368,8 +369,6 @@ let g:airline_mode_map = {
       \ 'c'  : 'CMD',
       \ '' : 'VB',
       \ }
-" Just show the file name
-let g:airline_section_c = '%t'
 
 " ---------------
 " jellybeans.vim colorscheme tweaks
@@ -517,6 +516,7 @@ let g:delimitMate_expand_cr=1
 " ---------------
 let g:UltiSnipsExpandTrigger="<C-j>"
 let g:UltiSnipsListSnippets="<leader><tab>"
+let g:UltiSnipsSnippetsDir="~/.vim/UltiSnips"
 
 " ---------------
 " vim-signify

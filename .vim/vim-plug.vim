@@ -19,6 +19,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'Lokaltog/vim-easymotion'
   Plug 'ctrlpvim/ctrlp.vim'
   Plug 'rking/ag.vim', { 'on': 'Ag' }
+  Plug 'roxma/vim-window-resize-easy'
 
   Plug 'Shougo/vimproc.vim'
   Plug 'Shougo/unite.vim'
