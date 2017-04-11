@@ -72,7 +72,6 @@ let g:syntastic_mode_map = { 'mode': 'active',
                            \ 'active_filetypes': [],
                            \ 'passive_filetypes': ['scss'] }
 
-let g:syntastic_javascript_checkers = ['eslint']
 " Hat tip http://git.io/SPIBfg
 let g:syntastic_error_symbol = '✗'
 let g:syntastic_warning_symbol = '⚠'
@@ -86,7 +85,7 @@ else
   let g:syntastic_javascript_jsl_conf=$HOME.'/.vim/config/unix/syntastic/jsl.conf'
 endif
 
-let g:syntastic_javascript_checkers=['jshint', 'jscs']
+let g:syntastic_javascript_checkers=['jshint', 'jscs', 'eslint']
 
 "let g:syntastic_java_checkers = ['javac', 'checkstyle']
 "let g:syntastic_java_checkstyle_classpath = '/usr/share/java/checkstyle.jar'
@@ -514,7 +513,7 @@ let g:delimitMate_expand_cr=1
 " ---------------
 " Ultisnips
 " ---------------
-let g:UltiSnipsExpandTrigger="<C-j>"
+let g:UltiSnipsExpandTrigger="<C-l>"
 let g:UltiSnipsListSnippets="<leader><tab>"
 let g:UltiSnipsSnippetsDir="~/.vim/UltiSnips"
 
@@ -632,10 +631,10 @@ let g:tmuxline_preset = {
 
 let g:move_map_keys = 0
 
-nmap j <Plug>MoveLineDown
-nmap k <Plug>MoveLineUp
-vmap j <Plug>MoveBlockDown
-vmap k <Plug>MoveBlockUp
+nmap <M-j> <Plug>MoveLineDown
+nmap <M-k> <Plug>MoveLineUp
+vmap <M-j> <Plug>MoveBlockDown
+vmap <M-k> <Plug>MoveBlockUp
 " osx mappings, option+j/k with option mapped to ESC+
 nmap ∆ <Plug>MoveLineDown
 nmap ˚ <Plug>MoveLineUp

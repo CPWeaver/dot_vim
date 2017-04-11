@@ -1,5 +1,35 @@
+#Mocha
 snippet mocha.it "Unit Test"
-it('${1:should do something}', ($2) => {
+it('should ${1:do something}', ($2) => {
 	${0}
 });
 endsnippet
+
+snippet mocha.describe "Unit Test Suite"
+describe('${1:'thing to test'}', () => {
+	${0}
+});
+endsnippet
+
+snippet mocha.beforeEach "beforeEach block"
+beforeEach(() => {
+	${0}
+});
+endsnippet
+
+snippet mocha.afterEach "afterEach block"
+afterEach(() => {
+	${0}
+});
+endsnippet
+
+# Chai 
+snippet chai.rejected "Promise rejected"
+expect(${1:null}).to.eventually.be.rejected;
+endsnippet
+
+
+snippet chai.fulfilled "Promise fulfilled"
+expect(${1:null}).to.eventually.be.fulfilled;
+endsnippet
+
