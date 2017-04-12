@@ -2,6 +2,10 @@
 " Regular Vim Configuration (No Plugins Needed)
 " ---------------------------------------------
 
+" Fixes common typos
+command! W w
+command! Q q
+
 " ---------------
 " Color
 " ---------------

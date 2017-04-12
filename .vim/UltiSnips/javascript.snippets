@@ -33,3 +33,9 @@ snippet chai.fulfilled "Promise fulfilled"
 expect(${1:null}).to.eventually.be.fulfilled;
 endsnippet
 
+# General
+snippet then "Promise then"
+.then((${1}) => {
+	${0}
+});
+endsnippet

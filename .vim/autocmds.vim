@@ -41,8 +41,6 @@ if has("autocmd")
     " Enable autocomplete based on syntax
     autocmd FileType css,coffee,javascript,html setlocal omnifunc=syntaxcomplete#Complete
 
-    autocmd BufRead,BufNewFile .jshintrc,.bowerrc set filetype=json
-    autocmd BufRead,BufNewFile *.tmux set filetype=tmux
 
     " This breaks Rainbow Parentheses for js
     autocmd FileType javascript syntax clear jsFuncBlock
@@ -60,6 +58,8 @@ if has("autocmd")
 
   " Use java.groovy file type for groovy
   augroup filetypedetect
+    autocmd BufNew,BufNewFile,BufRead *.tmux set filetype=tmux
+    autocmd BufNew,BufNewFile,BufRead .jshintrc,.bowerrc set filetype=json
     autocmd BufNew,BufNewFile,BufRead *.groovy set filetype=java.groovy
     autocmd BufNew,BufNewFile,BufRead Jenkinsfile set filetype=groovy
   augroup END
