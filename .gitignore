@@ -3,6 +3,7 @@ sessions
 .DS_Store
 extra.vim
 .vim/autoload/
+.vim/.netrwhist
 /.netrwhist
 /spell/custom.en.utf-8.add.spl
 tags
