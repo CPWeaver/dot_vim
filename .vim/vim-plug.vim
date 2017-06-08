@@ -44,7 +44,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'luochen1990/rainbow'
   " Commands
   "Plug 'dansomething/vim-eclim'
-  Plug 'eclim'
+  "Plug 'eclim'
   Plug 'scrooloose/nerdcommenter'
   Plug 'tpope/vim-surround'
   Plug 'tpope/vim-fugitive'
@@ -88,6 +88,8 @@ call plug#begin('~/.vim/plugged')
   Plug 'airblade/vim-rooter'
   "Plug 'vim-scripts/dbext.vim'
   "Language Additions
+    " LaTeX
+  Plug 'vim-latex/vim-latex', {'for': 'tex'}
     "Clojure
   "Plug 'tpope/vim-fireplace'
   "Plug 'tpope/vim-classpath'
@@ -106,7 +108,7 @@ call plug#begin('~/.vim/plugged')
     "HTML
   Plug 'nono/vim-handlebars', { 'for' : ['html', 'hbs'] }
   Plug 'othree/html5.vim', { 'for' : ['html', 'hbs'] }
-  Plug 'indenthtml.vim', { 'for' : ['html', 'hbs'] }
+  Plug 'vim-scripts/indenthtml.vim', { 'for' : ['html', 'hbs'] }
     "Other Languages
   Plug 'hail2u/vim-css3-syntax', { 'for' : ['css', 'less', 'sass'] }
   Plug 'groenewege/vim-less', { 'for' : 'less' }
@@ -116,11 +118,11 @@ call plug#begin('~/.vim/plugged')
   Plug 'tmux-plugins/vim-tmux-focus-events'
   Plug 'hashivim/vim-terraform'
   " MatchIt
-  Plug 'matchit.zip'
+  Plug 'vim-scripts/matchit.zip'
   "Plug 'kana/vim-textobj-user'
   "Plug 'nelstrom/vim-textobj-rubyblock'
   "Libraries
-  Plug 'L9'
+  Plug 'vim-scripts/L9'
   Plug 'tpope/vim-repeat'
   Plug 'vim-scripts/groovy.vim'
   "Plug 'mattn/webapi-vim'
