@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-DOT_VIM="git://github.com:CPWeaver/dot_vim.git"
+DOT_VIM="git@github.com:CPWeaver/dot_vim.git"
 CMDS="git vim"
 
 # Check for necessary commands
