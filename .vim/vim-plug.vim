@@ -89,7 +89,7 @@ call plug#begin('~/.vim/plugged')
   "Plug 'vim-scripts/dbext.vim'
   "Language Additions
     " LaTeX
-  Plug 'vim-latex/vim-latex', {'for': 'tex'}
+  Plug 'lervag/vimtex', {'for': 'tex'}
     "Clojure
   "Plug 'tpope/vim-fireplace'
   "Plug 'tpope/vim-classpath'
