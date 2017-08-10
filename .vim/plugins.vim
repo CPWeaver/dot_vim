@@ -354,6 +354,8 @@ endif
 "let g:airline_solarized_bg = 'dark'
 let g:airline_theme = 'hybrid'
 let g:airline_powerline_fonts = 1
+let g:airline_left_sep = ''
+let g:airline_right_sep = ''
 let g:airline_detect_modified = 1
 let g:airline#extensions#eclim#enabled = 1
 let g:airline#extensions#hunks#enabled = 0
@@ -643,6 +645,10 @@ vmap ˚ <Plug>MoveBlockUp
 " vim-argwrap
 " ----------
 nnoremap <silent> <leader>a :ArgWrap<CR>
+
+"let g:WebDevIconsUnicodeDecorateFileNodesPatternSymbols = {}
+"let g:WebDevIconsUnicodeDecorateFileNodesPatternSymbols['Jenkinsfile'] = ''
+"let g:WebDevIconsUnicodeDecorateFileNodesPatternSymbols['Dockerfile'] = ''
 
 
 "" ------
