@@ -608,9 +608,14 @@ nnoremap <silent> <leader>vc :CoffeeWatch vert<CR>
 nnoremap <Leader>ut :UndotreeToggle<CR>
 
 "------------
+" prosession
+"------------
+let g:prosession_on_startup = 0
+
+"------------
 " vim-rooter
 "------------
-" Look for node, gradle build files
+" Look for gradle build files
 let g:rooter_patterns = ['.git', 'package.json', 'build.gradle', 'pom.xml', '.git/', '_darcs/', '.hg/', '.bzr/', '.svn/']
 
 let g:tmuxline_preset = {

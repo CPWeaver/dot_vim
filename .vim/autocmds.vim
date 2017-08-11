@@ -59,7 +59,7 @@ if has("autocmd")
   " Use java.groovy file type for groovy
   augroup filetypedetect
     autocmd BufNew,BufNewFile,BufRead *.tmux set filetype=tmux
-    autocmd BufNew,BufNewFile,BufRead .jshintrc,.bowerrc set filetype=json
+    autocmd BufNew,BufNewFile,BufRead .tern-project,.jshintrc,.bowerrc set filetype=json
     autocmd BufNew,BufNewFile,BufRead *.groovy set filetype=java.groovy
     autocmd BufNew,BufNewFile,BufRead Jenkinsfile set filetype=groovy
   augroup END

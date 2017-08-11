@@ -39,6 +39,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'mhinz/vim-signify'
   Plug 'mhinz/vim-startify'
   Plug 'tpope/vim-obsession'
+  Plug 'dhruvasagar/vim-prosession', {'depends': 'tpope/vim-obsession'}
   Plug 'mbbill/undotree'
   "Plug 'jszakmeister/vim-togglecursor'
   Plug 'luochen1990/rainbow'
@@ -77,9 +78,9 @@ call plug#begin('~/.vim/plugged')
   Plug 'FooSoft/vim-argwrap', { 'on': 'ArgWrap' }
 
   function! BuildYCM(info)
-    if a:info.status == 'installed' || a:info.force
-      !./install.py --clang-completer --tern-completer
-    endif
+   if a:info.status == 'installed' || a:info.force
+     !./install.py --clang-completer --tern-completer
+   endif
   endfunction
 
   Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
@@ -88,9 +89,9 @@ call plug#begin('~/.vim/plugged')
   Plug 'airblade/vim-rooter'
   "Plug 'vim-scripts/dbext.vim'
   "Language Additions
-    " LaTeX
+   " LaTeX
   Plug 'lervag/vimtex', {'for': 'tex'}
-    "Clojure
+   "Clojure
   "Plug 'tpope/vim-fireplace'
   "Plug 'tpope/vim-classpath'
   "Plug 'guns/vim-clojure-static'
@@ -100,16 +101,16 @@ call plug#begin('~/.vim/plugged')
   "Plug 'tpope/vim-haml'
   "Plug 'tpope/vim-rails'
   "Plug 'tpope/vim-rake'
-    "JavaScript
+   "JavaScript
   Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
   Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
   Plug 'elzr/vim-json', { 'for': 'json' }
   Plug 'othree/javascript-libraries-syntax.vim', { 'for': ['javascript', 'coffee'] }
-    "HTML
+   "HTML
   Plug 'nono/vim-handlebars', { 'for' : ['html', 'hbs'] }
   Plug 'othree/html5.vim', { 'for' : ['html', 'hbs'] }
   Plug 'vim-scripts/indenthtml.vim', { 'for' : ['html', 'hbs'] }
-    "Other Languages
+   "Other Languages
   Plug 'hail2u/vim-css3-syntax', { 'for' : ['css', 'less', 'sass'] }
   Plug 'groenewege/vim-less', { 'for' : 'less' }
   Plug 'tpope/vim-cucumber', { 'for' : ['feature', 'story'] }

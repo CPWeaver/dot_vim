@@ -1,12 +1,12 @@
 #Mocha
-snippet mocha.it "Unit Test"
+snippet mit "Unit Test"
 it('should ${1:do something}', ($2) => {
 	${0}
 });
 endsnippet
 
 snippet mocha.describe "Unit Test Suite"
-describe('${1:'thing to test'}', () => {
+describe('${1:thing to test}', () => {
 	${0}
 });
 endsnippet
@@ -38,4 +38,10 @@ snippet then "Promise then"
 .then((${1}) => {
 	${0}
 });
+endsnippet
+
+snippet () "Arrow function"
+(${1}) => {
+	${0}
+}
 endsnippet
