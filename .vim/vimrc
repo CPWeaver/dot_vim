@@ -22,3 +22,6 @@ let extraFile=expand("~/.vim/extra.vim")
 if filereadable(extraFile)
   exe "source" . extraFile
 endif
+
+highlight Comment cterm=italic
+highlight Comment gui=italic

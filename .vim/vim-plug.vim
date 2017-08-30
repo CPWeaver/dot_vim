@@ -36,13 +36,16 @@ call plug#begin('~/.vim/plugged')
   Plug 'Xuyuanp/nerdtree-git-plugin'
   Plug 'majutsushi/tagbar' | Plug 'szw/vim-tags'
   Plug 'Rykka/colorv.vim'
+
   Plug 'mhinz/vim-signify'
   Plug 'mhinz/vim-startify'
   Plug 'tpope/vim-obsession'
   Plug 'dhruvasagar/vim-prosession', {'depends': 'tpope/vim-obsession'}
   Plug 'mbbill/undotree'
-  "Plug 'jszakmeister/vim-togglecursor'
+  Plug 'jszakmeister/vim-togglecursor'
+
   Plug 'luochen1990/rainbow'
+
   " Commands
   "Plug 'dansomething/vim-eclim'
   "Plug 'eclim'
