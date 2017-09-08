@@ -26,7 +26,7 @@ call plug#begin('~/.vim/plugged')
 
   Plug 'christoomey/vim-tmux-navigator'
   " This fork supports true colors!
-  Plug 'weihanglo/tmuxline.vim'
+  Plug 'CPWeaver/tmuxline.vim'
   Plug 'edkolev/promptline.vim'
 
   " UI Additions
@@ -82,7 +82,7 @@ call plug#begin('~/.vim/plugged')
 
   function! BuildYCM(info)
    if a:info.status == 'installed' || a:info.force
-     !./install.py --clang-completer --tern-completer
+     !./install.py --clang-completer --gocode-completer --tern-completer
    endif
   endfunction
 
