@@ -62,5 +62,7 @@ if has("autocmd")
     autocmd BufNew,BufNewFile,BufRead .tern-project,.jshintrc,.bowerrc set filetype=json
     autocmd BufNew,BufNewFile,BufRead *.groovy set filetype=java.groovy
     autocmd BufNew,BufNewFile,BufRead Jenkinsfile set filetype=groovy
+    autocmd BufNew,BufNewFile,BufRead *.cfm set filetype=eoz
+    autocmd BufNew,BufNewFile,BufRead *.cfc set filetype=eoz
   augroup END
 endif

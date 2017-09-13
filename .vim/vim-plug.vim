@@ -54,6 +54,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-fugitive'
   Plug 'tpope/vim-dispatch'
   Plug 'godlygeek/tabular', { 'on': 'Tabularize' }
+  Plug 'junegunn/vim-easy-align'
 
   "Plug 'milkypostman/vim-togglelist'
   Plug 'AndrewRadev/sideways.vim'
@@ -121,6 +122,8 @@ call plug#begin('~/.vim/plugged')
   Plug 'tmux-plugins/vim-tmux', { 'for': 'tmux' }
   Plug 'tmux-plugins/vim-tmux-focus-events'
   Plug 'hashivim/vim-terraform'
+  Plug 'ernstvanderlinden/vim-coldfusion', { 'for': 'eoz' }
+  Plug 'fatih/vim-go', { 'for': 'go' }
   " MatchIt
   Plug 'vim-scripts/matchit.zip'
   "Plug 'kana/vim-textobj-user'

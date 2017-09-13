@@ -86,6 +86,7 @@ else
 endif
 
 let g:syntastic_javascript_checkers=['jshint', 'jscs', 'eslint']
+let g:syntastic_go_checkers = ['go', 'gofmt', 'golint']
 
 "let g:syntastic_java_checkers = ['javac', 'checkstyle']
 "let g:syntastic_java_checkstyle_classpath = '/usr/share/java/checkstyle.jar'
@@ -146,6 +147,34 @@ let g:tagbar_type_less = {
         \ 't:tag',
         \ 'v:variables',
     \ ]
+\ }
+
+let g:tagbar_type_go = {
+	\ 'ctagstype' : 'go',
+	\ 'kinds'     : [
+		\ 'p:package',
+		\ 'i:imports:1',
+		\ 'c:constants',
+		\ 'v:variables',
+		\ 't:types',
+		\ 'n:interfaces',
+		\ 'w:fields',
+		\ 'e:embedded',
+		\ 'm:methods',
+		\ 'r:constructor',
+		\ 'f:functions'
+	\ ],
+	\ 'sro' : '.',
+	\ 'kind2scope' : {
+		\ 't' : 'ctype',
+		\ 'n' : 'ntype'
+	\ },
+	\ 'scope2kind' : {
+		\ 'ctype' : 't',
+		\ 'ntype' : 'n'
+	\ },
+	\ 'ctagsbin'  : 'gotags',
+	\ 'ctagsargs' : '-sort -silent'
 \ }
 
 "" ---------------
@@ -267,6 +296,15 @@ nnoremap <Leader>t,, :Tabularize /,\zs<CR>
 vnoremap <Leader>t,, :Tabularize /,\zs<CR>
 nnoremap <Leader>t<Bar> :Tabularize /<Bar><CR>
 vnoremap <Leader>t<Bar> :Tabularize /<Bar><CR>
+
+" ---------------
+" vim-easy-align
+" ---------------
+" Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
 
 " ---------------
 " Fugitive
@@ -643,7 +681,6 @@ nmap ∆ <Plug>MoveLineDown
 nmap ˚ <Plug>MoveLineUp
 vmap ∆ <Plug>MoveBlockDown
 vmap ˚ <Plug>MoveBlockUp
-
 
 
 " ----------
