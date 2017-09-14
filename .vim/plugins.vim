@@ -544,6 +544,15 @@ let g:ycm_collect_identifiers_from_comments_and_strings=1
 " This runs me out of RAM
 "let g:ycm_collect_identifiers_from_tags_files = 1
 
+" ---------------------
+" CompleteParameter.vim
+" ---------------------
+inoremap <silent><expr> ( complete_parameter#pre_complete("()")
+smap <c-p> <Plug>(complete_parameter#goto_next_parameter)
+imap <c-p> <Plug>(complete_parameter#goto_next_parameter)
+smap <c-o> <Plug>(complete_parameter#goto_previous_parameter)
+imap <c-o> <Plug>(complete_parameter#goto_previous_parameter)
+
 "-----------------
 " DelimitMate
 "-----------------
