@@ -85,7 +85,7 @@ else
   let g:syntastic_javascript_jsl_conf=$HOME.'/.vim/config/unix/syntastic/jsl.conf'
 endif
 
-let g:syntastic_javascript_checkers=['jshint', 'jscs', 'eslint']
+let g:syntastic_javascript_checkers=['eslint']
 let g:syntastic_go_checkers = ['go', 'gofmt', 'golint']
 
 "let g:syntastic_java_checkers = ['javac', 'checkstyle']
@@ -93,6 +93,11 @@ let g:syntastic_go_checkers = ['go', 'gofmt', 'golint']
 "let g:syntastic_java_checkstyle_conf = '~/dev/chatws/config/checkstyle/checkstyle.xml'
 
 let g:syntastic_html_checkers=['']
+
+"---------------
+" vim-javascript
+"---------------
+let g:jsx_ext_required = 0
 
 "--------------------
 " vim-tags
@@ -544,14 +549,19 @@ let g:ycm_collect_identifiers_from_comments_and_strings=1
 " This runs me out of RAM
 "let g:ycm_collect_identifiers_from_tags_files = 1
 
+" -------------
+" NerdCommenter
+" -------------
+let NERDSpaceDelims=1
+
 " ---------------------
 " CompleteParameter.vim
 " ---------------------
 inoremap <silent><expr> ( complete_parameter#pre_complete("()")
-smap <c-p> <Plug>(complete_parameter#goto_next_parameter)
-imap <c-p> <Plug>(complete_parameter#goto_next_parameter)
-smap <c-o> <Plug>(complete_parameter#goto_previous_parameter)
-imap <c-o> <Plug>(complete_parameter#goto_previous_parameter)
+smap <c-o> <Plug>(complete_parameter#goto_next_parameter)
+imap <c-o> <Plug>(complete_parameter#goto_next_parameter)
+smap <c-i> <Plug>(complete_parameter#goto_previous_parameter)
+imap <c-i> <Plug>(complete_parameter#goto_previous_parameter)
 
 "-----------------
 " DelimitMate
@@ -562,9 +572,16 @@ let g:delimitMate_expand_cr=1
 " ---------------
 " Ultisnips
 " ---------------
-let g:UltiSnipsExpandTrigger="<C-l>"
+let g:UltiSnipsExpandTrigger="<leader><Enter>"
 let g:UltiSnipsListSnippets="<leader><tab>"
+let g:UltiSnipsJumpForwardTrigger="<leader>j"
+let g:UltiSnipsJumpBackwardTrigger="<leader>k"
 let g:UltiSnipsSnippetsDir="~/.vim/UltiSnips"
+
+" ---------
+" vim-emmet
+" ---------
+let g:user_emmet_leader_key='<leader>e'
 
 " ---------------
 " vim-signify

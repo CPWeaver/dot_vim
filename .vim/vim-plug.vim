@@ -30,6 +30,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'edkolev/promptline.vim'
 
   " UI Additions
+  Plug 'chrisbra/Colorizer'
   Plug 'nathanaelkane/vim-indent-guides'
   Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
   Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind', 'NERDTree'] }
@@ -108,6 +109,7 @@ call plug#begin('~/.vim/plugged')
   "Plug 'tpope/vim-rake'
    "JavaScript
   Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
+  Plug 'mxw/vim-jsx', { 'for': 'javascript' }
   Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
   Plug 'elzr/vim-json', { 'for': 'json' }
   Plug 'othree/javascript-libraries-syntax.vim', { 'for': ['javascript', 'coffee'] }
