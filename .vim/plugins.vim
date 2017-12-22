@@ -680,7 +680,7 @@ let g:prosession_on_startup = 0
 " vim-rooter
 "------------
 " Look for gradle build files
-let g:rooter_patterns = ['.git', 'package.json', 'build.gradle', 'pom.xml', '.git/', '_darcs/', '.hg/', '.bzr/', '.svn/']
+let g:rooter_patterns = ['Makefile', '.git', 'package.json', 'build.gradle', 'pom.xml', '.git/', '_darcs/', '.hg/', '.bzr/', '.svn/']
 
 let g:tmuxline_preset = {
     \ 'a'    : '❐ #S',
