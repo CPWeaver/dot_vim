@@ -79,6 +79,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'Raimondi/delimitMate'
   Plug 'scrooloose/syntastic'
   "Plug 'ervandew/supertab'
+  Plug 'Chiel92/vim-autoformat'
   Plug 'Valloric/MatchTagAlways'
   Plug 'FooSoft/vim-argwrap', { 'on': 'ArgWrap' }
 
@@ -127,6 +128,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'hashivim/vim-terraform'
   Plug 'ernstvanderlinden/vim-coldfusion', { 'for': 'eoz' }
   Plug 'fatih/vim-go', { 'for': 'go' }
+  Plug 'sebdah/vim-delve', { 'for': 'go' }
   " MatchIt
   Plug 'vim-scripts/matchit.zip'
   "Plug 'kana/vim-textobj-user'
