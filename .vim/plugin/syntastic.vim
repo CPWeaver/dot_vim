@@ -21,6 +21,7 @@ else
 endif
 
 let g:syntastic_javascript_checkers=['eslint']
+let g:syntastic_javascript_eslint_exec= 'eslint_d'
 let g:syntastic_go_checkers = ['go', 'gofmt', 'golint']
 
 "let g:syntastic_java_checkers = ['javac', 'checkstyle']
