@@ -56,6 +56,11 @@ if has("autocmd")
     autocmd! CmdwinLeave * :call MapCR()
   augroup END
 
+  augroup File-Type
+    autocmd!
+    autocmd FileType qf setlocal wrap
+  augroup END
+
   " Use java.groovy file type for groovy
   augroup filetypedetect
     autocmd BufNew,BufNewFile,BufRead *.tmux set filetype=tmux

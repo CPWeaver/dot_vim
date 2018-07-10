@@ -20,7 +20,7 @@ else
   let g:syntastic_javascript_jsl_conf=$HOME.'/.vim/config/unix/syntastic/jsl.conf'
 endif
 
-let g:syntastic_javascript_checkers=['eslint']
+let g:syntastic_javascript_checkers=['eslint', 'flow']
 let g:syntastic_javascript_eslint_exec= 'eslint_d'
 let g:syntastic_go_checkers = ['go', 'gofmt', 'golint']
 
