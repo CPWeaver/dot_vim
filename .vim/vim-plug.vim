@@ -74,7 +74,7 @@ call plug#begin('~/.vim/plugged')
   "Plug 'sk1418/Join'
   " Automatic Helpers
   Plug 'vim-scripts/SyntaxComplete'
-  Plug 'vim-scripts/AnsiEsc.vim'
+  Plug 'powerman/vim-plugin-AnsiEsc'
   Plug 'MarcWeber/vim-addon-local-vimrc'
   Plug 'Raimondi/delimitMate'
   Plug 'scrooloose/syntastic'
@@ -85,7 +85,7 @@ call plug#begin('~/.vim/plugged')
 
   function! BuildYCM(info)
    if a:info.status == 'installed' || a:info.force
-     !./install.py --clang-completer --gocode-completer --tern-completer
+     !./install.py --clang-completer --go-completer
    endif
   endfunction
 
@@ -127,7 +127,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'tmux-plugins/vim-tmux-focus-events'
   Plug 'hashivim/vim-terraform'
   Plug 'ernstvanderlinden/vim-coldfusion', { 'for': 'eoz' }
-  Plug 'fatih/vim-go', { 'for': 'go' }
+  Plug 'fatih/vim-go', { 'for': 'go', 'do': ':GoUpdateBinaries' }
   Plug 'sebdah/vim-delve', { 'for': 'go' }
   Plug 'iamcco/markdown-preview.vim'
   " MatchIt
