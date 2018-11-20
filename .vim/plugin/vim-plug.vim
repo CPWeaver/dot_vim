@@ -11,7 +11,7 @@ endif
 
 
 nnoremap <Leader>pi :call PluginReloadAndRun("PlugInstall")<CR>
-nnoremap <Leader>pu :call PluginReloadAndRun("PlugUpdate!")<CR>
+nnoremap <Leader>pu :call PluginReloadAndRun("PlugUpdate")<CR>
 nnoremap <Leader>pc :call PluginReloadAndRun("PlugClean")<CR>
 nnoremap <Leader>ps :call PluginReloadAndRun("PlugStatus")<CR>
 

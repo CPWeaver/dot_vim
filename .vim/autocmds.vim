@@ -59,6 +59,7 @@ if has("autocmd")
   augroup File-Type
     autocmd!
     autocmd FileType qf setlocal wrap
+    autocmd FileType qf AnsiEsc
   augroup END
 
   " Use java.groovy file type for groovy

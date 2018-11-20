@@ -18,6 +18,25 @@ let g:tagbar_type_coffee = {
     \ ]
 \ }
 
+let g:tagbar_type_javascript = {
+    \ 'ctagstype' : 'javascript',
+    \ 'kinds'     : [
+        \ 'C:classes',
+        \ 'M:methods',
+        \ 'F:functions',
+        \ 'V:variables',
+        \ 'v:variables',
+        \ 'A:arrays',
+        \ 'G:generators',
+        \ 'O:objects',
+        \ 'P:properties',
+        \ 'f:fields',
+        \ 'T:tags',
+        \ 'E:exports',
+        \ 'I:imports',
+    \ ]
+\ }
+
 let g:tagbar_type_groovy = {
     \ 'ctagstype' : 'groovy',
     \ 'kinds'     : [

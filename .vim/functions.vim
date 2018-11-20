@@ -255,20 +255,20 @@ nnoremap <silent> <leader>mit :MavenFailsafeTest<CR>
 " ---------------
 " Run the current file as a Gradle test
 " ---------------
-if !exists("*GradleTest")
-  function GradleTest()
-    !gw test -Dtest.single=%:t:r -i
-  endfunction
-endif
-command! GradleTest call GradleTest()
-nnoremap <silent> <leader>gt :GradleTest<CR>
+" if !exists("*GradleTest")
+  " function GradleTest()
+    " !gw test -Dtest.single=%:t:r -i
+  " endfunction
+" endif
+" command! GradleTest call GradleTest()
+" nnoremap <silent> <leader>gt :GradleTest<CR>
 
-if !exists("*CucumberCurrent")
-  function CucumberCurrent()
-     :Junit %
-  endfunction
-endif
-nnoremap <silent> <leader>cit :CucumberCurrent<cr>
+" if !exists("*CucumberCurrent")
+  " function CucumberCurrent()
+     " :Junit %
+  " endfunction
+" endif
+" nnoremap <silent> <leader>cit :CucumberCurrent<cr>
 
 " ---------------
 " Disable one diff window during a three-way diff allowing you to cut out the
