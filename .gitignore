@@ -1,5 +1,6 @@
 plugged
 sessions
+session
 .DS_Store
 extra.vim
 .vim/autoload/

@@ -35,7 +35,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
   Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind', 'NERDTree'] }
   Plug 'Xuyuanp/nerdtree-git-plugin'
-  Plug 'majutsushi/tagbar' | Plug 'szw/vim-tags'
+  Plug 'majutsushi/tagbar' "| Plug 'ludovicchabant/vim-gutentags'
   Plug 'Rykka/colorv.vim'
 
   Plug 'mhinz/vim-signify'
@@ -129,6 +129,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'ernstvanderlinden/vim-coldfusion', { 'for': 'eoz' }
   Plug 'fatih/vim-go', { 'for': 'go' }
   Plug 'sebdah/vim-delve', { 'for': 'go' }
+  Plug 'iamcco/markdown-preview.vim'
   " MatchIt
   Plug 'vim-scripts/matchit.zip'
   "Plug 'kana/vim-textobj-user'
