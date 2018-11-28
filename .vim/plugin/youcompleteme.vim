@@ -8,3 +8,21 @@ let g:ycm_collect_identifiers_from_comments_and_strings=1
 
 nnoremap  :YcmCompleter GoTo<CR>
 
+" let ALE handle diagnostics
+let g:ycm_show_diagnostics_ui = 0
+
+let g:ycm_always_populate_location_list = 1
+
+if !exists("*HideYCMDiagnostics")
+  function! HideYCMDiagnostics()
+    let g:ycm_filter_diagnostics = {
+      \  "javascript": {
+      \   "regex": [".*"],
+      \  }
+      \}
+
+    YcmRestartServer
+  endfunction
+endif
+
+nnoremap <leader>hd :call HideYCMDiagnostics()<CR>

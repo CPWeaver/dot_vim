@@ -77,7 +77,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'powerman/vim-plugin-AnsiEsc'
   Plug 'MarcWeber/vim-addon-local-vimrc'
   Plug 'Raimondi/delimitMate'
-  Plug 'scrooloose/syntastic'
+  Plug 'w0rp/ale'
   "Plug 'ervandew/supertab'
   Plug 'Chiel92/vim-autoformat'
   Plug 'Valloric/MatchTagAlways'
