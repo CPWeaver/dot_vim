@@ -1,12 +1,16 @@
 let g:ale_linters = {
-      \ 'javascript': ['eslint', 'flow']
+      \ 'javascript': ['eslint', 'flow'],
+      \ 'go': ['gofmt', 'golint', 'gobuild']
       \}
 
 let g:ale_javascript_eslint_executable = 'eslint_d'
+let g:ale_go_golint_executable = 'revive'
+let g:ale_go_golint_options = '-config revive.toml'
 
 let g:ale_fixers = {
       \ 'javascript': ['eslint', 'prettier_eslint'],
       \ 'javascript.jsx': ['eslint', 'prettier_eslint'],
+      \ 'go': ['gofmt', 'goimports'],
       \ }
 
 noremap <leader>f :ALEFix<CR>
@@ -16,9 +20,9 @@ nnoremap <leader>p :ALEPrevious<CR>
 let g:ale_sign_error = '✖'
 let g:ale_sign_warning = '⚠'
 
-let g:ale_echo_msg_format = '%severity%: %linter%: %s'
+" let g:ale_echo_msg_format = '%severity%: %linter%: %s'
 
-let g:ale_lint_on_enter = 0
+" let g:ale_lint_on_enter = 0
 
 " error list
 let g:ale_open_list = 'on_save'

@@ -109,6 +109,13 @@ set wildignore+=*/.tmp/*,*/test-output/*,*/bin/*,*/target/*,*/build/*,
       \*/node_modules/*,*.o,*.obj,*.exe,*.so,*.dll,*.pyc,.svn,.hg,.bzr,.git,
       \.sass-cache,*.class,*.scssc,*.cssc,sprockets%*,*.lessc
 
+if executable('rg')
+  set grepprg=rg\ --vimgrep\ --no-heading
+  set grepformat=%f:%l:%c:%m,%f:%l:%m
+elseif executable('ag')
+  set grepprg=ag\ --nogroup\ --nocolor
+endif
+
 " ---------------
 " Visual
 " ---------------

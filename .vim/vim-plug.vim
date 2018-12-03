@@ -17,8 +17,9 @@ call plug#begin('~/.vim/plugged')
   " This fork is required due to remapping ; to :
   "Plug 'christoomey/vim-space'
   Plug 'Lokaltog/vim-easymotion'
-  Plug 'ctrlpvim/ctrlp.vim'
-  Plug 'rking/ag.vim', { 'on': 'Ag' }
+  Plug 'mileszs/ack.vim'
+  Plug '/usr/local/opt/fzf'
+  Plug 'junegunn/fzf.vim'
   Plug 'roxma/vim-window-resize-easy'
 
   Plug 'Shougo/vimproc.vim'

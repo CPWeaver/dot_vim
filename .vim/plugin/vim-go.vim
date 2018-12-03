@@ -32,6 +32,7 @@ let $GINKGO_EDITOR_INTEGRATION = "true"
  noremap <leader>gotf :GoTestFunc<CR>
  noremap <leader>goc :GoCoverageToggle<CR>
  noremap <leader>god :GoDef<CR>
+ noremap <leader>gi :GoInstall -i<CR>
 
  autocmd FileType go nmap <leader>goo   <Plug>(go-debug-continue)
  autocmd FileType go nmap <leader>gop   <Plug>(go-debug-print)
