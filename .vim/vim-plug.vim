@@ -54,6 +54,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'scrooloose/nerdcommenter'
   Plug 'tpope/vim-surround'
   Plug 'tpope/vim-fugitive'
+  Plug 'tpope/vim-rhubarb'
   Plug 'tpope/vim-dispatch'
   Plug 'godlygeek/tabular', { 'on': 'Tabularize' }
   Plug 'junegunn/vim-easy-align'
@@ -85,7 +86,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'FooSoft/vim-argwrap', { 'on': 'ArgWrap' }
 
   function! BuildYCM(info)
-   if a:info.status == 'installed' || a:info.force
+   if a:info.status != 'unchanged' || a:info.force
      !./install.py --clang-completer --go-completer
    endif
   endfunction

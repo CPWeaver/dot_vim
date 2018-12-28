@@ -37,11 +37,11 @@ let $GINKGO_EDITOR_INTEGRATION = "true"
  autocmd FileType go nmap dst   :GoDebugStart<CR>
  autocmd FileType go nmap dop   :GoDebugStop<CR>
  autocmd FileType go nmap dc   <Plug>(go-debug-continue)
- autocmd FileType go nmap dp   <Plug>(go-debug-print)
+ autocmd FileType go nmap dr   <Plug>(go-debug-print)
  autocmd FileType go nmap dpr   :GoDebugPrint
  autocmd FileType go nmap db   <Plug>(go-debug-breakpoint)
  autocmd FileType go nmap dn  <Plug>(go-debug-next)
- autocmd FileType go nmap ds  <Plug>(go-debug-step)
+ autocmd FileType go nmap dx  <Plug>(go-debug-step)
  " autocmd FileType go nmap <leader>gob :<C-u>call <SID>build_go_files()<CR>
 
 
