@@ -37,7 +37,6 @@ call plug#begin('~/.vim/plugged')
   Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind', 'NERDTree'] }
   Plug 'Xuyuanp/nerdtree-git-plugin'
   Plug 'majutsushi/tagbar' "| Plug 'ludovicchabant/vim-gutentags'
-  Plug 'Rykka/colorv.vim'
 
   Plug 'mhinz/vim-signify'
   Plug 'mhinz/vim-startify'

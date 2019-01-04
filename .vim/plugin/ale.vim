@@ -1,6 +1,15 @@
+call ale#linter#Define('go', {
+\   'name': 'revive',
+\   'output_stream': 'both',
+\   'executable': 'revive',
+\   'read_buffer': 0,
+\   'command': 'revive %t',
+\   'callback': 'ale#handlers#unix#HandleAsWarning',
+\})
+
 let g:ale_linters = {
       \ 'javascript': ['eslint', 'flow'],
-      \ 'go': ['gofmt', 'golint', 'gobuild']
+      \ 'go': ['gofmt', 'golint', 'gobuild', 'revive']
       \}
 
 let g:ale_javascript_eslint_executable = 'eslint_d'
