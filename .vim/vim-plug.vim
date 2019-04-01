@@ -27,7 +27,7 @@ call plug#begin('~/.vim/plugged')
 
   Plug 'christoomey/vim-tmux-navigator'
   " This fork supports true colors!
-  Plug 'CPWeaver/tmuxline.vim'
+  Plug 'edkolev/tmuxline.vim'
   Plug 'edkolev/promptline.vim'
 
   " UI Additions
