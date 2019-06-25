@@ -9,12 +9,13 @@ call ale#linter#Define('go', {
 
 let g:ale_linters = {
       \ 'javascript': ['eslint', 'flow'],
-      \ 'go': ['gofmt', 'golint', 'gobuild', 'revive']
+      \ 'go': ['gopls', 'gofmt', 'golint', 'gobuild', 'revive']
       \}
 
 let g:ale_javascript_eslint_executable = 'eslint_d'
 let g:ale_go_golint_executable = 'revive'
 let g:ale_go_golint_options = '-config revive.toml'
+let g:ale_go_govet_options = '-composites=false'
 
 let g:ale_fixers = {
       \ 'javascript': ['eslint', 'prettier_eslint'],

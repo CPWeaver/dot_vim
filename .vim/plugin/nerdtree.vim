@@ -2,8 +2,8 @@
 " NERDTree
 " ---------------
 
-if !exists("*ToggleNERDTreeAndTagbar")
-  function! ToggleNERDTreeAndTagbar()
+if !exists("*ToggleNERDTreeAndVista")
+  function! ToggleNERDTreeAndVista()
     let w:jumpbacktohere = 1
 
     " Detect which plugins are open
@@ -12,24 +12,24 @@ if !exists("*ToggleNERDTreeAndTagbar")
     else
       let nerdtree_open = 0
     endif
-    let tagbar_open = bufwinnr('__Tagbar__') != -1
+    let vista_open = bufwinnr('__vista__') != -1
 
     " Perform the appropriate action
-    if nerdtree_open && tagbar_open
+    if nerdtree_open && vista_open
       NERDTreeClose
-      TagbarClose
+      Vista!
     elseif nerdtree_open
       NERDTreeClose
-      TagbarOpen
-    elseif tagbar_open
-      TagbarClose
+      Vista
+    elseif vista_open
+      Vista!
       if &filetype == ""
         NERDTree
       else
         NERDTreeFind
       endif
     else
-      TagbarOpen
+      Vista
     endif
 
     " Jump back to the original window
@@ -42,7 +42,7 @@ if !exists("*ToggleNERDTreeAndTagbar")
     endfor
   endfunction
 endif
-nnoremap <leader>ss :call ToggleNERDTreeAndTagbar()<CR>
+nnoremap <leader>ss :call ToggleNERDTreeAndVista()<CR>
 
 
 if !exists("*ShowNERDTree")
@@ -50,11 +50,11 @@ if !exists("*ShowNERDTree")
     let w:jumpbacktohere = 1
 
     " Detect which plugins are open
-    let tagbar_open = bufwinnr('__Tagbar__') != -1
+    let vista_open = bufwinnr('__vista__') != -1
 
     " Perform the appropriate action
-    if tagbar_open
-      TagbarClose
+    if vista_open
+      Vista!
     endif
     if &filetype == ""
       NERDTree

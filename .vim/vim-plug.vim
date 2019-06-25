@@ -36,7 +36,8 @@ call plug#begin('~/.vim/plugged')
   Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
   Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind', 'NERDTree'] }
   Plug 'Xuyuanp/nerdtree-git-plugin'
-  Plug 'majutsushi/tagbar' "| Plug 'ludovicchabant/vim-gutentags'
+  " Plug 'majutsushi/tagbar' "| Plug 'ludovicchabant/vim-gutentags'
+  Plug 'liuchengxu/vista.vim'
 
   Plug 'mhinz/vim-signify'
   Plug 'mhinz/vim-startify'
@@ -91,8 +92,11 @@ call plug#begin('~/.vim/plugged')
   endfunction
 
   Plug 'SirVer/ultisnips'
-  Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
-  Plug 'tenfyzhong/CompleteParameter.vim'
+  " Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
+
+  Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
+
+  " Plug 'tenfyzhong/CompleteParameter.vim'
   Plug 'honza/vim-snippets'
   Plug 'airblade/vim-rooter'
   "Plug 'vim-scripts/dbext.vim'

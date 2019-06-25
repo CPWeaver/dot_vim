@@ -7,7 +7,7 @@ nnoremap <Leader>gl :Glog<CR>
 nnoremap <Leader>gll :Glog --graph --pretty=oneline --abbrev-commit -n 20<CR>
 nnoremap <Leader>gc :Gcommit -v<CR>
 nnoremap <Leader>gw :Gwrite<CR>
-nnoremap <Leader>gs :Gstatus<CR>
+nnoremap <Leader>G :Gstatus<CR>
 nnoremap <Leader>gp :Git push<CR>
  " Mnemonic, gu = Git Update
 nnoremap <Leader>gu :Git pull<CR>

@@ -1,0 +1,17 @@
+{
+  "suggest.triggerCompletionWait": 300,
+  "diagnostic.enable": false,
+  "diagnostic.displayByAle": true,
+  "languageserver": {
+    "golang": {
+      "trace.server": "verbose",
+      "command":"gopls",
+      "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
+      "filetypes": ["go"],
+    }
+  },
+  "codeLens.enable": true,
+  "suggest.enablePreview": true,
+  "suggest.triggerAfterInsertEnter": true,
+  "coc.preferences.previewAutoClose": false
+}
