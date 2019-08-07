@@ -1,11 +1,21 @@
 "" ---------------
 "" switch.vim
 "" ---------------
+let g:switch_mapping="-"
 nnoremap - :Switch<cr>
 autocmd FileType coffee let g:switch_custom_definitions =
     \ [
     \   [' ->', ' =>', ' (done) ->', ' (done) =>'],
     \ ]
+
+autocmd FileType markdown let g:switch_custom_definitions =
+    \ [
+    \   {
+    \     '^\(\s*-\s\?\)\[\]': '\1\[x\]',
+    \     '^\(\s*-\s\?\)\[x\]': '\1\[\]',
+    \   },
+    \ ]
+
 autocmd BufNewFile,BufRead *[Ss]pec.coffee let g:switch_custom_definitions =
     \ [
     \   {
@@ -31,4 +41,3 @@ autocmd BufNewFile,BufRead *[Ss]pec.js let g:switch_custom_definitions =
     \     '^\(\s\+\)it.only\(([^)]\+)\)':  '\1it\2',
     \   }
     \ ]
-

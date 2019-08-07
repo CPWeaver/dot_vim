@@ -9,7 +9,7 @@ call ale#linter#Define('go', {
 
 let g:ale_linters = {
       \ 'javascript': ['eslint', 'flow'],
-      \ 'go': ['gopls', 'gofmt', 'golint', 'gobuild', 'revive']
+      \ 'go': ['gopls', 'gofmt', 'golint', 'gobuild', 'revive', 'vet']
       \}
 
 let g:ale_javascript_eslint_executable = 'eslint_d'
