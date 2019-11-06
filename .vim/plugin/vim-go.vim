@@ -1,7 +1,7 @@
 " --------------
 " vim-go
 " --------------
-let g:go_bin_path = "/Users/cweaver/dev/invision/go/bin"
+" let g:go_bin_path = "/Users/cweaver/dev/invision/go/bin"
 
 " run :GoBuild or :GoTestCompile based on the go file
 function! s:build_go_files()
@@ -43,6 +43,3 @@ let $GINKGO_EDITOR_INTEGRATION = "true"
  autocmd FileType go nmap dn  <Plug>(go-debug-next)
  autocmd FileType go nmap dx  <Plug>(go-debug-step)
  " autocmd FileType go nmap <leader>gob :<C-u>call <SID>build_go_files()<CR>
-
-
-

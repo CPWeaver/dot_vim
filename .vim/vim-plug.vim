@@ -156,5 +156,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'ChrisHonniball/vim-task'
   Plug 'editorconfig/editorconfig-vim'
   Plug 'ryanoasis/vim-devicons'
+
+  Plug 'APZelos/blamer.nvim'
 call plug#end()
 

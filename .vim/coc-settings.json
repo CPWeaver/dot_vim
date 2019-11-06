@@ -3,6 +3,12 @@
   "diagnostic.enable": false,
   "diagnostic.displayByAle": true,
   "languageserver": {
+    "bash": {
+      "command": "bash-language-server",
+      "args": ["start"],
+      "filetypes": ["sh"],
+      "ignoredRootPaths": ["~"]
+    },
     "golang": {
       "trace.server": "verbose",
       "command":"gopls",
