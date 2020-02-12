@@ -2,6 +2,13 @@
 " Rainbow parens (solarized palette)
 " ------------------------------------
 autocmd FileType javascript syntax clear jsFuncBlock
+
+let g:rainbow_conf = {
+  \    'separately': {
+    \        'nerdtree':0,
+  \   }
+  \ }
+
 let g:rainbow_active = 1
 "let g:rbpt_colorpairs = [
     "\ ['136',  '#b58900'],

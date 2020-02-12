@@ -15,6 +15,10 @@ endfunction
 
 let g:go_def_mapping_enabled = 0
 
+" let g:go_auto_sameids = 1
+" let g:go_auto_type_info = 1
+
+
 let g:go_highlight_types = 1
 let g:go_highlight__extra_types = 1
 let g:go_highlight_fields = 1
@@ -23,13 +27,14 @@ let g:go_highlight_function_calls = 1
 let g:go_highlight_operators = 1
 let g:go_fmt_command="goimports"
 
-let g:go_term_enabled = 1
-let g:go_term_mode = "below split"
-let g:go_term_height = 15
+" let g:go_term_enabled = 1
+" let g:go_term_mode = "below split"
+" let g:go_term_height = 15
 
 let $GINKGO_EDITOR_INTEGRATION = "true"
 
  noremap <leader>got :GoTest<CR>
+ noremap <leader>t :GoTest<CR>
  noremap <leader>gotf :GoTestFunc<CR>
  noremap <leader>goc :GoCoverageToggle<CR>
  noremap <leader>god :GoDef<CR>
