@@ -25,7 +25,12 @@ let g:go_highlight_fields = 1
 let g:go_highlight_functions = 1
 let g:go_highlight_function_calls = 1
 let g:go_highlight_operators = 1
-let g:go_fmt_command="goimports"
+" let g:go_fmt_command="goimports"
+let g:go_fmt_command="gopls"
+let g:go_rename_command="gopls"
+let g:go_gopls_staticheck = 1
+let g:go_gopls_complete_unimported = 1
+let g:go_gopls_use_placeholders = 1
 
 " let g:go_term_enabled = 1
 " let g:go_term_mode = "below split"
@@ -40,6 +45,7 @@ let $GINKGO_EDITOR_INTEGRATION = "true"
  noremap <leader>god :GoDef<CR>
  noremap <leader>gi :GoInstall -i<CR>
  noremap <leader>gr :GoReferrers<CR>
+ noremap <leader>ga :GoAlternate<CR>
 
  autocmd FileType go nmap dst   :GoDebugStart<CR>
  autocmd FileType go nmap dop   :GoDebugStop<CR>

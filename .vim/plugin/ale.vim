@@ -9,7 +9,7 @@ call ale#linter#Define('go', {
 
 let g:ale_linters = {
       \ 'javascript': ['eslint', 'flow'],
-      \ 'go': ['gopls', 'gofmt', 'golint', 'gobuild', 'revive', 'vet']
+      \ 'go': ['gofmt', 'gobuild', 'revive', 'vet']
       \}
 
 let g:ale_javascript_eslint_executable = 'eslint_d'
@@ -30,7 +30,7 @@ nnoremap <leader>p :ALEPrevious<CR>
 let g:ale_sign_error = '✖'
 let g:ale_sign_warning = '⚠'
 
-" let g:ale_echo_msg_format = '%severity%: %linter%: %s'
+let g:ale_echo_msg_format = '%severity%: %linter%: %s'
 
 " let g:ale_lint_on_enter = 0
 

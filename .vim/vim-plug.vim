@@ -119,6 +119,9 @@ call plug#begin('~/.vim/plugged')
   Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
   Plug 'elzr/vim-json', { 'for': 'json' }
   Plug 'othree/javascript-libraries-syntax.vim', { 'for': ['javascript', 'coffee'] }
+
+  Plug 'leafgarland/typescript-vim', { 'for': ['typescript']}
+  Plug 'peitalin/vim-jsx-typescript', { 'for': ['typescript']}
    "HTML
   Plug 'nono/vim-handlebars', { 'for' : ['html', 'hbs'] }
   Plug 'othree/html5.vim', { 'for' : ['html', 'hbs'] }
