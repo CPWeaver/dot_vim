@@ -77,6 +77,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'SirVer/ultisnips'
 
   Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
+  Plug 'antoinemadec/coc-fzf'
 
   " Plug 'tenfyzhong/CompleteParameter.vim'
   Plug 'honza/vim-snippets'
