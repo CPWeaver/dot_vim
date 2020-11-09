@@ -14,9 +14,20 @@ command! FZFMru call fzf#run({
 endfunction
 
 " Leader Commands
-nnoremap <leader>r :Files<CR>
+nnoremap <leader>t :Files<CR>
+nnoremap <leader>f :Files<CR>
 nnoremap <leader>b :Buffers<CR>
 nnoremap <leader>m :History<CR>
+
+nnoremap \ :Rg<space>
+nnoremap <leader>ag :Rg<space>
+vnoremap <leader>ag "xy :Rg "<C-R>x"
+nnoremap <leader>sag :Rg <C-R><C-W>
+
+" bind K to grep highlighted text
+vnoremap K "xy :Rg "<C-R>x"<CR>
+" bind K to grep word under cursor
+nnoremap K :Rg "\b<C-R><C-W>\b"<CR>
 
 nnoremap <leader>u :FZFMru<CR>
 
