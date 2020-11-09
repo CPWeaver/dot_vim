@@ -1,4 +1,3 @@
-
 {
   "suggest.triggerCompletionWait": 300,
   "diagnostic.enable": true,
@@ -27,6 +26,7 @@
     }
   },
   "codeLens.enable": true,
+  "suggest.enablePreselect": true,
   "suggest.enablePreview": true,
   "suggest.triggerAfterInsertEnter": true,
   "coc.preferences.previewAutoClose": false
