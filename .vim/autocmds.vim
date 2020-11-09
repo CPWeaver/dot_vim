@@ -38,6 +38,10 @@ if has("autocmd")
     autocmd filetype help nnoremap <buffer><bs> <c-T>
     autocmd filetype help nnoremap <buffer>q :q<CR>
 
+
+    " Quickly close other window types
+    autocmd filetype qf nnoremap <buffer>q :q<CR>
+
     " Enable autocomplete based on syntax
     autocmd FileType css,coffee,javascript,html setlocal omnifunc=syntaxcomplete#Complete
 
