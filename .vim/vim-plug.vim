@@ -14,16 +14,11 @@ call plug#begin('~/.vim/plugged')
 
   " Navigation
   Plug 'regedarek/ZoomWin', {'on': 'ZoomWin' }
-  " This fork is required due to remapping ; to :
-  "Plug 'christoomey/vim-space'
   Plug 'Lokaltog/vim-easymotion'
-  Plug 'mileszs/ack.vim'
+  " Plug 'mileszs/ack.vim'
   Plug '/usr/local/opt/fzf'
   Plug 'junegunn/fzf.vim'
   Plug 'roxma/vim-window-resize-easy'
-
-  Plug 'Shougo/vimproc.vim'
-  Plug 'Shougo/unite.vim'
 
   Plug 'christoomey/vim-tmux-navigator'
   " This fork supports true colors!
@@ -36,7 +31,6 @@ call plug#begin('~/.vim/plugged')
   Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
   Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind', 'NERDTree'] }
   Plug 'Xuyuanp/nerdtree-git-plugin'
-  " Plug 'majutsushi/tagbar' "| Plug 'ludovicchabant/vim-gutentags'
   Plug 'liuchengxu/vista.vim'
 
   Plug 'mhinz/vim-signify'
@@ -46,8 +40,8 @@ call plug#begin('~/.vim/plugged')
   Plug 'mbbill/undotree'
   Plug 'jszakmeister/vim-togglecursor'
 
-  Plug 'luochen1990/rainbow'
-
+  " Plug 'luochen1990/rainbow'
+  Plug 'kien/rainbow_parentheses.vim'
   " Commands
   "Plug 'dansomething/vim-eclim'
   "Plug 'eclim'
@@ -67,13 +61,8 @@ call plug#begin('~/.vim/plugged')
   Plug 'AndrewRadev/switch.vim'
   "Plug 'tpope/vim-eunuch'
   Plug 'mutewinter/UnconditionalPaste'
-  "TODO: This guy steps on p by default.
-  "Plug 'sickill/vim-pasta'
-  "Plug 'skalnik/vim-vroom'
-  "Plug 'HelpClose'
-  "Plug 'mattn/gist-vim'
   Plug 'nelstrom/vim-visual-star-search'
-  "Plug 'sk1418/Join'
+  j
   " Automatic Helpers
   Plug 'vim-scripts/SyntaxComplete'
   Plug 'powerman/vim-plugin-AnsiEsc'
@@ -85,21 +74,14 @@ call plug#begin('~/.vim/plugged')
   Plug 'Valloric/MatchTagAlways'
   Plug 'FooSoft/vim-argwrap', { 'on': 'ArgWrap' }
 
-  function! BuildYCM(info)
-   if a:info.status != 'unchanged' || a:info.force
-     !./install.py --clang-completer --go-completer
-   endif
-  endfunction
-
   Plug 'SirVer/ultisnips'
-  " Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
 
   Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
 
   " Plug 'tenfyzhong/CompleteParameter.vim'
   Plug 'honza/vim-snippets'
   Plug 'airblade/vim-rooter'
-  "Plug 'vim-scripts/dbext.vim'
+
   "Language Additions
    " LaTeX
   Plug 'lervag/vimtex', {'for': 'tex'}
