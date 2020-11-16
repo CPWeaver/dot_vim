@@ -25,6 +25,7 @@
       }
     }
   },
+  "yaml.trace.server":"verbose",
   "codeLens.enable": true,
   "suggest.enablePreselect": true,
   "suggest.enablePreview": true,
