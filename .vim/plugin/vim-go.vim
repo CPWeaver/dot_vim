@@ -31,6 +31,7 @@ let g:go_rename_command="gopls"
 let g:go_metalinter_autosave = 0
 let g:go_gopls_staticheck = 1
 let g:go_gopls_complete_unimported = 1
+let g:go_alternate_mode='vsplit'
 " let g:go_gopls_use_placeholders = 1
 
 " let g:go_term_enabled = 1
@@ -48,6 +49,7 @@ let $GINKGO_EDITOR_INTEGRATION = "true"
  noremap <leader>gi :GoInstall -i<CR>
  noremap <leader>gr :GoReferrers<CR>
  noremap <leader>a :GoAlternate<CR>
+ noremap ge :GoGenerate<CR>
 
  autocmd FileType go nmap dst   :GoDebugStart<CR>
  autocmd FileType go nmap dop   :GoDebugStop<CR>

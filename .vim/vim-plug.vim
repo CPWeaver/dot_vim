@@ -29,7 +29,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'chrisbra/Colorizer'
   Plug 'nathanaelkane/vim-indent-guides'
   Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
-  Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind', 'NERDTree'] }
+  Plug 'scrooloose/nerdtree'
   Plug 'Xuyuanp/nerdtree-git-plugin'
   Plug 'liuchengxu/vista.vim'
 
@@ -69,8 +69,8 @@ call plug#begin('~/.vim/plugged')
   Plug 'MarcWeber/vim-addon-local-vimrc'
   Plug 'Raimondi/delimitMate'
   Plug 'w0rp/ale'
-  "Plug 'ervandew/supertab'
-  Plug 'Chiel92/vim-autoformat'
+
+  " Plug 'Chiel92/vim-autoformat'
   Plug 'Valloric/MatchTagAlways'
   Plug 'FooSoft/vim-argwrap', { 'on': 'ArgWrap' }
 
@@ -79,11 +79,11 @@ call plug#begin('~/.vim/plugged')
   Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
   Plug 'antoinemadec/coc-fzf'
 
-  " Plug 'tenfyzhong/CompleteParameter.vim'
   Plug 'honza/vim-snippets'
   Plug 'airblade/vim-rooter'
 
-  "Language Additions
+  Plug 'puremourning/vimspector'
+"Language Additions
    " LaTeX
   Plug 'lervag/vimtex', {'for': 'tex'}
    "Clojure

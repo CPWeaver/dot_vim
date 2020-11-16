@@ -73,7 +73,27 @@ if !exists("*ShowNERDTree")
   endfunction
 endif
 
+if !exists("*ShowVista")
+  function! ShowVista()
+    " let w:jumpbacktohere = 1
+
+    NERDTreeClose
+    Vista!! focus
+
+    " Jump back to the original window
+    " for window in range(1, winnr('$'))
+      " execute window . 'wincmd w'
+      " if exists('w:jumpbacktohere')
+        " unlet w:jumpbacktohere
+        " break
+      " endif
+    " endfor
+  endfunction
+endif
+
+
 nnoremap <leader>nf :call ShowNERDTree()<CR>
+nnoremap <leader>vf :Vista!! focus<CR>
 let g:NERDTreeWinSize = 40
 let g:NERDTreeShowBookmarks = 1
 let g:NERDTreeChDirMode = 2 " Change the NERDTree directory to the root node
