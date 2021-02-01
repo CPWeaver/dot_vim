@@ -31,3 +31,5 @@ nnoremap K :Rg "\b<C-R><C-W>\b"<CR>
 
 nnoremap <leader>u :FZFMru<CR>
 
+let g:fzf_history_dir = '~/.local/share/fzf-history'
+

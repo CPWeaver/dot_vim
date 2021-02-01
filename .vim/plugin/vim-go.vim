@@ -31,7 +31,7 @@ let g:go_rename_command="gopls"
 let g:go_metalinter_autosave = 0
 let g:go_gopls_staticheck = 1
 let g:go_gopls_complete_unimported = 1
-let g:go_alternate_mode='vsplit'
+" let g:go_alternate_mode='vsplit'
 " let g:go_gopls_use_placeholders = 1
 
 " let g:go_term_enabled = 1

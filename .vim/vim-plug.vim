@@ -48,6 +48,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'scrooloose/nerdcommenter'
   Plug 'tpope/vim-surround'
   Plug 'tpope/vim-fugitive'
+  Plug 'junegunn/gv.vim'
   Plug 'tpope/vim-rhubarb'
   Plug 'tpope/vim-dispatch'
   Plug 'godlygeek/tabular', { 'on': 'Tabularize' }
@@ -67,7 +68,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'vim-scripts/SyntaxComplete'
   Plug 'powerman/vim-plugin-AnsiEsc'
   Plug 'MarcWeber/vim-addon-local-vimrc'
-  Plug 'Raimondi/delimitMate'
+  Plug 'jiangmiao/auto-pairs'
   Plug 'w0rp/ale'
 
   " Plug 'Chiel92/vim-autoformat'
@@ -143,6 +144,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'editorconfig/editorconfig-vim'
   Plug 'ryanoasis/vim-devicons'
 
+  Plug 'whiteinge/diffconflicts'
   Plug 'APZelos/blamer.nvim'
 call plug#end()
 

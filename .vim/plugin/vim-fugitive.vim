@@ -3,7 +3,6 @@
 " ---------------
 nnoremap <Leader>gb :Gblame<CR>
 " Show commit log of current file
-nnoremap <Leader>gl :Glog<CR>
 nnoremap <Leader>gll :Glog --graph --pretty=oneline --abbrev-commit -n 20<CR>
 nnoremap <Leader>gc :Gcommit -v<CR>
 nnoremap <Leader>gw :Gwrite<CR>
