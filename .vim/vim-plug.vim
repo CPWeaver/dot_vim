@@ -13,7 +13,7 @@ call plug#begin('~/.vim/plugged')
 " Plugins go here
 
   " Navigation
-  Plug 'regedarek/ZoomWin', {'on': 'ZoomWin' }
+  Plug 'dhruvasagar/vim-zoom'
   Plug 'Lokaltog/vim-easymotion'
   " Plug 'mileszs/ack.vim'
   Plug '/usr/local/opt/fzf'
@@ -55,7 +55,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'junegunn/vim-easy-align'
 
   "Plug 'milkypostman/vim-togglelist'
-  Plug 'AndrewRadev/sideways.vim'
+  Plug 'AndrewRadev/sideways.vim', { 'branch': 'main' }
   "Plug 'tpope/vim-abolish'
   "Plug 'scratch.vim'
   Plug 'mattn/emmet-vim'
@@ -134,7 +134,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'nanotech/jellybeans.vim'
   Plug 'Pychimp/vim-luna'
   Plug 'w0ng/vim-hybrid'
-  Plug 'ajh17/Spacegray.vim'
+  Plug 'ajh17/Spacegray.vim', { 'branch': 'main' }
   Plug 'altercation/vim-colors-solarized'
   "Plug 'chriskempson/base16-vim'
   "This branch is regenerated with more color schames

@@ -2,5 +2,5 @@
 " Zoomwin
 " ---------------
 " Zoom Window to Full Size
-"nnoremap <silent> <leader>wo :ZoomWin<CR>
+nmap <leader>zo <Plum>(zoom-toggle)
 
