@@ -18,7 +18,10 @@
       "command":"gopls",
       "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
       "filetypes": ["go"],
+      "args": ["-remote=auto"],
       "initializationOptions": {
+        "local":"github.com/InVisionApp",
+        "buildFlags":["-tags=wireinject", "-tags=integration"],
         "staticcheck": true,
         "usePlaceholders": true,
         "completeUnimported": true
@@ -30,5 +33,14 @@
   "suggest.enablePreselect": true,
   "suggest.enablePreview": true,
   "suggest.triggerAfterInsertEnter": true,
-  "coc.preferences.previewAutoClose": false
+  "coc.preferences.previewAutoClose": false,
+  "explorer.icon.enableNerdfont": true,
+  "explorer.icon.enableVimDevicons": true,
+  "explorer.file.autoReveal":true,
+  "explorer.file.showHiddenFiles":true,
+  "explorer.file.revealWhenOpen":true,
+  "explorer.width": 50,
+  "explorer.keyMappings.global": {
+    "gl": false
+  }
 }

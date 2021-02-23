@@ -294,3 +294,15 @@ endfunction
 nmap <silent> <leader>dl :call DiffToggle(1)<cr>
 nmap <silent> <leader>dc :call DiffToggle(2)<cr>
 nmap <silent> <leader>dr :call DiffToggle(3)<cr>
+
+if !exists("*RestartCOC")
+  function RestartCOC()
+    if CocAction('runCommand', 'explorer.getNodeInfo', 'closest') isnot# v:null
+      exe ':CocCommand explorer --quit'
+    endif
+    exe ':CocRestart'
+  endfunction
+
+  nnoremap <silent><nowait> <space>r  :call RestartCOC()<CR>
+endif
+

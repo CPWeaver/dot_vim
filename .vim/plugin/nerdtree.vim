@@ -42,7 +42,7 @@ if !exists("*ToggleNERDTreeAndVista")
     endfor
   endfunction
 endif
-nnoremap <leader>ss :call ToggleNERDTreeAndVista()<CR>
+" nnoremap <leader>ss :call ToggleNERDTreeAndVista()<CR>
 
 
 if !exists("*ShowNERDTree")
@@ -92,7 +92,7 @@ if !exists("*ShowVista")
 endif
 
 
-nnoremap <leader>nf :call ShowNERDTree()<CR>
+" nnoremap <leader>nf :call ShowNERDTree()<CR>
 nnoremap <leader>vf :Vista!! focus<CR>
 let g:NERDTreeWinSize = 40
 let g:NERDTreeShowBookmarks = 1

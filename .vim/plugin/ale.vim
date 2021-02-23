@@ -1,6 +1,7 @@
+" \ 'go': ['gobuild', 'golangci-lint', 'golint']
 let g:ale_linters = {
       \ 'javascript': ['eslint', 'flow'],
-      \ 'go': ['gobuild', 'golangci-lint']
+      \ 'go': ['gobuild', 'golangci-lint', 'golint']
       \}
 
 let g:ale_go_golangci_lint_options = ''
@@ -18,6 +19,14 @@ let g:ale_sign_warning = '⚠'
 " let g:ale_echo_msg_format = '%severity%: %linter%: %s'
 
 " " let g:ale_lint_on_enter = 0
+" let COC do this stuff
+let g:ale_disable_lsp = 1
+
+let g:ale_lint_on_text_changed = 'never'
+let g:ale_lint_on_insert_leave = 0
+" let g:ale_lint_on_enter
+" let g:ale_lint_on_save
+" let g:ale_lint_on_filetype_changed
 
 " error list
 let g:ale_open_list = 1
