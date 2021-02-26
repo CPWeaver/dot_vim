@@ -16,11 +16,12 @@
     "golang": {
       "trace.server": "verbose",
       "command":"gopls",
-      "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
+      "rootPatterns": ["go.mod", ".vim/", ".git/"],
       "filetypes": ["go"],
       "args": ["-remote=auto"],
       "initializationOptions": {
         "local":"github.com/InVisionApp",
+        "gofumpt": true,
         "buildFlags":["-tags=wireinject", "-tags=integration"],
         "staticcheck": true,
         "usePlaceholders": true,

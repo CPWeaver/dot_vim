@@ -15,7 +15,6 @@ endfunction
 
 " Leader Commands
 nnoremap <leader>t :Files<CR>
-nnoremap <leader>f :Files<CR>
 nnoremap <leader>b :Buffers<CR>
 nnoremap <leader>m :History<CR>
 

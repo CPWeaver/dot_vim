@@ -35,6 +35,8 @@ noremap <silent><Leader>/ :nohls<CR>
 " Highlight search word under cursor without jumping to next
 nnoremap <leader>h *<C-O>
 
+nnoremap <leader>s :%s/\<<C-r><C-w>\>/
+
 " Create newlines without entering insert mode
 nnoremap go o<Esc>k
 nnoremap gO O<Esc>j
@@ -54,7 +56,7 @@ nnoremap <silent> gk :WriteBufferIfNecessary<CR>:wincmd k<CR>
 nnoremap <silent> gl :WriteBufferIfNecessary<CR>:wincmd l<CR>
 
 " Toggle spelling mode with ,s
-nnoremap <silent> <leader>s :set spell!<CR>
+" nnoremap <silent> <leader>s :set spell!<CR>
 " Edit vimrc with ,v
 nnoremap <silent> <leader>v :e ~/.vim/vimrc<CR>
 " Quickly switch to last buffer

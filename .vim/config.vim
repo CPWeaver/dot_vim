@@ -67,6 +67,7 @@ set wildmenu           " Turn on WiLd menu
 set hidden             " Change buffer - without saving
 set history=768        " Number of things to remember in history.
 set cf                 " Enable error files & error jumping.
+set splitright
 
 if !has("nvim")
   " not supported yet

@@ -1,6 +1,6 @@
 " ----------
 " vim-argwrap
 " ----------
-nnoremap <silent> <leader>a :ArgWrap<CR>
+nnoremap <silent> <leader>w :ArgWrap<CR>
 
 

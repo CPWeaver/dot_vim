@@ -1,7 +1,7 @@
 " \ 'go': ['gobuild', 'golangci-lint', 'golint']
 let g:ale_linters = {
       \ 'javascript': ['eslint', 'flow'],
-      \ 'go': ['gobuild', 'golangci-lint', 'golint']
+      \ 'go': ['gobuild', 'golangci-lint'],
       \}
 
 let g:ale_go_golangci_lint_options = ''
@@ -13,6 +13,7 @@ let g:ale_go_golangci_lint_package = 1
       " \ 'go': ['gofmt', 'goimports'],
       " \ }
 
+let g:ale_sign_priority = 5
 let g:ale_sign_error = '✖'
 let g:ale_sign_warning = '⚠'
 
@@ -22,8 +23,8 @@ let g:ale_sign_warning = '⚠'
 " let COC do this stuff
 let g:ale_disable_lsp = 1
 
-let g:ale_lint_on_text_changed = 'never'
-let g:ale_lint_on_insert_leave = 0
+let g:ale_lint_on_text_changed = 'always'
+let g:ale_lint_on_insert_leave = 1
 " let g:ale_lint_on_enter
 " let g:ale_lint_on_save
 " let g:ale_lint_on_filetype_changed
@@ -43,3 +44,6 @@ highlight link ALEVirtualTextStyleWarning SpellCap
 let g:ale_virtualtext_cursor = 1
 
 let g:airline#extensions#ale#enabled = 1
+
+nmap <silent> ]a <Plug>(ale_next_wrap)
+nmap <silent> [a <Plug>(ale_previous_wrap)
