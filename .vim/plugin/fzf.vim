@@ -23,10 +23,10 @@ nnoremap <leader>ag :Rg<space>
 vnoremap <leader>ag "xy :Rg "<C-R>x"
 nnoremap <leader>sag :Rg <C-R><C-W>
 
-" bind K to grep highlighted text
-vnoremap K "xy :Rg "<C-R>x"<CR>
-" bind K to grep word under cursor
-nnoremap K :Rg "\b<C-R><C-W>\b"<CR>
+" " bind K to grep highlighted text
+" vnoremap K "xy :Rg "<C-R>x"<CR>
+" " bind K to grep word under cursor
+" nnoremap K :Rg "\b<C-R><C-W>\b"<CR>
 
 nnoremap <leader>u :FZFMru<CR>
 

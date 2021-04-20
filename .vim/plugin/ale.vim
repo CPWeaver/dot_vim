@@ -30,7 +30,7 @@ let g:ale_lint_on_insert_leave = 1
 " let g:ale_lint_on_filetype_changed
 
 " error list
-let g:ale_open_list = 1
+let g:ale_open_list = 0
 " let g:ale_list_window_size = 5
 
 let g:ale_set_highlights = 1

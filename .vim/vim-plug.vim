@@ -20,6 +20,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'junegunn/fzf.vim'
   Plug 'roxma/vim-window-resize-easy'
 
+  " Plug 'knubie/vim-kitty-navigator'
   Plug 'christoomey/vim-tmux-navigator'
   " This fork supports true colors!
   Plug 'edkolev/tmuxline.vim'
@@ -69,7 +70,6 @@ call plug#begin('~/.vim/plugged')
   Plug 'jiangmiao/auto-pairs'
   Plug 'w0rp/ale'
 
-  " Plug 'Chiel92/vim-autoformat'
   Plug 'Valloric/MatchTagAlways'
   Plug 'FooSoft/vim-argwrap', { 'on': 'ArgWrap' }
 
@@ -118,7 +118,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'hashivim/vim-terraform'
   Plug 'ernstvanderlinden/vim-coldfusion', { 'for': 'eoz' }
   Plug 'fatih/vim-go', { 'for': 'go', 'do': ':GoUpdateBinaries' }
-  Plug 'sebdah/vim-delve', { 'for': 'go' }
+  Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
   Plug 'iamcco/markdown-preview.vim'
   " MatchIt
   Plug 'vim-scripts/matchit.zip'

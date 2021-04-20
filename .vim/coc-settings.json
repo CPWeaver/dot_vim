@@ -35,6 +35,7 @@
   "suggest.enablePreview": true,
   "suggest.triggerAfterInsertEnter": true,
   "coc.preferences.previewAutoClose": false,
+  "explorer.filename.colored.enable": true,
   "explorer.icon.enableNerdfont": true,
   "explorer.icon.enableVimDevicons": true,
   "explorer.file.autoReveal":true,
