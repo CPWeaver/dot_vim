@@ -1,12 +1,12 @@
 " ---------------
 " Fugitive
 " ---------------
-nnoremap <Leader>gb :Gblame<CR>
+nnoremap <Leader>gb :Git blame<CR>
 " Show commit log of current file
 nnoremap <Leader>gll :Glog --graph --pretty=oneline --abbrev-commit -n 20<CR>
 nnoremap <Leader>gc :Gcommit -v<CR>
 nnoremap <Leader>gw :Gwrite<CR>
-nnoremap <Leader>g :Gstatus<CR>
+nnoremap <Leader>g :Git<CR>
 nnoremap <Leader>gp :Git push<CR>
  " Mnemonic, gu = Git Update
 nnoremap <Leader>gu :Git pull<CR>

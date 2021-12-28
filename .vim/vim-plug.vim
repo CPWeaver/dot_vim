@@ -16,7 +16,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'dhruvasagar/vim-zoom'
   Plug 'Lokaltog/vim-easymotion'
   " Plug 'mileszs/ack.vim'
-  Plug '/usr/local/opt/fzf'
+  Plug '/opt/homebrew/opt/fzf'
   Plug 'junegunn/fzf.vim'
   Plug 'roxma/vim-window-resize-easy'
 
@@ -75,7 +75,7 @@ call plug#begin('~/.vim/plugged')
 
   Plug 'SirVer/ultisnips'
 
-  Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
+  Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': { -> 'yarn install --frozen-lockfile'}}
   Plug 'antoinemadec/coc-fzf'
 
   Plug 'honza/vim-snippets'

@@ -39,7 +39,7 @@ nnoremap <leader>s :%s/\<<C-r><C-w>\>/
 
 " Create newlines without entering insert mode
 nnoremap go o<Esc>k
-nnoremap gO O<Esc>j
+" nnoremap gO O<Esc>j
 
 " ---------------
 " Tabs Movement
@@ -134,6 +134,17 @@ inoremap JK <Esc>
 inoremap Jk <Esc>
 inoremap jK <Esc>
 
+tnoremap jk <Esc>
+tnoremap JK <Esc>
+tnoremap Jk <Esc>
+tnoremap jK <Esc>
+
+vnoremap jk <Esc>
+vnoremap JK <Esc>
+vnoremap Jk <Esc>
+vnoremap jK <Esc>
+
+
 " ---------------
 " Leader Mappings
 " ---------------
@@ -188,7 +199,7 @@ nnoremap <leader>jts <Esc>:%!underscore print --strict<CR><Esc>:set filetype=jso
 
 " Create newlines without entering insert mode
 nnoremap go o<Esc>k
-nnoremap gO O<Esc>j
+" nnoremap gO O<Esc>j
 
 "--------------------------------------------------
 " visual mode search for selected text, forwards or backwards.

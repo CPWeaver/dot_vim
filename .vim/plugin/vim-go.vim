@@ -19,6 +19,7 @@ let g:go_def_mapping_enabled = 0
 " let g:go_auto_type_info = 1
 let g:go_code_completion_enabled = 0
 let g:go_doc_keywordprg_enabled = 0
+let g:go_textobj_enabled = 0
 
 let g:go_highlight_types = 1
 let g:go_highlight__extra_types = 1
@@ -49,7 +50,7 @@ let $GINKGO_EDITOR_INTEGRATION = "true"
  noremap <leader>v :GoCoverage<CR>
  noremap <leader>vv :GoCoverageClear<CR>
  noremap <leader>god :GoDef<CR>
- noremap <leader>gi :GoInstall -i<CR>
+ " noremap <leader>gi :GoInstall -i<CR>
  noremap <leader>gr :GoReferrers<CR>
  noremap <leader>ga :GoAlternate<CR>
  noremap ge :GoGenerate<CR>

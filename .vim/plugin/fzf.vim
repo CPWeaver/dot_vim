@@ -17,11 +17,17 @@ endfunction
 nnoremap <leader>t :Files<CR>
 nnoremap <leader>b :Buffers<CR>
 nnoremap <leader>m :History<CR>
+nnoremap <space>t :Files<CR>
+nnoremap <space>b :Buffers<CR>
+nnoremap <space>m :History<CR>
 
 nnoremap \ :Rg<space>
 nnoremap <leader>ag :Rg<space>
 vnoremap <leader>ag "xy :Rg "<C-R>x"
 nnoremap <leader>sag :Rg <C-R><C-W>
+nnoremap <space>ag :Rg<space>
+vnoremap <space>ag "xy :Rg "<C-R>x"
+nnoremap <space>sag :Rg <C-R><C-W>
 
 " " bind K to grep highlighted text
 " vnoremap K "xy :Rg "<C-R>x"<CR>
