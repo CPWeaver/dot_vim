@@ -63,7 +63,6 @@ call plug#begin('~/.vim/plugged')
   Plug 'nelstrom/vim-visual-star-search'
   j
   " Automatic Helpers
-  " Plug 'vim-scripts/SyntaxComplete'
   Plug 'powerman/vim-plugin-AnsiEsc'
   Plug 'MarcWeber/vim-addon-local-vimrc'
   Plug 'jiangmiao/auto-pairs'
