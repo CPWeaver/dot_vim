@@ -42,7 +42,8 @@ call plug#begin('~/.vim/plugged')
   Plug 'jszakmeister/vim-togglecursor'
 
   " Plug 'luochen1990/rainbow'
-  Plug 'kien/rainbow_parentheses.vim'
+  " Plug 'kien/rainbow_parentheses.vim'
+  Plug 'p00f/nvim-ts-rainbow'
   " Commands
   Plug 'scrooloose/nerdcommenter'
   Plug 'tpope/vim-surround'
