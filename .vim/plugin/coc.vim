@@ -50,10 +50,10 @@ endif
 inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
                               \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
-" Use `[g` and `]g` to navigate diagnostics
+" Use `[d` and `]d` to navigate diagnostics
 " Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
-nmap <silent> [g <Plug>(coc-diagnostic-prev)
-nmap <silent> ]g <Plug>(coc-diagnostic-next)
+nmap <silent> [d <Plug>(coc-diagnostic-prev)
+nmap <silent> ]d <Plug>(coc-diagnostic-next)
 
 " GoTo code navigation.
 nmap <silent> gd  :call CocAction('jumpDefinition', 'vsplit')<CR>
@@ -61,8 +61,10 @@ nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
-nmap <silent>  <Plug>(coc-definition)
-nmap <silent>  <Plug>(coc-references)
+" nmap <silent>  <Plug>(coc-definition)
+" nmap <silent>  <Plug>(coc-references)
+nmap <silent> )] <Plug>(coc-definition)
+nmap <silent> )[ <Plug>(coc-references)
 
 " Use K to show documentation in preview window.
 nnoremap <silent> K :call <SID>show_documentation()<CR>
@@ -152,6 +154,7 @@ command! -nargs=? Fold :call     CocAction('fold', <f-args>)
 
 " Add `:OR` command for organize imports of the current buffer.
 command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
+nnoremap <leader>gi :call CocAction('runCommand', 'editor.action.organizeImport')<CR>
 " Auto organize on save of go
 autocmd BufWritePre *.go :silent call CocAction('format')
 
@@ -180,4 +183,4 @@ nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocFzfList<CR>
 
-let g:coc_global_extensions = ['coc-json', 'coc-explorer', 'coc-yaml', 'coc-tsserver', 'coc-actions', 'coc-sh']
+let g:coc_global_extensions = ['coc-json', 'coc-explorer', 'coc-yaml', 'coc-tsserver', 'coc-actions', 'coc-sh', 'coc-go', 'coc-flow']

@@ -6,43 +6,39 @@
   "diagnostic.displayByAle": false,
   "diagnostic.virtualText": true,
   "diagnostic.checkCurrentLine": true,
-  "languageserver": {
-    "bash": {
-      "command": "bash-language-server",
-      "args": ["start"],
-      "filetypes": ["sh"],
-      "ignoredRootPaths": ["~"]
-    },
-    "golang": {
-      "trace.server": "verbose",
-      "command":"gopls",
-      "rootPatterns": ["go.mod", ".vim/", ".git/"],
-      "filetypes": ["go"],
-      "args": ["-remote=auto"],
-      "initializationOptions": {
-        "local":"github.com/InVisionApp",
-        "gofumpt": true,
-        "buildFlags":["-tags=wireinject", "-tags=integration"],
-        "staticcheck": true,
-        "usePlaceholders": true,
-        "completeUnimported": true
-      }
-    }
-  },
   "yaml.trace.server":"verbose",
   "codeLens.enable": true,
   "suggest.enablePreselect": true,
   "suggest.enablePreview": true,
   "suggest.triggerAfterInsertEnter": true,
-  "coc.preferences.previewAutoClose": false,
   "explorer.filename.colored.enable": true,
   "explorer.icon.enableNerdfont": true,
-  "explorer.icon.enableVimDevicons": true,
-  "explorer.file.autoReveal":true,
+  "explorer.icon.source": "vim-devicons",
+  "explorer.file.reveal.auto":true,
   "explorer.file.showHiddenFiles":true,
-  "explorer.file.revealWhenOpen":true,
+  "explorer.file.reveal.whenOpen":true,
   "explorer.width": 50,
   "explorer.keyMappings.global": {
     "gl": false
+  },
+  "coc.preferences.formatOnSaveFiletypes": ["go"],
+  "go.goplsOptions": {
+    "gofumpt": true,
+    "staticcheck": true,
+    "usePlaceholders": true,
+    "codelenses": {
+      "gc_details": true
+    },
+    "local": "github.com/InVisionApp/permissions-apiv2"
+  },
+  "javascript.validate.enable": false,
+  "languageserver": {
+    "golangci-lint-languageserver": {
+      "command": "golangci-lint-langserver",
+      "filetypes": ["go"],
+      "initializationOptions": {
+        "command": ["golangci-lint", "run", "--out-format", "json"]
+      }
+    }
   }
 }
