@@ -1,0 +1,30 @@
+{
+  "configurations": {
+    "run": {
+      "adapter": "delve",
+      "configuration": {
+        "request": "launch",
+        "program": "${workspaceRoot}",
+        "mode": "debug",
+        "trace": true,
+        "showGlobalVariables": true
+      }
+    },
+   "run-wire": {
+      "extends": "run",
+      "variables": {
+        "dlvFlags": "--build-flags=-tags=+wireinject"
+      },
+      "configuration": {
+        "args": ["*${CommandLineArgs:-app=api}"]
+      }
+    },
+    "test": {
+      "extends": "run",
+      "configuration": {
+        "mode": "test",
+        "program": "${TestPackage:${fileDirname\\}}"
+      }
+    }
+  }
+}
