@@ -15,7 +15,6 @@ call plug#begin('~/.vim/plugged')
   " Navigation
   Plug 'dhruvasagar/vim-zoom'
   Plug 'Lokaltog/vim-easymotion'
-  " Plug 'mileszs/ack.vim'
   Plug '/opt/homebrew/opt/fzf'
   Plug 'junegunn/fzf.vim'
   Plug 'roxma/vim-window-resize-easy'
@@ -54,7 +53,6 @@ call plug#begin('~/.vim/plugged')
   Plug 'godlygeek/tabular', { 'on': 'Tabularize' }
   Plug 'junegunn/vim-easy-align'
 
-  "Plug 'milkypostman/vim-togglelist'
   Plug 'AndrewRadev/sideways.vim', { 'branch': 'main' }
   "Plug 'tpope/vim-abolish'
   "Plug 'scratch.vim'
@@ -65,7 +63,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'nelstrom/vim-visual-star-search'
   j
   " Automatic Helpers
-  Plug 'vim-scripts/SyntaxComplete'
+  " Plug 'vim-scripts/SyntaxComplete'
   Plug 'powerman/vim-plugin-AnsiEsc'
   Plug 'MarcWeber/vim-addon-local-vimrc'
   Plug 'jiangmiao/auto-pairs'
@@ -123,10 +121,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'iamcco/markdown-preview.vim'
   " MatchIt
   Plug 'vim-scripts/matchit.zip'
-  "Plug 'kana/vim-textobj-user'
-  "Plug 'nelstrom/vim-textobj-rubyblock'
   "Libraries
-  Plug 'vim-scripts/L9'
   Plug 'tpope/vim-repeat'
   Plug 'vim-scripts/groovy.vim'
   "Plug 'mattn/webapi-vim'
