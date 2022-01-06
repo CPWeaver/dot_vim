@@ -14,9 +14,6 @@ command! FZFMru call fzf#run({
 endfunction
 
 " Leader Commands
-nnoremap <leader>t :Files<CR>
-nnoremap <leader>b :Buffers<CR>
-nnoremap <leader>m :History<CR>
 nnoremap <space>t :Files<CR>
 nnoremap <space>b :Buffers<CR>
 nnoremap <space>m :History<CR>

@@ -66,20 +66,21 @@ call plug#begin('~/.vim/plugged')
   Plug 'powerman/vim-plugin-AnsiEsc'
   Plug 'MarcWeber/vim-addon-local-vimrc'
   Plug 'jiangmiao/auto-pairs'
-  Plug 'w0rp/ale'
+  " Plug 'w0rp/ale'
 
   Plug 'Valloric/MatchTagAlways'
   Plug 'FooSoft/vim-argwrap', { 'on': 'ArgWrap' }
 
   Plug 'SirVer/ultisnips'
 
-  Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': { -> 'yarn install --frozen-lockfile'}}
+  Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
   Plug 'antoinemadec/coc-fzf'
 
   Plug 'honza/vim-snippets'
   Plug 'airblade/vim-rooter'
 
-  Plug 'puremourning/vimspector'
+  Plug 'puremourning/vimspector', { 'do': ':VimspectorInstall' }
+  Plug 'CPWeaver/nvim-goc.lua'
 "Language Additions
    " LaTeX
   Plug 'lervag/vimtex', {'for': 'tex'}
@@ -115,7 +116,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'tmux-plugins/vim-tmux-focus-events'
   Plug 'hashivim/vim-terraform'
   Plug 'ernstvanderlinden/vim-coldfusion', { 'for': 'eoz' }
-  Plug 'fatih/vim-go', { 'for': 'go', 'do': ':GoUpdateBinaries' }
+  Plug 'vim-test/vim-test'
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
   Plug 'iamcco/markdown-preview.vim'
   " MatchIt
@@ -133,7 +134,6 @@ call plug#begin('~/.vim/plugged')
   "This branch is regenerated with more color schames
   Plug 'snooc/base16-vim'
   Plug 'matze/vim-move'
-  Plug 'ChrisHonniball/vim-task'
   Plug 'editorconfig/editorconfig-vim'
   Plug 'ryanoasis/vim-devicons'
 
