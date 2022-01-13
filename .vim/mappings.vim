@@ -39,7 +39,7 @@ nnoremap <leader>s :%s/\<<C-r><C-w>\>/
 
 " Create newlines without entering insert mode
 nnoremap go o<Esc>k
-" nnoremap gO O<Esc>j
+nnoremap gO O<Esc>j
 
 " ---------------
 " Tabs Movement
@@ -200,6 +200,11 @@ nnoremap <leader>jts <Esc>:%!underscore print --strict<CR><Esc>:set filetype=jso
 " Create newlines without entering insert mode
 nnoremap go o<Esc>k
 " nnoremap gO O<Esc>j
+
+
+" Use shift+arrows to scroll the window
+map <S-Down> <C-E>
+map <S-Up>   <C-Y>
 
 "--------------------------------------------------
 " visual mode search for selected text, forwards or backwards.
