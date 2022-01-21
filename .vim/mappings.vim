@@ -38,8 +38,8 @@ nnoremap <leader>h *<C-O>
 nnoremap <leader>s :%s/\<<C-r><C-w>\>/
 
 " Create newlines without entering insert mode
-nnoremap go o<Esc>k
-nnoremap gO O<Esc>j
+nnoremap go O<Esc>j
+nnoremap gO o<Esc>k
 
 " ---------------
 " Tabs Movement
@@ -196,11 +196,6 @@ nnoremap <leader>fl Vgq
 " from https://github.com/spf13/spf13-vim/blob/3.0/.vimrc#L390
 nnoremap <leader>jt <Esc>:%!underscore print<CR><Esc>:set filetype=json<CR>
 nnoremap <leader>jts <Esc>:%!underscore print --strict<CR><Esc>:set filetype=json<CR>
-
-" Create newlines without entering insert mode
-nnoremap go o<Esc>k
-" nnoremap gO O<Esc>j
-
 
 " Use shift+arrows to scroll the window
 map <S-Down> <C-E>

@@ -4,10 +4,10 @@
 
 let g:move_map_keys = 0
 
-nmap <M-j> <Plug>MoveLineDown
-nmap <M-k> <Plug>MoveLineUp
-vmap <M-j> <Plug>MoveBlockDown
-vmap <M-k> <Plug>MoveBlockUp
+nmap <M-Down> <Plug>MoveLineDown
+nmap <M-Up> <Plug>MoveLineUp
+vmap <M-Down> <Plug>MoveBlockDown
+vmap <M-Up> <Plug>MoveBlockUp
 " osx mappings, option+j/k with option mapped to ESC+
 nmap ∆ <Plug>MoveLineDown
 nmap ˚ <Plug>MoveLineUp
