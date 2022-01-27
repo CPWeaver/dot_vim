@@ -40,5 +40,6 @@
         "command": ["golangci-lint", "run", "--out-format", "json"]
       }
     }
-  }
+  },
+  "texlab.build.onSave": true
 }
