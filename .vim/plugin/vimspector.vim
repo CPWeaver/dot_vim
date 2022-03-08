@@ -13,3 +13,10 @@ noremap <F2> :VimspectorReset<CR>
 nmap <Leader>di <Plug>VimspectorBalloonEval
 " for visual mode, the visually selected text
 xmap <Leader>di <Plug>VimspectorBalloonEval
+
+" increased display priority for any set breakpoints
+let g:vimspector_sign_priority = {
+  \    'vimspectorBP':         20,
+  \    'vimspectorBPCond':     20,
+  \    'vimspectorBPLog':      20,
+  \ }
