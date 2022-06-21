@@ -72,6 +72,15 @@ call plug#begin('~/.vim/plugged')
 
   Plug 'SirVer/ultisnips'
 
+  " testing
+  Plug 'nvim-lua/plenary.nvim'
+  Plug 'nvim-treesitter/nvim-treesitter'
+  Plug 'antoinemadec/FixCursorHold.nvim'
+  Plug 'nvim-neotest/neotest'
+  Plug 'nvim-neotest/neotest-go'
+  " Coverage
+  Plug 'CPWeaver/nvim-goc.lua'
+
   " Plug 'neoclide/coc.nvim', {'commit': '7cce8ca', 'do': 'yarn install --frozen-lockfile'}
   Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
 
@@ -80,8 +89,9 @@ call plug#begin('~/.vim/plugged')
   Plug 'honza/vim-snippets'
   Plug 'airblade/vim-rooter'
 
+  " Debugging
   Plug 'puremourning/vimspector', { 'do': ':VimspectorInstall' }
-  Plug 'CPWeaver/nvim-goc.lua'
+
 "Language Additions
    " LaTeX
   Plug 'lervag/vimtex', {'for': 'tex'}
@@ -117,8 +127,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'tmux-plugins/vim-tmux-focus-events'
   Plug 'hashivim/vim-terraform', { 'for': 'tf' }
   Plug 'ernstvanderlinden/vim-coldfusion', { 'for': 'eoz' }
-  " Plug 'vim-test/vim-test'
-  " Plug 'rcarriga/vim-ultest', { 'do': ':UpdateRemotePlugins' }
+
 
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
   Plug 'iamcco/markdown-preview.nvim', {'do': 'cd app && yarn install'} " MatchIt

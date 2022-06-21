@@ -83,19 +83,21 @@ Here's a list of plugins that require further dependencies:
 | ![Star count](https://flat.badgen.net/github/stars/junegunn/gv.vim?label=★&color=black) |[gv.vim](https://github.com/junegunn/gv.vim)|A git commit browser in Vim |
 | ![Star count](https://flat.badgen.net/github/stars/airblade/vim-rooter?label=★&color=black) |[vim-rooter](https://github.com/airblade/vim-rooter)|Changes Vim working directory to project root. |
 | ![Star count](https://flat.badgen.net/github/stars/matze/vim-move?label=★&color=black) |[vim-move](https://github.com/matze/vim-move)|Plugin to move lines and selections up and down |
+| ![Star count](https://flat.badgen.net/github/stars/nvim-lua/plenary.nvim?label=★&color=black) |[plenary.nvim](https://github.com/nvim-lua/plenary.nvim)|plenary: full; complete; entire; absolute; unqualified. All the lua functions I don't want to write twice. |
 | ![Star count](https://flat.badgen.net/github/stars/othree/html5.vim?label=★&color=black) |[html5.vim](https://github.com/othree/html5.vim)|HTML5 omnicomplete and syntax |
 | ![Star count](https://flat.badgen.net/github/stars/hashivim/vim-terraform?label=★&color=black) |[vim-terraform](https://github.com/hashivim/vim-terraform)|basic vim/terraform integration |
 | ![Star count](https://flat.badgen.net/github/stars/tpope/vim-rhubarb?label=★&color=black) |[vim-rhubarb](https://github.com/tpope/vim-rhubarb)|rhubarb.vim: GitHub extension for fugitive.vim |
 | ![Star count](https://flat.badgen.net/github/stars/othree/javascript-libraries-syntax.vim?label=★&color=black) |[javascript-libraries-syntax.vim](https://github.com/othree/javascript-libraries-syntax.vim)|Syntax for JavaScript libraries |
 | ![Star count](https://flat.badgen.net/github/stars/edkolev/promptline.vim?label=★&color=black) |[promptline.vim](https://github.com/edkolev/promptline.vim)|Generate a fast shell prompt with powerline symbols and airline colors |
 | ![Star count](https://flat.badgen.net/github/stars/groenewege/vim-less?label=★&color=black) |[vim-less](https://github.com/groenewege/vim-less)|vim syntax for LESS (dynamic CSS) |
-| ![Star count](https://flat.badgen.net/github/stars/p00f/nvim-ts-rainbow?label=★&color=black) |[nvim-ts-rainbow](https://github.com/p00f/nvim-ts-rainbow)|Rainbow parentheses for neovim using tree-sitter. https://sr.ht/~p00f/nvim-ts-rainbow preferred |
 | ![Star count](https://flat.badgen.net/github/stars/AndrewRadev/switch.vim?label=★&color=black) |[switch.vim](https://github.com/AndrewRadev/switch.vim)|A simple Vim plugin to switch segments of text with predefined replacements |
 | ![Star count](https://flat.badgen.net/github/stars/hail2u/vim-css3-syntax?label=★&color=black) |[vim-css3-syntax](https://github.com/hail2u/vim-css3-syntax)|CSS3 syntax (and syntax defined in some foreign specifications) support for Vim's built-in syntax/css.vim |
+| ![Star count](https://flat.badgen.net/github/stars/p00f/nvim-ts-rainbow?label=★&color=black) |[nvim-ts-rainbow](https://github.com/p00f/nvim-ts-rainbow)|Rainbow parentheses for neovim using tree-sitter. https://sr.ht/~p00f/nvim-ts-rainbow preferred |
 | ![Star count](https://flat.badgen.net/github/stars/APZelos/blamer.nvim?label=★&color=black) |[blamer.nvim](https://github.com/APZelos/blamer.nvim)|A git blame plugin for neovim inspired by VS Code's GitLens plugin |
 | ![Star count](https://flat.badgen.net/github/stars/Valloric/MatchTagAlways?label=★&color=black) |[MatchTagAlways](https://github.com/Valloric/MatchTagAlways)|A Vim plugin that always highlights the enclosing html/xml tags |
 | ![Star count](https://flat.badgen.net/github/stars/chrisbra/Colorizer?label=★&color=black) |[Colorizer](https://github.com/chrisbra/Colorizer)|color hex codes and color names |
 | ![Star count](https://flat.badgen.net/github/stars/AndrewRadev/sideways.vim?label=★&color=black) |[sideways.vim](https://github.com/AndrewRadev/sideways.vim)|A Vim plugin to move function arguments (and other delimited-by-something items) left and right. |
+| ![Star count](https://flat.badgen.net/github/stars/nvim-neotest/neotest?label=★&color=black) |[neotest](https://github.com/nvim-neotest/neotest)|An extensible framework for interacting with tests within NeoVim. |
 | ![Star count](https://flat.badgen.net/github/stars/ajh17/Spacegray.vim?label=★&color=black) |[Spacegray.vim](https://github.com/ajh17/Spacegray.vim)|A Vim color scheme loosely based on the Spacegray Xcode theme. |
 | ![Star count](https://flat.badgen.net/github/stars/antoinemadec/coc-fzf?label=★&color=black) |[coc-fzf](https://github.com/antoinemadec/coc-fzf)|fzf :heart: coc.nvim |
 | ![Star count](https://flat.badgen.net/github/stars/whiteinge/diffconflicts?label=★&color=black) |[diffconflicts](https://github.com/whiteinge/diffconflicts)|A better Vimdiff Git mergetool |
@@ -105,24 +107,26 @@ Here's a list of plugins that require further dependencies:
 | ![Star count](https://flat.badgen.net/github/stars/peitalin/vim-jsx-typescript?label=★&color=black) |[vim-jsx-typescript](https://github.com/peitalin/vim-jsx-typescript)|React JSX syntax highlighting for vim and Typescript |
 | ![Star count](https://flat.badgen.net/github/stars/FooSoft/vim-argwrap?label=★&color=black) |[vim-argwrap](https://github.com/FooSoft/vim-argwrap)|Wrap and unwrap function arguments, lists, and dictionaries in Vim |
 | ![Star count](https://flat.badgen.net/github/stars/dhruvasagar/vim-prosession?label=★&color=black) |[vim-prosession](https://github.com/dhruvasagar/vim-prosession)|Handle vim sessions like a pro |
+| ![Star count](https://flat.badgen.net/github/stars/antoinemadec/FixCursorHold.nvim?label=★&color=black) |[FixCursorHold.nvim](https://github.com/antoinemadec/FixCursorHold.nvim)|Fix CursorHold Performance. |
 | ![Star count](https://flat.badgen.net/github/stars/nelstrom/vim-visual-star-search?label=★&color=black) |[vim-visual-star-search](https://github.com/nelstrom/vim-visual-star-search)|Start a * or # search from a visual block |
 | ![Star count](https://flat.badgen.net/github/stars/dhruvasagar/vim-zoom?label=★&color=black) |[vim-zoom](https://github.com/dhruvasagar/vim-zoom)|Toggle zoom in / out individual windows (splits) |
 | ![Star count](https://flat.badgen.net/github/stars/powerman/vim-plugin-AnsiEsc?label=★&color=black) |[vim-plugin-AnsiEsc](https://github.com/powerman/vim-plugin-AnsiEsc)|ansi escape sequences concealed, but highlighted as specified (conceal) |
 | ![Star count](https://flat.badgen.net/github/stars/vim-scripts/matchit.zip?label=★&color=black) |[matchit.zip](https://github.com/vim-scripts/matchit.zip)|extended % matching for HTML, LaTeX, and many other languages |
 | ![Star count](https://flat.badgen.net/github/stars/MarcWeber/vim-addon-local-vimrc?label=★&color=black) |[vim-addon-local-vimrc](https://github.com/MarcWeber/vim-addon-local-vimrc)|kiss local vimrc with hash protection |
 | ![Star count](https://flat.badgen.net/github/stars/tfnico/vim-gradle?label=★&color=black) |[vim-gradle](https://github.com/tfnico/vim-gradle)|Simple little vim-bundle that recognizes .gradle files as being groovy syntax |
-| ![Star count](https://flat.badgen.net/github/stars/Pychimp/vim-luna?label=★&color=black) |[vim-luna](https://github.com/Pychimp/vim-luna)|Touchdown on Lunar Surface ! :) |
 | ![Star count](https://flat.badgen.net/github/stars/jszakmeister/vim-togglecursor?label=★&color=black) |[vim-togglecursor](https://github.com/jszakmeister/vim-togglecursor)|Toggle the cursor shape in the terminal for Vim. |
+| ![Star count](https://flat.badgen.net/github/stars/Pychimp/vim-luna?label=★&color=black) |[vim-luna](https://github.com/Pychimp/vim-luna)|Touchdown on Lunar Surface ! :) |
 | ![Star count](https://flat.badgen.net/github/stars/nono/vim-handlebars?label=★&color=black) |[vim-handlebars](https://github.com/nono/vim-handlebars)|[deprecated] Vim plugin for Handlebars |
 | ![Star count](https://flat.badgen.net/github/stars/roxma/vim-window-resize-easy?label=★&color=black) |[vim-window-resize-easy](https://github.com/roxma/vim-window-resize-easy)| |
 | ![Star count](https://flat.badgen.net/github/stars/vim-scripts/groovy.vim?label=★&color=black) |[groovy.vim](https://github.com/vim-scripts/groovy.vim)|syntax file for the groovy programming language |
+| ![Star count](https://flat.badgen.net/github/stars/nvim-neotest/neotest-go?label=★&color=black) |[neotest-go](https://github.com/nvim-neotest/neotest-go)| |
 | ![Star count](https://flat.badgen.net/github/stars/ernstvanderlinden/vim-coldfusion?label=★&color=black) |[vim-coldfusion](https://github.com/ernstvanderlinden/vim-coldfusion)|Vim - ColdFusion Syntax Highlighter |
 | ![Star count](https://flat.badgen.net/github/stars/vim-scripts/indenthtml.vim?label=★&color=black) |[indenthtml.vim](https://github.com/vim-scripts/indenthtml.vim)|alternative html indent script |
 | ![Star count](https://flat.badgen.net/github/stars/mutewinter/UnconditionalPaste?label=★&color=black) |[UnconditionalPaste](https://github.com/mutewinter/UnconditionalPaste)|A clone of UnconditionalPaste from http://www.vim.org/scripts/script.php?script_id=3355 since it's not updated on GitHub yet. |
 | ![Star count](https://flat.badgen.net/github/stars/CPWeaver/nvim-goc.lua?label=★&color=black) |[nvim-goc.lua](https://github.com/CPWeaver/nvim-goc.lua)|Go Coverage for Neovim |
 | ![Star count](https://flat.badgen.net/github/stars/snooc/base16-vim?label=★&color=black) |[base16-vim](https://github.com/snooc/base16-vim)|Base16 for Vim |
 
-_That's 81 plugins, holy crap._
+_That's 86 plugins, holy crap._
 
 _Generated by `rake update_readme` on 2022/06/21._
 
