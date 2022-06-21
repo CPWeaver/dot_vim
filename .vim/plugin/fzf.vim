@@ -20,10 +20,10 @@ nnoremap <space>m :History<CR>
 
 nnoremap \ :Rg<space>
 nnoremap <leader>ag :Rg<space>
-vnoremap <leader>ag "xy :Rg "<C-R>x"
+vnoremap <leader>ag "xy :Rg <C-R>x
 nnoremap <leader>sag :Rg <C-R><C-W>
 nnoremap <space>ag :Rg<space>
-vnoremap <space>ag "xy :Rg "<C-R>x"
+vnoremap <space>ag "xy :Rg <C-R>x
 nnoremap <space>sag :Rg <C-R><C-W>
 
 " " bind K to grep highlighted text

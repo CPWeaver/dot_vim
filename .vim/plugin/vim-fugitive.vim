@@ -14,9 +14,9 @@ nnoremap <Leader>gd :Gdiff<CR>
 " Exit a diff by closing the diff window
 nnoremap <Leader>gx :wincmd h<CR>:q<CR>
 
-
-nnoremap <Leader>gh :.Gbrowse<CR>
-noremap <Leader>gm :.Gbrowse origin/master:%<CR>
+nnoremap <Leader>gh :.GBrowse<CR>
+noremap <Leader>gm :.GBrowse origin/main:%<CR>
+noremap <Leader>gM :.GBrowse origin/master:%<CR>
 
 " Start git command
 " nnoremap <leader>gi :Git<space>

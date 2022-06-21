@@ -66,14 +66,15 @@ call plug#begin('~/.vim/plugged')
   Plug 'powerman/vim-plugin-AnsiEsc'
   Plug 'MarcWeber/vim-addon-local-vimrc'
   Plug 'jiangmiao/auto-pairs'
-  " Plug 'w0rp/ale'
 
   Plug 'Valloric/MatchTagAlways'
   Plug 'FooSoft/vim-argwrap', { 'on': 'ArgWrap' }
 
   Plug 'SirVer/ultisnips'
 
+  " Plug 'neoclide/coc.nvim', {'commit': '7cce8ca', 'do': 'yarn install --frozen-lockfile'}
   Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
+
   Plug 'antoinemadec/coc-fzf'
 
   Plug 'honza/vim-snippets'
@@ -114,12 +115,13 @@ call plug#begin('~/.vim/plugged')
   Plug 'tfnico/vim-gradle', { 'for': 'groovy'}
   Plug 'tmux-plugins/vim-tmux', { 'for': 'tmux' }
   Plug 'tmux-plugins/vim-tmux-focus-events'
-  Plug 'hashivim/vim-terraform'
+  Plug 'hashivim/vim-terraform', { 'for': 'tf' }
   Plug 'ernstvanderlinden/vim-coldfusion', { 'for': 'eoz' }
-  Plug 'vim-test/vim-test'
+  " Plug 'vim-test/vim-test'
+  " Plug 'rcarriga/vim-ultest', { 'do': ':UpdateRemotePlugins' }
+
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-  Plug 'iamcco/markdown-preview.vim'
-  " MatchIt
+  Plug 'iamcco/markdown-preview.nvim', {'do': 'cd app && yarn install'} " MatchIt
   Plug 'vim-scripts/matchit.zip'
   "Libraries
   Plug 'tpope/vim-repeat'

@@ -9,3 +9,4 @@ extra.vim
 .vim/spell/
 .vim/vimspector-config/gadgets
 tags
+yarn.lock
