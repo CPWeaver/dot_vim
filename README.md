@@ -11,7 +11,9 @@
 3. `ln -s ~/.vim/gvimrc ~/.gvimrc`
 
 ## Screenshot
-[ss]: https://github.com/CPWeaver/dot_vim/raw/master/screenshot.png
+[![Screenshot][ss]][ss]
+
+[ss]: https://github.com/cpweaver/dot_vim/raw/master/screenshot.png
 
 ## Mappings
 
