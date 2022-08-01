@@ -1,5 +1,5 @@
 {
-  "suggest.triggerCompletionWait": 300,
+  "suggest.triggerCompletionWait": 50,
   "diagnostic.enable": true,
   "diagnostic.refreshOnInsertMode":true,
   "diagnostic.errorSign":"✖",

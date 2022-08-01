@@ -31,9 +31,4 @@ end
 -- vim.highlight.link('GocCovered', 'String')
 -- vim.highlight.link('GocUncovered', 'Error')
 
--- alternate between test file and normal file
-vim.api.nvim_set_keymap('n', ']a', ':lua require("nvim-goc").Alternate()<CR>', {silent=true})
-
--- alternate in a new split
-vim.api.nvim_set_keymap('n', '[a', ':lua require("nvim-goc").Alternate(true)<CR>', {silent=true})
 EOF

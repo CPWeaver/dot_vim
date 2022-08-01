@@ -50,6 +50,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'junegunn/gv.vim'
   Plug 'tpope/vim-rhubarb'
   Plug 'tpope/vim-dispatch'
+  Plug 'tpope/vim-projectionist'
   Plug 'godlygeek/tabular', { 'on': 'Tabularize' }
   Plug 'junegunn/vim-easy-align'
 
@@ -74,12 +75,14 @@ call plug#begin('~/.vim/plugged')
 
   " testing
   Plug 'nvim-lua/plenary.nvim'
-  Plug 'nvim-treesitter/nvim-treesitter'
   Plug 'antoinemadec/FixCursorHold.nvim'
   Plug 'nvim-neotest/neotest'
   Plug 'nvim-neotest/neotest-go'
   " Coverage
-  Plug 'CPWeaver/nvim-goc.lua'
+  Plug 'jdstrand/nvim-goc.lua', { 'branch': 'jdstrand/main' }
+
+  Plug 'vim-test/vim-test'
+  " Plug 'rcarriga/vim-ultest', { 'do': ':UpdateRemotePlugins' }
 
   " Plug 'neoclide/coc.nvim', {'commit': '7cce8ca', 'do': 'yarn install --frozen-lockfile'}
   Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
@@ -149,6 +152,6 @@ call plug#begin('~/.vim/plugged')
   Plug 'ryanoasis/vim-devicons'
 
   Plug 'whiteinge/diffconflicts'
-  Plug 'APZelos/blamer.nvim'
+  " Plug 'APZelos/blamer.nvim'
 call plug#end()
 
