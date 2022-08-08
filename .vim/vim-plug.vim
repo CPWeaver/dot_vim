@@ -79,7 +79,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'nvim-neotest/neotest'
   Plug 'nvim-neotest/neotest-go'
   " Coverage
-  Plug 'jdstrand/nvim-goc.lua', { 'branch': 'jdstrand/main' }
+  Plug 'cpweaver/nvim-goc.lua', { 'branch': 'cpweaver/main' }
 
   Plug 'vim-test/vim-test'
   " Plug 'rcarriga/vim-ultest', { 'do': ':UpdateRemotePlugins' }
@@ -152,6 +152,6 @@ call plug#begin('~/.vim/plugged')
   Plug 'ryanoasis/vim-devicons'
 
   Plug 'whiteinge/diffconflicts'
-  " Plug 'APZelos/blamer.nvim'
+  Plug 'APZelos/blamer.nvim'
 call plug#end()
 

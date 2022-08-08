@@ -9,7 +9,6 @@
   "yaml.trace.server":"verbose",
   "codeLens.enable": true,
   "suggest.enablePreselect": true,
-  "suggest.enablePreview": true,
   "suggest.triggerAfterInsertEnter": true,
   "explorer.filename.colored.enable": true,
   "explorer.icon.enableNerdfont": true,
@@ -22,14 +21,17 @@
     "gl": false
   },
   "coc.preferences.formatOnSaveFiletypes": ["go"],
+  "semanticTokens.filetypes": ["go"],
   "go.goplsOptions": {
+    "semanticTokens": true,
     "gofumpt": true,
     "staticcheck": true,
     "usePlaceholders": true,
     "codelenses": {
       "gc_details": true
     },
-    "local": "github.com/InVisionApp/permissions-apiv2"
+    "local": "github.com/InVisionApp/permissions-apiv2",
+    "buildFlags": ["-tags=integration"]
   },
   "javascript.validate.enable": false,
   "languageserver": {
