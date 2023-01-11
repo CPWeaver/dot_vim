@@ -4,7 +4,11 @@ require("neotest").setup({
     require("neotest-go"),
   },
   icons = {
-    running='',
+    running = '',
+    failed  = "",
+    passed  = "",
+    skipped = "ﰸ",
+    unknown = ""
   },
 })
 
