@@ -84,9 +84,8 @@ call plug#begin('~/.vim/plugged')
   Plug 'vim-test/vim-test'
   " Plug 'rcarriga/vim-ultest', { 'do': ':UpdateRemotePlugins' }
 
-  " Plug 'neoclide/coc.nvim', {'commit': '7cce8ca', 'do': 'yarn install --frozen-lockfile'}
+  " Plug 'neoclide/coc.nvim', {'commit': '28e0edd7', 'do': 'yarn install --frozen-lockfile'}
   Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
-
   Plug 'antoinemadec/coc-fzf'
 
   Plug 'honza/vim-snippets'
@@ -142,7 +141,6 @@ call plug#begin('~/.vim/plugged')
   Plug 'nanotech/jellybeans.vim'
   Plug 'Pychimp/vim-luna'
   Plug 'w0ng/vim-hybrid'
-  Plug 'ajh17/Spacegray.vim', { 'branch': 'main' }
   Plug 'altercation/vim-colors-solarized'
   "Plug 'chriskempson/base16-vim'
   "This branch is regenerated with more color schames
