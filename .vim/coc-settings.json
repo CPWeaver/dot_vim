@@ -19,8 +19,10 @@
   "explorer.keyMappings.global": {
     "gl": false
   },
-  "coc.preferences.formatOnSaveFiletypes": ["go"],
-  "semanticTokens.filetypes": ["go"],
+  "[go]": {
+    "semanticTokens.enable": true,
+    "coc.preferences.formatOnSave": true
+  },
   "go.goplsOptions": {
     "semanticTokens": true,
     "gofumpt": true,
@@ -29,7 +31,7 @@
     "codelenses": {
       "gc_details": true
     },
-    "local": "github.com/InVisionApp/permissions-apiv2",
+    "local": "github.com/InVisionApp",
     "buildFlags": ["-tags=integration"]
   },
   "javascript.validate.enable": false,

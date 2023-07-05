@@ -42,7 +42,8 @@ call plug#begin('~/.vim/plugged')
 
   " Plug 'luochen1990/rainbow'
   " Plug 'kien/rainbow_parentheses.vim'
-  Plug 'p00f/nvim-ts-rainbow'
+  " Plug 'p00f/nvim-ts-rainbow'
+  Plug 'https://gitlab.com/HiPhish/rainbow-delimiters.nvim.git'
   " Commands
   Plug 'scrooloose/nerdcommenter'
   Plug 'tpope/vim-surround'
