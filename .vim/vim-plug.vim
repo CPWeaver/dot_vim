@@ -62,8 +62,8 @@ call plug#begin('~/.vim/plugged')
   Plug 'AndrewRadev/switch.vim'
   "Plug 'tpope/vim-eunuch'
   Plug 'mutewinter/UnconditionalPaste'
-  Plug 'nelstrom/vim-visual-star-search'
-  j
+  Plug 'wincent/loupe'
+
   " Automatic Helpers
   Plug 'powerman/vim-plugin-AnsiEsc'
   Plug 'MarcWeber/vim-addon-local-vimrc'
@@ -79,6 +79,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'antoinemadec/FixCursorHold.nvim'
   Plug 'nvim-neotest/neotest'
   Plug 'nvim-neotest/neotest-go'
+  Plug 'nvim-neotest/neotest-jest'
   " Coverage
   Plug 'cpweaver/nvim-goc.lua', { 'branch': 'cpweaver/main' }
 

@@ -48,6 +48,9 @@ endif
 " nmap <silent> )} <Plug>(coc-diagnostic-next)
 nmap <silent> [g <Plug>(coc-diagnostic-prev)
 nmap <silent> ]g <Plug>(coc-diagnostic-next)
+nmap <silent> $# <Plug>(coc-diagnostic-prev)
+nmap <silent> #$ <Plug>(coc-diagnostic-next)
+
 
 " GoTo code navigation.
 " nmap <silent>  <Plug>(coc-definition)
