@@ -1,25 +1,22 @@
 {
   "configurations": {
-    "run": {
+    "Run": {
       "adapter": "delve",
       "configuration": {
         "request": "launch",
-        "program": "${workspaceRoot}",
+        "program": "${cwd}",
         "mode": "debug",
         "trace": true,
+        //  "args": ["*${CommandLineArgs:-app=api}"],
+        "variables": {
+        //  "dlvFlags": "--build-flags=-tags=+wireinject",
+        //  "buildFlags": "-tags=integration"
+        },
+
         "showGlobalVariables": true
       }
     },
-   "run-wire": {
-      "extends": "run",
-      "variables": {
-        "dlvFlags": "--build-flags=-tags=+wireinject"
-      },
-      "configuration": {
-        "args": ["*${CommandLineArgs:-app=api}"]
-      }
-    },
-    "test": {
+    "Test": {
       "extends": "run",
       "configuration": {
         "mode": "test",

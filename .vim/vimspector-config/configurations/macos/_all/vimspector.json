@@ -1,0 +1,35 @@
+{
+  "configurations": {
+    "Run Node": {
+      "adapter": "js-debug",
+      "filetypes": [ "javascript", "typescript" ], // optional
+      "configuration": {
+        "request": "launch",
+        "stopOnEntry": true,
+        "console": "integratedTerminal",
+        "program": "${cwd}/server.js",
+        "cwd": "${workspaceRoot}",
+        "type": "pwa-node" // this is the default, but see below
+      }
+    },
+    "Attach Chrome": {
+      "adapter": "js-debug",
+      "filetypes": [ "javascript", "typescript", "typescriptreact" ],
+      "configuration": {
+        "request": "attach",
+        "port": "9222",
+        "webRoot": "${workspaceFolder}",
+        "type": "pwa-chrome"
+      },
+      "breakpoints": {
+        "exception": {
+          "raised": "N",
+          "uncaught": "",
+          "userUnhandled": ""
+        }
+      }
+
+    }
+  }
+}
+
