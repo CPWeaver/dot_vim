@@ -1,6 +1,6 @@
 let g:vimspector_enable_mappings = 'HUMAN'
 
-let g:vimspector_install_gadgets = ['delve', 'vscode-node-debug2']
+let g:vimspector_install_gadgets = ['delve', 'vscode-js-debug']
 let g:vimspector_sidebar_width = 100
 
 let g:vimspector_base_dir=expand( '$HOME/.vim/vimspector-config' )

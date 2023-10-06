@@ -10,25 +10,24 @@
         "program": "${cwd}/server.js",
         "cwd": "${workspaceRoot}",
         "type": "pwa-node" // this is the default, but see below
+      },
+      "breakpoints": {
+        "exception": {
+          "raised": "N",
+          "uncaught": "Y",
+          "userUnhandled": ""
+        }
       }
     },
     "Attach Chrome": {
-      "adapter": "js-debug",
+      "extends": "Run Node",
       "filetypes": [ "javascript", "typescript", "typescriptreact" ],
       "configuration": {
         "request": "attach",
         "port": "9222",
         "webRoot": "${workspaceFolder}",
         "type": "pwa-chrome"
-      },
-      "breakpoints": {
-        "exception": {
-          "raised": "N",
-          "uncaught": "",
-          "userUnhandled": ""
-        }
       }
-
     }
   }
 }

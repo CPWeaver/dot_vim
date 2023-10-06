@@ -74,4 +74,9 @@ if has("autocmd")
     autocmd BufNew,BufNewFile,BufRead *.cfm set filetype=eoz
     autocmd BufNew,BufNewFile,BufRead *.cfc set filetype=eoz
   augroup END
+
+  " By default allow comments in json files
+  augroup JsonToJsonc
+    autocmd! FileType json set filetype=jsonc
+  augroup END
 endif

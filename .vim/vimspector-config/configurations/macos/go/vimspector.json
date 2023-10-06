@@ -17,7 +17,7 @@
       }
     },
     "Test": {
-      "extends": "run",
+      "extends": "Run",
       "configuration": {
         "mode": "test",
         "program": "${TestPackage:${fileDirname\\}}"
