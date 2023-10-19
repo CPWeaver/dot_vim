@@ -4,6 +4,7 @@ require'nvim-treesitter.configs'.setup {
     "go",
     "javascript",
     "json",
+    "jsonc",
     "yaml",
     "bash",
     "typescript",

@@ -87,7 +87,7 @@ call plug#begin('~/.vim/plugged')
   " Plug 'rcarriga/vim-ultest', { 'do': ':UpdateRemotePlugins' }
 
   " Plug 'neoclide/coc.nvim', {'commit': '28e0edd7', 'do': 'yarn install --frozen-lockfile'}
-  Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
+  Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'npm ci'}
   Plug 'antoinemadec/coc-fzf'
 
   Plug 'honza/vim-snippets'
