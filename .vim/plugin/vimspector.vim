@@ -16,7 +16,7 @@ xmap <Leader>di <Plug>VimspectorBalloonEval
 
 " increased display priority for any set breakpoints
 let g:vimspector_sign_priority = {
-  \    'vimspectorBP':         20,
-  \    'vimspectorBPCond':     20,
-  \    'vimspectorBPLog':      20,
+  \    'vimspectorBP':         50,
+  \    'vimspectorBPCond':     50,
+  \    'vimspectorBPLog':      50,
   \ }

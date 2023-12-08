@@ -1,4 +1,5 @@
 {
+  "diagnostic.signPriority": 10,
   "suggest.triggerCompletionWait": 50,
   "diagnostic.enable": true,
   "diagnostic.refreshOnInsertMode":true,

@@ -26,7 +26,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'edkolev/promptline.vim'
 
   " UI Additions
-  Plug 'chrisbra/Colorizer'
+  Plug 'NvChad/nvim-colorizer.lua'
   Plug 'nathanaelkane/vim-indent-guides'
   Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
   Plug 'scrooloose/nerdtree'
@@ -48,8 +48,11 @@ call plug#begin('~/.vim/plugged')
   Plug 'scrooloose/nerdcommenter'
   Plug 'tpope/vim-surround'
   Plug 'tpope/vim-fugitive'
-  Plug 'junegunn/gv.vim'
+  " github
   Plug 'tpope/vim-rhubarb'
+  " gitlab
+  Plug 'shumphrey/fugitive-gitlab.vim'
+  Plug 'junegunn/gv.vim'
   Plug 'tpope/vim-dispatch'
   Plug 'tpope/vim-projectionist'
   Plug 'godlygeek/tabular', { 'on': 'Tabularize' }
@@ -67,7 +70,7 @@ call plug#begin('~/.vim/plugged')
   " Automatic Helpers
   Plug 'powerman/vim-plugin-AnsiEsc'
   Plug 'MarcWeber/vim-addon-local-vimrc'
-  Plug 'jiangmiao/auto-pairs'
+  Plug 'windwp/nvim-autopairs'
 
   Plug 'Valloric/MatchTagAlways'
   Plug 'FooSoft/vim-argwrap', { 'on': 'ArgWrap' }

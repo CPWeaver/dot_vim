@@ -193,7 +193,7 @@ nmap <space>e :CocCommand explorer<CR>
 let g:coc_snippet_next = '<tab>'
 let g:coc_snippet_prev = '<s-tab>'
 
-let g:coc_global_extensions = ['coc-json', 'coc-explorer', 'coc-yaml', 'coc-tsserver', 'coc-eslint','coc-actions', 'coc-sh', 'coc-go', 'coc-flow', 'coc-texlab']
+let g:coc_global_extensions = ['coc-json', 'coc-explorer', 'coc-yaml', 'coc-tsserver', 'coc-eslint','coc-actions', 'coc-sh', 'coc-go', 'coc-flow', 'coc-texlab', 'coc-prettier', 'coc-prisma', '@yaegassy/coc-tailwindcss3']
 
 " highlight CocHighlightText ctermfg=yellow  guifg=#f0c674
 highlight link CocHighlightText DiffChange

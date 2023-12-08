@@ -15,8 +15,8 @@ nnoremap <Leader>gd :Gdiff<CR>
 nnoremap <Leader>gx :wincmd h<CR>:q<CR>
 
 noremap <Leader>gh :GBrowse %<CR>
-noremap <Leader>gm :GBrowse origin/main:%<CR>
-noremap <Leader>gM :GBrowse origin/master:%<CR>
+noremap <Leader>gM :GBrowse origin/main:%<CR>
+noremap <Leader>gm :GBrowse origin/master:%<CR>
 
 " Start git command
 " nnoremap <leader>gi :Git<space>
