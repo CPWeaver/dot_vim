@@ -24,6 +24,10 @@
     "semanticTokens.enable": true,
     "coc.preferences.formatOnSave": true
   },
+  "[javascript][javascriptreact][typescript][typescriptreact][json]": {
+    "semanticTokens.enable": true,
+    "coc.preferences.formatOnSave": true,
+  },
   "go.goplsOptions": {
     "semanticTokens": true,
     "gofumpt": true,
