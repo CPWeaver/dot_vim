@@ -46,8 +46,8 @@ endif
 " Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
 " nmap <silent> ){ <Plug>(coc-diagnostic-prev)
 " nmap <silent> )} <Plug>(coc-diagnostic-next)
-nmap <silent> [g <Plug>(coc-diagnostic-prev)
-nmap <silent> ]g <Plug>(coc-diagnostic-next)
+nmap <silent> <leader>fd <Plug>(coc-diagnostic-prev)
+nmap <silent> <leader>df <Plug>(coc-diagnostic-next)
 nmap <silent> $# <Plug>(coc-diagnostic-prev)
 nmap <silent> #$ <Plug>(coc-diagnostic-next)
 
@@ -58,6 +58,8 @@ nmap <silent> #$ <Plug>(coc-diagnostic-next)
 " nmap <silent> )] <Plug>(coc-definition)
 " nmap <silent> )[ <Plug>(coc-references)
 nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gf :call CocAction('jumpDefinition', 'vsplit')<CR>
+nmap <silent> gb :call CocAction('jumpDefinition', 'split')<CR>
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
@@ -86,10 +88,12 @@ nmap <leader>f  <Plug>(coc-format-selected)
 augroup mygroup
   autocmd!
   " Setup formatexpr specified filetype(s).
-  autocmd FileType typescript,json setl formatexpr=CocAction('formatSelected')
+  autocmd FileType typescript,json,jsonc,html setl formatexpr=CocAction('formatSelected')
   " Update signature help on jump placeholder.
   autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
 augroup end
+
+command! -nargs=0 Prettier :CocCommand prettier.forceFormatDocument
 
 " Applying codeAction to the selected region.
 " Example: `<leader>aap` for current paragraph
@@ -102,6 +106,7 @@ nmap <leader>ac  <Plug>(coc-codeaction-cursor)
 " Remap keys for apply code actions affect whole buffer
 nmap <leader>as  <Plug>(coc-codeaction-source)
 " Apply the most preferred quickfix action to fix diagnostic on the current line
+nmap <leader>af  <Plug>(coc-fix-current)
 nmap <leader>qf  <Plug>(coc-fix-current)
 
 " Remap keys for applying refactor code actions

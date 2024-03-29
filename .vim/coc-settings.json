@@ -1,21 +1,20 @@
 {
-  "diagnostic.signPriority": 10,
+  "diagnostic.signPriority": 1000,
   "suggest.triggerCompletionWait": 50,
   "diagnostic.enable": true,
-  "diagnostic.refreshOnInsertMode":true,
-  "diagnostic.errorSign":"✖",
+  "diagnostic.refreshOnInsertMode": true,
   "diagnostic.displayByAle": false,
   "diagnostic.virtualText": true,
   "diagnostic.checkCurrentLine": true,
-  "yaml.trace.server":"verbose",
+  "yaml.trace.server": "verbose",
   "codeLens.enable": true,
   "suggest.enablePreselect": true,
   "suggest.triggerAfterInsertEnter": true,
   "explorer.icon.enableNerdfont": true,
   "explorer.icon.source": "vim-devicons",
-  "explorer.file.reveal.auto":true,
-  "explorer.file.showHiddenFiles":true,
-  "explorer.file.reveal.whenOpen":true,
+  "explorer.file.reveal.auto": true,
+  "explorer.file.showHiddenFiles": true,
+  "explorer.file.reveal.whenOpen": true,
   "explorer.width": 50,
   "explorer.keyMappings.global": {
     "gl": false
@@ -24,10 +23,11 @@
     "semanticTokens.enable": true,
     "coc.preferences.formatOnSave": true
   },
-  "[javascript][javascriptreact][typescript][typescriptreact][json]": {
+  "[javascript][javascriptreact][typescript][typescriptreact][json][jsonc][html]": {
     "semanticTokens.enable": true,
-    "coc.preferences.formatOnSave": true,
+    "coc.preferences.formatOnSave": true
   },
+  "prettier.documentSelectors": ["**/*.html"],
   "go.goplsOptions": {
     "semanticTokens": true,
     "gofumpt": true,
@@ -39,6 +39,8 @@
     "local": "github.com/InVisionApp",
     "buildFlags": ["-tags=integration"]
   },
+  "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": true,
+  "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": true,
   "javascript.validate.enable": false,
   "languageserver": {
     "golangci-lint-languageserver": {
@@ -49,5 +51,13 @@
       }
     }
   },
-  "texlab.build.onSave": true
+  "tsserver.log": "verbose",
+  "eslint.rules.customizations": [{ "rule": "*", "severity": "info" }],
+  "eslint.packageManager": "pnpm",
+  "eslint.debug": true,
+  "texlab.build.onSave": true,
+  "diagnostic.errorSign": "",
+  "diagnostic.warningSign": "⚠",
+  "diagnostic.infoSign": "",
+  "diagnostic.hintSign": ""
 }
