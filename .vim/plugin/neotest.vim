@@ -18,7 +18,7 @@ require("neotest").setup({
   },
 })
 
-vim.api.nvim_set_keymap('n', '<Leader>t', ':lua require("neotest").run.run()<CR>', {})
+vim.api.nvim_set_keymap('n', '<Leader>tr', ':lua require("neotest").run.run()<CR>', {})
 vim.api.nvim_set_keymap('n', '<Leader>tf', ':lua require("neotest").run.run(vim.fn.expand(\'%\'))<CR>', {})
 vim.api.nvim_set_keymap('n', '<Leader>td', ':lua require("neotest").run.run(vim.fn.expand(\'%:h\'))<CR>', {})
 vim.api.nvim_set_keymap('n', '<Leader>ts', ':lua require("neotest").summary.toggle()<CR>', {})

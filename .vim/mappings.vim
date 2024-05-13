@@ -112,6 +112,8 @@ nnoremap <silent> gx :wincmd x<CR>
 " Close the current window
 nnoremap <silent> <leader>c :close<CR>
 
+nnoremap <leader>q :bp<bar>sp<bar>bn<bar>bd<CR>
+
 " Make line completion easier.
 inoremap <C-l> <C-x><C-l>
 

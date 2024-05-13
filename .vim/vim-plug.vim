@@ -18,6 +18,7 @@ call plug#begin('~/.vim/plugged')
   Plug '/opt/homebrew/opt/fzf'
   Plug 'junegunn/fzf.vim'
   Plug 'roxma/vim-window-resize-easy'
+  Plug 'nanotee/zoxide.vim'
 
   " Plug 'knubie/vim-kitty-navigator'
   Plug 'christoomey/vim-tmux-navigator'
@@ -83,6 +84,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'nvim-neotest/neotest'
   Plug 'nvim-neotest/neotest-go'
   Plug 'nvim-neotest/neotest-jest'
+  Plug 'nvim-neotest/nvim-nio'
   " Coverage
   Plug 'cpweaver/nvim-goc.lua', { 'branch': 'cpweaver/main' }
 
@@ -135,9 +137,12 @@ call plug#begin('~/.vim/plugged')
   Plug 'hashivim/vim-terraform', { 'for': 'tf' }
   Plug 'ernstvanderlinden/vim-coldfusion', { 'for': 'eoz' }
 
+  " Plug 'rest-nvim/rest.nvim'
 
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-  Plug 'iamcco/markdown-preview.nvim', {'do': 'cd app && yarn install'} " MatchIt
+  Plug 'iamcco/markdown-preview.nvim', {'do': 'cd app && npx --yes yarn install'}
+
+  " MatchIt
   Plug 'vim-scripts/matchit.zip'
   "Libraries
   Plug 'tpope/vim-repeat'

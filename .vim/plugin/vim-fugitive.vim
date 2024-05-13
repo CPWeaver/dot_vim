@@ -23,3 +23,5 @@ noremap <Leader>gm :GBrowse origin/master:%<CR>
 " Undo the last commit
 command! Gcundo :Git reset HEAD~1
 
+autocmd FileType fugitiveblame nmap <buffer> q gq
+autocmd FileType fugitive nmap <buffer> q gq
