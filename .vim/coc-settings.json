@@ -27,7 +27,10 @@
     "semanticTokens.enable": true,
     "coc.preferences.formatOnSave": true
   },
-  "prettier.documentSelectors": ["**/*.html"],
+  "[markdown]": {
+    "coc.preferences.formatOnSave": true
+  },
+  "prettier.documentSelectors": ["**/*.html", "**/*.md"],
   "go.goplsOptions": {
     "semanticTokens": true,
     "gofumpt": true,
