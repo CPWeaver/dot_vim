@@ -22,3 +22,8 @@ let g:airline_mode_map = {
       \ '' : 'VB',
       \ }
 
+" 'reverse' attribute in hybrid color scheme causes wrong colors.
+" w0ng/hybrid.vim L320, L321
+hi statusline cterm=NONE gui=NONE
+hi StatusLineNC cterm=NONE gui=NONE
+
