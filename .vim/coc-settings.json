@@ -55,6 +55,7 @@
     }
   },
   "tsserver.log": "verbose",
+  "tsserver.implicitProjectConfig.target": "ES2022",
   "eslint.rules.customizations": [{ "rule": "*", "severity": "info" }],
   "eslint.packageManager": "pnpm",
   "eslint.debug": true,

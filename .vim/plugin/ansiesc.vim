@@ -1,5 +1,5 @@
 "" ------
 "" AnsiEsc
 "" ------
-nnoremap <Leader>a :AnsiEsc<CR>
+" nnoremap <Leader>a :AnsiEsc<CR>
 

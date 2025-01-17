@@ -15,8 +15,8 @@ call plug#begin('~/.vim/plugged')
   " Navigation
   Plug 'dhruvasagar/vim-zoom'
   Plug 'Lokaltog/vim-easymotion'
-  Plug '/opt/homebrew/opt/fzf'
-  Plug 'junegunn/fzf.vim'
+  " Plug '/opt/homebrew/opt/fzf'
+  " Plug 'junegunn/fzf.vim'
   Plug 'roxma/vim-window-resize-easy'
   Plug 'nanotee/zoxide.vim'
 
@@ -28,10 +28,9 @@ call plug#begin('~/.vim/plugged')
 
   " UI Additions
   Plug 'NvChad/nvim-colorizer.lua'
-  Plug 'nathanaelkane/vim-indent-guides'
+  " Plug 'nathanaelkane/vim-indent-guides'
+  Plug 'lukas-reineke/indent-blankline.nvim'
   Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
-  Plug 'scrooloose/nerdtree'
-  Plug 'Xuyuanp/nerdtree-git-plugin'
   Plug 'liuchengxu/vista.vim'
 
   Plug 'mhinz/vim-signify'
@@ -92,11 +91,28 @@ call plug#begin('~/.vim/plugged')
   " Plug 'rcarriga/vim-ultest', { 'do': ':UpdateRemotePlugins' }
 
   " Plug 'neoclide/coc.nvim', {'commit': '28e0edd7', 'do': 'yarn install --frozen-lockfile'}
-  Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'npm ci'}
-  Plug 'antoinemadec/coc-fzf'
+  " Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'npm ci'}
+  " Plug 'antoinemadec/coc-fzf'
 
   Plug 'honza/vim-snippets'
   Plug 'airblade/vim-rooter'
+
+  Plug 'nvim-tree/nvim-tree.lua'
+  Plug 'nvim-tree/nvim-web-devicons'
+  Plug 'chrisgrieser/nvim-lsp-endhints'
+
+  " nvim lsp
+  Plug 'neovim/nvim-lspconfig'
+  Plug 'williamboman/mason.nvim'
+  Plug 'williamboman/mason-lspconfig.nvim'
+  Plug 'hrsh7th/cmp-nvim-lsp'
+  Plug 'hrsh7th/cmp-nvim-lsp-signature-help'
+  Plug 'hrsh7th/cmp-buffer'
+  Plug 'quangnguyen30192/cmp-nvim-ultisnips'
+  Plug 'hrsh7th/nvim-cmp'
+
+  Plug 'ibhagwan/fzf-lua'
+  Plug 'stevearc/conform.nvim'
 
   " Debugging
   Plug 'puremourning/vimspector', { 'do': ':VimspectorInstall' }
