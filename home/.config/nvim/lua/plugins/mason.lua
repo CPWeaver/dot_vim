@@ -68,7 +68,9 @@ vim.api.nvim_create_autocmd('LspAttach', {
         autocmd({ 'CursorHold' }, {
           group = augroup,
           buffer = event.buf,
-          callback = vim.lsp.buf.document_highlight,
+          callback = function()
+            vim.lsp.buf.document_highlight()
+          end
         })
 
         autocmd({ 'CursorMoved' }, {
@@ -81,7 +83,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
   end,
 })
 
-local lsp_capabilities = require('cmp_nvim_lsp').default_capabilities()
+-- local lsp_capabilities = require('cmp_nvim_lsp').default_capabilities()
 
 local function organize_imports()
   local params = {
@@ -105,16 +107,19 @@ local inlayHints = {
 
 require 'mason'.setup()
 require 'mason-lspconfig'.setup({
-  ensure_installed = { 'ts_ls', 'eslint', 'lua_ls' },
+  ensure_installed = { 'ts_ls', 'eslint', 'lua_ls', 'prismals' },
   handlers = {
     function(server_name)
-      require('lspconfig')[server_name].setup({
-        capabilities = lsp_capabilities,
-      })
+      require('lspconfig')[server_name].setup(require('coq').lsp_ensure_capabilities())
     end,
     ['ts_ls'] = function()
       require('lspconfig').ts_ls.setup({
         init_options = {
+          tsserver = {
+            -- logVerbosity = 'verbose',
+            -- trace = 'verbose',
+            path = '/Users/chris/Library/pnpm/global/5/node_modules/typescript/lib'
+          },
           preferences = {
             includeInlayParameterNameHints = 'all',
             includeInlayParameterNameHintsWhenArgumentMatchesName = true,
@@ -126,7 +131,7 @@ require 'mason-lspconfig'.setup({
             importModuleSpecifierPreference = 'non-relative',
           },
         },
-        capabilities = lsp_capabilities,
+        -- capabilities = lsp_capabilities,
         settings = {
           completions = {
             completeFunctionCalls = true
@@ -148,12 +153,12 @@ require 'mason-lspconfig'.setup({
     end,
     ['eslint'] = function()
       require('lspconfig').eslint.setup({
-        capabilities = lsp_capabilities,
+        -- capabilities = lsp_capabilities,
         root_dir = function(fname)
           return require('lspconfig').util.find_git_ancestor(fname)
         end,
         settings = {
-          debug = true,
+          -- debug = true,
           rootMarkers = { '.git/' },
           packageManager = 'pnpm',
           -- nodePath = vim.env.HOME .. '/dev/assured-dev/node_modules',
@@ -165,7 +170,7 @@ require 'mason-lspconfig'.setup({
     end,
     lua_ls = function()
       require('lspconfig').lua_ls.setup({
-        capabilities = lsp_capabilities,
+        -- capabilities = lsp_capabilities,
         settings = {
           Lua = {
             hint = { enable = true },
@@ -188,32 +193,35 @@ require 'mason-lspconfig'.setup({
 })
 
 -- require'lspconfig'.ts_ls.setup {}
-local cmp = require('cmp')
-local cmp_select = { behavior = cmp.SelectBehavior.Select }
+local coq = require "coq"
 
-cmp.setup({
-  sources = cmp.config.sources({
-    { name = 'nvim_lsp' },
-    { name = 'nvim_lsp_signature_help' },
-    { name = 'ultisnips' },
-  }, {
-    { name = 'buffer' },
-  }),
-  window = {
-    completion = cmp.config.window.bordered(),
-    documentation = cmp.config.window.bordered(),
-  },
-  experimental = { ghost_text = true },
-  mapping = cmp.mapping.preset.insert({
-    ['<s-TAB>'] = cmp.mapping.select_prev_item(cmp_select),
-    ['<TAB>'] = cmp.mapping.select_next_item(cmp_select),
-    ['<CR>'] = cmp.mapping.confirm({ select = true }),
-    ['<C-Space>'] = cmp.mapping.complete(),
-  }),
-  snippet = {
-    expand = function(args)
-      vim.fn["UltiSnips#Anon"](args.body)
-      -- vim.snippet.expand(args.body)
-    end,
-  },
-})
+-- local cmp = require('cmp')
+-- local cmp_select = { behavior = cmp.SelectBehavior.Select }
+--[[
+   [ cmp.setup({
+   [   sources = cmp.config.sources({
+   [     { name = 'nvim_lsp' },
+   [     { name = 'nvim_lsp_signature_help' },
+   [     { name = 'ultisnips' },
+   [   }, {
+   [     { name = 'buffer' },
+   [   }),
+   [   window = {
+   [     completion = cmp.config.window.bordered(),
+   [     documentation = cmp.config.window.bordered(),
+   [   },
+   [   experimental = { ghost_text = true },
+   [   mapping = cmp.mapping.preset.insert({
+   [     ['<s-TAB>'] = cmp.mapping.select_prev_item(cmp_select),
+   [     ['<TAB>'] = cmp.mapping.select_next_item(cmp_select),
+   [     ['<CR>'] = cmp.mapping.confirm({ select = true }),
+   [     ['<C-Space>'] = cmp.mapping.complete(),
+   [   }),
+   [   snippet = {
+   [     expand = function(args)
+   [       vim.fn["UltiSnips#Anon"](args.body)
+   [       -- vim.snippet.expand(args.body)
+   [     end,
+   [   },
+   [ })
+   ]]

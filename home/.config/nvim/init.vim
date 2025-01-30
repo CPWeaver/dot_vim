@@ -3,3 +3,5 @@ source ~/.vim/vimrc
 
 lua require('init')
 
+
+set signcolumn=yes

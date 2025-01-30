@@ -1,3 +1,4 @@
+require("plugins/coq_nvim")
 require("plugins/mason")
 require("plugins/nvim-autopairs")
 require("plugins/nvim-tree")
@@ -5,6 +6,7 @@ require("plugins/fzf-lua")
 require("plugins/indent-blankline")
 require("plugins/conform")
 require("plugins/nvim-lsp-endhints")
+require("plugins/fidget")
 
 
 vim.diagnostic.config({

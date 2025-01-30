@@ -105,11 +105,14 @@ call plug#begin('~/.vim/plugged')
   Plug 'neovim/nvim-lspconfig'
   Plug 'williamboman/mason.nvim'
   Plug 'williamboman/mason-lspconfig.nvim'
-  Plug 'hrsh7th/cmp-nvim-lsp'
-  Plug 'hrsh7th/cmp-nvim-lsp-signature-help'
-  Plug 'hrsh7th/cmp-buffer'
-  Plug 'quangnguyen30192/cmp-nvim-ultisnips'
-  Plug 'hrsh7th/nvim-cmp'
+  Plug 'ms-jpq/coq_nvim', { 'branch' : 'coq' }
+
+  " Plug 'hrsh7th/nvim-cmp'
+  " Plug 'hrsh7th/cmp-nvim-lsp'
+  " Plug 'hrsh7th/cmp-nvim-lsp-signature-help'
+  " Plug 'hrsh7th/cmp-buffer'
+  " Plug 'quangnguyen30192/cmp-nvim-ultisnips'
+  Plug 'j-hui/fidget.nvim'
 
   Plug 'ibhagwan/fzf-lua'
   Plug 'stevearc/conform.nvim'
