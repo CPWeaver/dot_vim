@@ -5,11 +5,11 @@ vim.api.nvim_create_autocmd('LspAttach', {
 
     local opts = { buffer = event.buf }
 
-    vim.keymap.set('n', 'gd', function() vim.lsp.buf.definition() end, opts)
-    vim.keymap.set('n', 'gD', function() vim.lsp.buf.declaration() end, opts)
+    -- vim.keymap.set('n', 'gd', function() vim.lsp.buf.definition() end, opts)
+    -- vim.keymap.set('n', 'gD', function() vim.lsp.buf.declaration() end, opts)
     vim.keymap.set('n', 'gf', '<cmd>vsplit | lua vim.lsp.buf.definition()<cr>', opts)
-    vim.keymap.set('n', 'gi', function() vim.lsp.buf.implementation() end, opts)
-    vim.keymap.set('n', 'go', '<cmd>OrganizeImports<cr>')
+    -- vim.keymap.set('n', 'gi', function() vim.lsp.buf.implementation() end, opts)
+    vim.keymap.set('n', 'go', '<cmd>VtsExec organize_imports<cr>')
     -- FzfLua
     -- vim.keymap.set('n', 'gr', function() vim.lsp.buf.references() end, opts)
     vim.keymap.set('n', 'gy', function() vim.lsp.buf.type_definition() end, opts)
@@ -19,9 +19,12 @@ vim.api.nvim_create_autocmd('LspAttach', {
     vim.keymap.set('n', '#$', function() vim.diagnostic.jump({ count = 1, float = true, }) end, opts)
     vim.keymap.set('n', '$#', function() vim.diagnostic.jump({ count = -1, float = true, }) end, opts)
     vim.keymap.set('n', '<leader>vca', function() vim.lsp.buf.code_action() end, opts)
+    vim.keymap.set('', '<leader>a', function() vim.lsp.buf.code_action() end, opts)
     vim.keymap.set('n', '<leader>rn', function() vim.lsp.buf.rename() end, opts)
     vim.keymap.set('i', '<C-h>', function() vim.lsp.buf.signature_help() end, opts)
-    vim.keymap.set({ 'n', 'x' }, '<leader>f', function() vim.lsp.buf.format({ async = true }) end, opts)
+
+    -- handled by conform.lua
+    -- vim.keymap.set({ 'n', 'x' }, '<leader>f', function() vim.lsp.buf.format({ async = true }) end, opts)
 
     vim.keymap.set('n', '<leader>h',
 
@@ -63,7 +66,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
         vim.api.nvim_clear_autocmds({ buffer = opts.buf, group = augroup })
 
 
-        vim.opt.updatetime = 250
+        vim.opt.updatetime = 0
 
         autocmd({ 'CursorHold' }, {
           group = augroup,
@@ -83,82 +86,72 @@ vim.api.nvim_create_autocmd('LspAttach', {
   end,
 })
 
--- local lsp_capabilities = require('cmp_nvim_lsp').default_capabilities()
+local lsp_capabilities = require('blink.cmp').get_lsp_capabilities({})
 
-local function organize_imports()
-  local params = {
-    command = "_typescript.organizeImports",
-    arguments = { vim.api.nvim_buf_get_name(0) },
-    title = ""
-  }
-  vim.lsp.buf.execute_command(params)
-end
+local lsp = require('lspconfig')
 
-local inlayHints = {
-  includeInlayParameterNameHints = "all",
-  includeInlayParameterNameHintsWhenArgumentMatchesName = false,
-  includeInlayFunctionParameterTypeHints = true,
-  includeInlayVariableTypeHints = true,
-  includeInlayVariableTypeHintsWhenTypeMatchesName = false,
-  includeInlayPropertyDeclarationTypeHints = true,
-  includeInlayFunctionLikeReturnTypeHints = true,
-  includeInlayEnumMemberValueHints = true,
-}
+require("lspconfig.configs").vtsls = require("vtsls").lspconfig
 
 require 'mason'.setup()
 require 'mason-lspconfig'.setup({
-  ensure_installed = { 'ts_ls', 'eslint', 'lua_ls', 'prismals' },
+  ensure_installed = { 'vtsls', 'eslint', 'jsonls', 'lua_ls', 'prismals', 'bashls', 'tailwindcss' },
   handlers = {
     function(server_name)
-      require('lspconfig')[server_name].setup(require('coq').lsp_ensure_capabilities())
+      lsp[server_name].setup {
+        capabilities = lsp_capabilities
+      }
     end,
-    ['ts_ls'] = function()
-      require('lspconfig').ts_ls.setup({
-        init_options = {
-          tsserver = {
-            -- logVerbosity = 'verbose',
-            -- trace = 'verbose',
-            path = '/Users/chris/Library/pnpm/global/5/node_modules/typescript/lib'
-          },
-          preferences = {
-            includeInlayParameterNameHints = 'all',
-            includeInlayParameterNameHintsWhenArgumentMatchesName = true,
-            includeInlayFunctionParameterTypeHints = true,
-            includeInlayVariableTypeHints = true,
-            includeInlayPropertyDeclarationTypeHints = true,
-            includeInlayFunctionLikeReturnTypeHints = true,
-            includeInlayEnumMemberValueHints = true,
-            importModuleSpecifierPreference = 'non-relative',
-          },
-        },
-        -- capabilities = lsp_capabilities,
+    ['vtsls'] = function()
+      lsp.vtsls.setup({
+        capabilities = lsp_capabilities,
         settings = {
-          completions = {
-            completeFunctionCalls = true
+          javascript = {
+            suggest = {
+              completeFunctionCalls = true
+            }
           },
           typescript = {
-            inlayHints = inlayHints,
+            suggest = {
+              completeFunctionCalls = true
+            },
+            preferences = {
+              includePackageJsonAutoImports = 'off'
+            },
+            tsserver = {
+              -- useSyntaxServer = 'never',
+              -- log = 'verbose',
+              maxTsServerMemory = 8192,
+            },
+            inlayHints = {
+              parameterNames = { enabled = "literals" },
+              parameterTypes = { enabled = true },
+              variableTypes = { enabled = true },
+              propertyDeclarationTypes = { enabled = true },
+              functionLikeReturnTypes = { enabled = true },
+              enumMemberValues = { enabled = true },
+            }
           },
-          javascript = {
-            inlayHints = inlayHints,
-          }
-        },
-        commands = {
-          OrganizeImports = {
-            organize_imports,
-            description = "Organize Imports"
+          vtsls = {
+            experimental = {
+              completion = {
+                enableServerSideFuzzyMatch = true,
+                entriesLimit = 100
+              }
+            }
           }
         }
       })
     end,
+
     ['eslint'] = function()
-      require('lspconfig').eslint.setup({
-        -- capabilities = lsp_capabilities,
+      lsp.eslint.setup({
+        capabilities = lsp_capabilities,
         root_dir = function(fname)
-          return require('lspconfig').util.find_git_ancestor(fname)
+          return lsp.util.find_git_ancestor(fname)
         end,
+        cmd = { 'vscode-eslint-language-server', '--max-old-space-size=8192', '--stdio' },
         settings = {
-          -- debug = true,
+          debug = true,
           rootMarkers = { '.git/' },
           packageManager = 'pnpm',
           -- nodePath = vim.env.HOME .. '/dev/assured-dev/node_modules',
@@ -168,9 +161,10 @@ require 'mason-lspconfig'.setup({
         -- libs = { vim.env.HOME ..  '/dev/assured-dev/node_modules' },
       })
     end,
+
     lua_ls = function()
-      require('lspconfig').lua_ls.setup({
-        -- capabilities = lsp_capabilities,
+      lsp.lua_ls.setup({
+        capabilities = lsp_capabilities,
         settings = {
           Lua = {
             hint = { enable = true },
@@ -191,37 +185,3 @@ require 'mason-lspconfig'.setup({
     end,
   }
 })
-
--- require'lspconfig'.ts_ls.setup {}
-local coq = require "coq"
-
--- local cmp = require('cmp')
--- local cmp_select = { behavior = cmp.SelectBehavior.Select }
---[[
-   [ cmp.setup({
-   [   sources = cmp.config.sources({
-   [     { name = 'nvim_lsp' },
-   [     { name = 'nvim_lsp_signature_help' },
-   [     { name = 'ultisnips' },
-   [   }, {
-   [     { name = 'buffer' },
-   [   }),
-   [   window = {
-   [     completion = cmp.config.window.bordered(),
-   [     documentation = cmp.config.window.bordered(),
-   [   },
-   [   experimental = { ghost_text = true },
-   [   mapping = cmp.mapping.preset.insert({
-   [     ['<s-TAB>'] = cmp.mapping.select_prev_item(cmp_select),
-   [     ['<TAB>'] = cmp.mapping.select_next_item(cmp_select),
-   [     ['<CR>'] = cmp.mapping.confirm({ select = true }),
-   [     ['<C-Space>'] = cmp.mapping.complete(),
-   [   }),
-   [   snippet = {
-   [     expand = function(args)
-   [       vim.fn["UltiSnips#Anon"](args.body)
-   [       -- vim.snippet.expand(args.body)
-   [     end,
-   [   },
-   [ })
-   ]]

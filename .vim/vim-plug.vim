@@ -75,7 +75,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'Valloric/MatchTagAlways'
   Plug 'FooSoft/vim-argwrap', { 'on': 'ArgWrap' }
 
-  Plug 'SirVer/ultisnips'
+  " Plug 'SirVer/ultisnips'
 
   " testing
   Plug 'nvim-lua/plenary.nvim'
@@ -94,7 +94,10 @@ call plug#begin('~/.vim/plugged')
   " Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'npm ci'}
   " Plug 'antoinemadec/coc-fzf'
 
-  Plug 'honza/vim-snippets'
+  " Plug 'honza/vim-snippets'
+  " vs-code style snippets for use with blink
+  Plug 'rafamadriz/friendly-snippets'
+
   Plug 'airblade/vim-rooter'
 
   Plug 'nvim-tree/nvim-tree.lua'
@@ -105,13 +108,9 @@ call plug#begin('~/.vim/plugged')
   Plug 'neovim/nvim-lspconfig'
   Plug 'williamboman/mason.nvim'
   Plug 'williamboman/mason-lspconfig.nvim'
-  Plug 'ms-jpq/coq_nvim', { 'branch' : 'coq' }
-
-  " Plug 'hrsh7th/nvim-cmp'
-  " Plug 'hrsh7th/cmp-nvim-lsp'
-  " Plug 'hrsh7th/cmp-nvim-lsp-signature-help'
-  " Plug 'hrsh7th/cmp-buffer'
-  " Plug 'quangnguyen30192/cmp-nvim-ultisnips'
+  Plug 'yioneko/nvim-vtsls'
+  "Plug 'saghen/blink.cmp', { 'tag': 'v1*'}
+  Plug 'saghen/blink.cmp', {'do': 'cargo build --release'}
   Plug 'j-hui/fidget.nvim'
 
   Plug 'ibhagwan/fzf-lua'
