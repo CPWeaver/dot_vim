@@ -88,100 +88,84 @@ vim.api.nvim_create_autocmd('LspAttach', {
 
 local lsp_capabilities = require('blink.cmp').get_lsp_capabilities({})
 
-local lsp = require('lspconfig')
-
 require("lspconfig.configs").vtsls = require("vtsls").lspconfig
+
+vim.lsp.config('vtsls', {
+  capabilities = lsp_capabilities,
+  settings = {
+    javascript = {
+      suggest = {
+        completeFunctionCalls = true
+      }
+    },
+    typescript = {
+      suggest = {
+        completeFunctionCalls = true
+      },
+      preferences = {
+        includePackageJsonAutoImports = 'off'
+      },
+      tsserver = {
+        -- useSyntaxServer = 'never',
+        -- log = 'verbose',
+        maxTsServerMemory = 8192,
+      },
+      inlayHints = {
+        parameterNames = { enabled = "literals" },
+        parameterTypes = { enabled = true },
+        variableTypes = { enabled = true },
+        propertyDeclarationTypes = { enabled = true },
+        functionLikeReturnTypes = { enabled = true },
+        enumMemberValues = { enabled = true },
+      }
+    },
+    vtsls = {
+      experimental = {
+        completion = {
+          enableServerSideFuzzyMatch = true,
+          entriesLimit = 100
+        }
+      },
+    }
+  }
+})
+
+vim.lsp.config('eslint', {
+  capabilities = lsp_capabilities,
+  root_markers = { '.git' },
+  cmd = { 'vscode-eslint-language-server', '--max-old-space-size=8192', '--stdio' },
+  settings = {
+    debug = true,
+    rootMarkers = { '.git/' },
+    packageManager = 'pnpm',
+    -- nodePath = vim.env.HOME .. '/dev/assured-dev/node_modules',
+    rulesCustomizations = { { rule = '*', severity = 'warn' } },
+    run = "onType",
+  },
+  -- libs = { vim.env.HOME ..  '/dev/assured-dev/node_modules' },
+})
+
+vim.lsp.config('lua_ls', {
+  capabilities = lsp_capabilities,
+  settings = {
+    Lua = {
+      hint = { enable = true },
+      runtime = {
+        version = 'LuaJIT'
+      },
+      diagnostics = {
+        globals = { 'vim' },
+      },
+      workspace = {
+        library = {
+          vim.env.VIMRUNTIME,
+        }
+      }
+    }
+  }
+})
 
 require 'mason'.setup()
 require 'mason-lspconfig'.setup({
   ensure_installed = { 'vtsls', 'eslint', 'jsonls', 'lua_ls', 'prismals', 'bashls', 'tailwindcss', 'yamlls' },
-  handlers = {
-    function(server_name)
-      lsp[server_name].setup {
-        capabilities = lsp_capabilities
-      }
-    end,
-    ['vtsls'] = function()
-      lsp.vtsls.setup({
-        capabilities = lsp_capabilities,
-        settings = {
-          javascript = {
-            suggest = {
-              completeFunctionCalls = true
-            }
-          },
-          typescript = {
-            suggest = {
-              completeFunctionCalls = true
-            },
-            preferences = {
-              includePackageJsonAutoImports = 'off'
-            },
-            tsserver = {
-              -- useSyntaxServer = 'never',
-              -- log = 'verbose',
-              maxTsServerMemory = 8192,
-            },
-            inlayHints = {
-              parameterNames = { enabled = "literals" },
-              parameterTypes = { enabled = true },
-              variableTypes = { enabled = true },
-              propertyDeclarationTypes = { enabled = true },
-              functionLikeReturnTypes = { enabled = true },
-              enumMemberValues = { enabled = true },
-            }
-          },
-          vtsls = {
-            experimental = {
-              completion = {
-                enableServerSideFuzzyMatch = true,
-                entriesLimit = 100
-              }
-            }
-          }
-        }
-      })
-    end,
-
-    ['eslint'] = function()
-      lsp.eslint.setup({
-        capabilities = lsp_capabilities,
-        root_dir = function(fname)
-          return lsp.util.find_git_ancestor(fname)
-        end,
-        cmd = { 'vscode-eslint-language-server', '--max-old-space-size=8192', '--stdio' },
-        settings = {
-          debug = true,
-          rootMarkers = { '.git/' },
-          packageManager = 'pnpm',
-          -- nodePath = vim.env.HOME .. '/dev/assured-dev/node_modules',
-          rulesCustomizations = { { rule = '*', severity = 'warn' } },
-          run = "onType",
-        },
-        -- libs = { vim.env.HOME ..  '/dev/assured-dev/node_modules' },
-      })
-    end,
-
-    lua_ls = function()
-      lsp.lua_ls.setup({
-        capabilities = lsp_capabilities,
-        settings = {
-          Lua = {
-            hint = { enable = true },
-            runtime = {
-              version = 'LuaJIT'
-            },
-            diagnostics = {
-              globals = { 'vim' },
-            },
-            workspace = {
-              library = {
-                vim.env.VIMRUNTIME,
-              }
-            }
-          }
-        }
-      })
-    end,
-  }
 })

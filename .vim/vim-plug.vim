@@ -100,8 +100,8 @@ call plug#begin('~/.vim/plugged')
 
   " nvim lsp
   Plug 'neovim/nvim-lspconfig'
-  Plug 'williamboman/mason.nvim'
-  Plug 'williamboman/mason-lspconfig.nvim'
+  Plug 'mason-org/mason.nvim'
+  Plug 'mason-org/mason-lspconfig.nvim'
   Plug 'yioneko/nvim-vtsls'
   "Plug 'saghen/blink.cmp', { 'tag': 'v1*'}
   Plug 'saghen/blink.cmp', {'do': 'cargo build --release'}
