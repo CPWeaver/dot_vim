@@ -85,16 +85,10 @@ call plug#begin('~/.vim/plugged')
   Plug 'nvim-neotest/neotest-jest'
   Plug 'nvim-neotest/nvim-nio'
   " Coverage
-  Plug 'cpweaver/nvim-goc.lua', { 'branch': 'cpweaver/main' }
+  " Plug 'cpweaver/nvim-goc.lua', { 'branch': 'cpweaver/main' }
 
-  Plug 'vim-test/vim-test'
-  " Plug 'rcarriga/vim-ultest', { 'do': ':UpdateRemotePlugins' }
+  " Plug 'vim-test/vim-test'
 
-  " Plug 'neoclide/coc.nvim', {'commit': '28e0edd7', 'do': 'yarn install --frozen-lockfile'}
-  " Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'npm ci'}
-  " Plug 'antoinemadec/coc-fzf'
-
-  " Plug 'honza/vim-snippets'
   " vs-code style snippets for use with blink
   Plug 'rafamadriz/friendly-snippets'
 
@@ -133,27 +127,27 @@ call plug#begin('~/.vim/plugged')
   "Plug 'tpope/vim-rails'
   "Plug 'tpope/vim-rake'
    "JavaScript
-  Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
-  Plug 'mxw/vim-jsx', { 'for': 'javascript' }
-  Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
-  Plug 'elzr/vim-json', { 'for': 'json' }
-  Plug 'othree/javascript-libraries-syntax.vim', { 'for': ['javascript', 'coffee'] }
+  " Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
+  " Plug 'mxw/vim-jsx', { 'for': 'javascript' }
+  " Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
+  " Plug 'elzr/vim-json', { 'for': 'json' }
+  " Plug 'othree/javascript-libraries-syntax.vim', { 'for': ['javascript', 'coffee'] }
 
-  Plug 'leafgarland/typescript-vim', { 'for': ['typescript']}
-  Plug 'peitalin/vim-jsx-typescript', { 'for': ['typescript']}
+  " Plug 'leafgarland/typescript-vim', { 'for': ['typescript']}
+  " Plug 'peitalin/vim-jsx-typescript', { 'for': ['typescript']}
    "HTML
-  Plug 'nono/vim-handlebars', { 'for' : ['html', 'hbs'] }
-  Plug 'othree/html5.vim', { 'for' : ['html', 'hbs'] }
-  Plug 'vim-scripts/indenthtml.vim', { 'for' : ['html', 'hbs'] }
+  " Plug 'nono/vim-handlebars', { 'for' : ['html', 'hbs'] }
+  " Plug 'othree/html5.vim', { 'for' : ['html', 'hbs'] }
+  " Plug 'vim-scripts/indenthtml.vim', { 'for' : ['html', 'hbs'] }
    "Other Languages
-  Plug 'hail2u/vim-css3-syntax', { 'for' : ['css', 'less', 'sass'] }
-  Plug 'groenewege/vim-less', { 'for' : 'less' }
-  Plug 'tpope/vim-cucumber', { 'for' : ['feature', 'story'] }
-  Plug 'tfnico/vim-gradle', { 'for': 'groovy'}
+  " Plug 'hail2u/vim-css3-syntax', { 'for' : ['css', 'less', 'sass'] }
+  " Plug 'groenewege/vim-less', { 'for' : 'less' }
+  " Plug 'tpope/vim-cucumber', { 'for' : ['feature', 'story'] }
+  " Plug 'tfnico/vim-gradle', { 'for': 'groovy'}
   Plug 'tmux-plugins/vim-tmux', { 'for': 'tmux' }
   Plug 'tmux-plugins/vim-tmux-focus-events'
-  Plug 'hashivim/vim-terraform', { 'for': 'tf' }
-  Plug 'ernstvanderlinden/vim-coldfusion', { 'for': 'eoz' }
+  " Plug 'hashivim/vim-terraform', { 'for': 'tf' }
+  " Plug 'ernstvanderlinden/vim-coldfusion', { 'for': 'eoz' }
 
   " Plug 'rest-nvim/rest.nvim'
 
@@ -161,7 +155,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'iamcco/markdown-preview.nvim', {'do': 'cd app && npx --yes yarn install'}
 
   " MatchIt
-  Plug 'vim-scripts/matchit.zip'
+  " Plug 'vim-scripts/matchit.zip'
   "Libraries
   Plug 'tpope/vim-repeat'
   Plug 'vim-scripts/groovy.vim'
