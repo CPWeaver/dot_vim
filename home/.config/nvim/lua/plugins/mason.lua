@@ -94,7 +94,7 @@ require("lspconfig.configs").vtsls = require("vtsls").lspconfig
 
 require 'mason'.setup()
 require 'mason-lspconfig'.setup({
-  ensure_installed = { 'vtsls', 'eslint', 'jsonls', 'lua_ls', 'prismals', 'bashls', 'tailwindcss' },
+  ensure_installed = { 'vtsls', 'eslint', 'jsonls', 'lua_ls', 'prismals', 'bashls', 'tailwindcss', 'yamlls' },
   handlers = {
     function(server_name)
       lsp[server_name].setup {
