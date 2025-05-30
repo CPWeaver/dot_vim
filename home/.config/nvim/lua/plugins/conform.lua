@@ -1,4 +1,7 @@
 require('conform').setup({
+  default_format_opts = {
+    lsp_format = "fallback",
+  },
   -- convenience that sets up auto format on save
   format_on_save = {
     lsp_format = "fallback",
@@ -8,6 +11,9 @@ require('conform').setup({
     javascriptreact = { "prettier" },
     typescript = { "prettier" },
     typescriptreact = { "prettier" },
+    json = { "jq" },
+    jsonc = { "jq" },
+    -- lua = { "lua-format" },
   }
 })
 

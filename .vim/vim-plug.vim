@@ -40,9 +40,6 @@ call plug#begin('~/.vim/plugged')
   Plug 'mbbill/undotree'
   Plug 'jszakmeister/vim-togglecursor'
 
-  " Plug 'luochen1990/rainbow'
-  " Plug 'kien/rainbow_parentheses.vim'
-  " Plug 'p00f/nvim-ts-rainbow'
   Plug 'https://gitlab.com/HiPhish/rainbow-delimiters.nvim.git'
   " Commands
   Plug 'scrooloose/nerdcommenter'
@@ -109,6 +106,8 @@ call plug#begin('~/.vim/plugged')
 
   Plug 'ibhagwan/fzf-lua'
   Plug 'stevearc/conform.nvim'
+
+  Plug 'hat0uma/csvview.nvim'
 
   " Debugging
   Plug 'puremourning/vimspector', { 'do': ':VimspectorInstall' }
