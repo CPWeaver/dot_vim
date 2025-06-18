@@ -8,6 +8,7 @@ require("plugins/conform")
 require("plugins/csvview")
 require("plugins/nvim-lsp-endhints")
 require("plugins/fidget")
+require("plugins/hop")
 -- require("plugins/nvim-lint")
 
 

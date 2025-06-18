@@ -14,7 +14,10 @@ call plug#begin('~/.vim/plugged')
 
   " Navigation
   Plug 'dhruvasagar/vim-zoom'
-  Plug 'Lokaltog/vim-easymotion'
+
+  " Plug 'Lokaltog/vim-easymotion'
+  Plug 'smoka7/hop.nvim'
+
   " Plug '/opt/homebrew/opt/fzf'
   " Plug 'junegunn/fzf.vim'
   Plug 'roxma/vim-window-resize-easy'

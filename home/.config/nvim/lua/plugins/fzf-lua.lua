@@ -20,6 +20,7 @@ require('fzf-lua').setup(
       jump1 = true,
     }
   })
+require('fzf-lua').register_ui_select()
 
 vim.keymap.set({ 'n' }, '<space>t', '<cmd>FzfLua files<cr>')
 vim.keymap.set({ 'n' }, '<space>d', '<cmd>FzfLua diagnostics_document<cr>')
