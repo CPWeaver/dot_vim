@@ -13,6 +13,7 @@ require('conform').setup({
     typescriptreact = { "prettier" },
     json = { "jq" },
     jsonc = { "jq" },
+    sql = { "pg_format" },
     -- lua = { "lua-format" },
   }
 })

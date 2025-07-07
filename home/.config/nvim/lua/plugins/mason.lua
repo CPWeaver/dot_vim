@@ -167,5 +167,5 @@ vim.lsp.config('lua_ls', {
 
 require 'mason'.setup()
 require 'mason-lspconfig'.setup({
-  ensure_installed = { 'vtsls', 'eslint', 'jsonls', 'lua_ls', 'prismals', 'bashls', 'tailwindcss', 'yamlls' },
+  ensure_installed = { 'vtsls', 'eslint', 'jsonls', 'lua_ls', 'prismals', 'bashls', 'tailwindcss', 'yamlls', 'postgres_lsp' },
 })
