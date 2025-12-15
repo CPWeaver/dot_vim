@@ -7,14 +7,14 @@ require('conform').setup({
     lsp_format = "fallback",
   },
   formatters_by_ft = {
-    javascript = { "prettier" },
-    javascriptreact = { "prettier" },
-    typescript = { "prettier" },
-    typescriptreact = { "prettier" },
-    json = { "jq" },
-    jsonc = { "jq" },
+    javascript = { "prettierd" },
+    javascriptreact = { "prettierd" },
+    typescript = { "prettierd" },
+    typescriptreact = { "prettierd" },
+    json = { "prettierd", "jq" },
+    jsonc = { "prettierd" },
     sql = { "pg_format" },
-    -- lua = { "lua-format" },
+    lua = { "lua-format" },
   }
 })
 
