@@ -30,8 +30,6 @@ call plug#begin('~/.vim/plugged')
   Plug 'edkolev/promptline.vim'
 
   " UI Additions
-  Plug 'NvChad/nvim-colorizer.lua'
-  " Plug 'nathanaelkane/vim-indent-guides'
   Plug 'lukas-reineke/indent-blankline.nvim'
   Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
   Plug 'liuchengxu/vista.vim'
