@@ -1,0 +1,1 @@
+nmap mp <Plug>MarkdownPreviewToggle
