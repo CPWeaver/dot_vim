@@ -1,7 +1,10 @@
 require('fidget').setup {
-  integration = {
-    ["nvim-tree"] = {
-      enable = true,
-    }
-  }
+    notification = {window = {avoid = {"NvimTree", "nvim-tree.lua"}}}
+    --[[
+     [ integration = {
+     [   ["nvim-tree"] = {
+     [     enable = true,
+     [   }
+     [ }
+     ]]
 }

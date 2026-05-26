@@ -1,5 +1,7 @@
-require 'blink-cmp'.setup(
-  {
+-- for v2
+require('blink.cmp').build():wait(60000)
+
+require'blink-cmp'.setup({
     -- 'default' (recommended) for mappings similar to built-in completions (C-y to accept)
     -- 'super-tab' for mappings similar to vscode (tab to accept)
     -- 'enter' for enter to accept
@@ -12,43 +14,34 @@ require 'blink-cmp'.setup(
     -- C-k: Toggle signature help (if signature.enabled = true)
     --
     -- See :h blink-cmp-config-keymap for defining your own keymap
-    keymap = {
-      preset = 'default',
-      ['<CR>'] = { 'accept', 'fallback' }
-    },
+    keymap = {preset = 'default', ['<CR>'] = {'accept', 'fallback'}},
     fuzzy = {
-      implementation = "prefer_rust_with_warning",
-      prebuilt_binaries = {
-        download = true,
-      }
+        implementation = "prefer_rust_with_warning"
+        --[[
+         [ prebuilt_binaries = {
+         [   download = true,
+         [ }
+         ]]
     },
 
     completion = {
-      documentation = {
-        auto_show = true,
-        auto_show_delay_ms = 500,
-      },
-      keyword = {
-        range = 'full'
-      },
-      ghost_text = {
-        enabled = true,
-      }
+        documentation = {auto_show = true, auto_show_delay_ms = 500},
+        keyword = {range = 'full'},
+        ghost_text = {enabled = true}
 
     },
 
     signature = {
-      enabled = true,
-      trigger = {
         enabled = true,
-        show_on_insert = true,
-        show_on_trigger_character = false,
-        show_on_insert_on_trigger_character = false,
-      }
+        trigger = {
+            enabled = true,
+            -- show_on_insert = true,
+            show_on_trigger_character = false
+            -- show_on_insert_on_trigger_character = false,
+        }
     }
 
-
-  })
+})
 
 --[[
    [         appearance = {

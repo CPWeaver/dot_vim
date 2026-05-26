@@ -102,7 +102,11 @@ call plug#begin('~/.vim/plugged')
   Plug 'mason-org/mason-lspconfig.nvim'
   Plug 'yioneko/nvim-vtsls'
   "Plug 'saghen/blink.cmp', { 'tag': 'v1*'}
-  Plug 'saghen/blink.cmp', {'do': 'cargo build --release'}
+  " Plug 'saghen/blink.cmp', {'do': 'cargo build --release', 'branch': 'v1'}
+  " Plug 'saghen/blink.cmp', {'do': 'cargo build --release'}
+  Plug 'saghen/blink.cmp' ", {'do': 'cargo build --release'}
+  Plug 'saghen/blink.lib'
+
   Plug 'j-hui/fidget.nvim'
 
   Plug 'ibhagwan/fzf-lua'

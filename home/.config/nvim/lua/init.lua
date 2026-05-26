@@ -1,4 +1,5 @@
-require("plugins/blink_cmp")
+vim.g.python3_host_prog = vim.fn.expand('~/.config/nvim/venv/bin/python3')
+
 require("plugins/mason")
 require("plugins/nvim-autopairs")
 require("plugins/nvim-tree")
@@ -10,6 +11,7 @@ require("plugins/nvim-lsp-endhints")
 require("plugins/fidget")
 require("plugins/hop")
 require("plugins/nvim-treesitter")
+require("plugins/blink_cmp")
 -- require("plugins/nvim-lint")
 
 vim.diagnostic.config({
