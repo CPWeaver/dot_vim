@@ -195,11 +195,25 @@ vim.lsp.config('lua_ls', {
     }
 })
 
+vim.lsp.config('helm_ls', {
+    settings = {['helm-ls'] = {yamlls = {path = "yaml-language-server"}}}
+})
+
+vim.lsp.config('pylsp', {
+    settings = {
+        pylsp = {
+            plugins = {pycodestyle = {ignore = {'W391'}, maxLineLength = 100}}
+        }
+    }
+})
+
+vim.lsp.config('yamlls', {settings = {yaml = {schemaStore = {enable = true}}}})
+
 require'mason'.setup()
 require'mason-lspconfig'.setup({
     ensure_installed = {
         'eslint', 'jsonls', 'lua_ls', 'bashls', 'tailwindcss', 'yamlls',
-        -- 'tsgo',
+        'helm_ls', -- 'tsgo',
         'vtsls'
     }
 })

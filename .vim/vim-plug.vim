@@ -153,6 +153,8 @@ call plug#begin('~/.vim/plugged')
   " Plug 'hashivim/vim-terraform', { 'for': 'tf' }
   " Plug 'ernstvanderlinden/vim-coldfusion', { 'for': 'eoz' }
 
+  Plug 'qvalentin/helm-ls.nvim'
+
   " Plug 'rest-nvim/rest.nvim'
 
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}

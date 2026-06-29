@@ -1,6 +1,6 @@
 require'nvim-treesitter'.install({
     "bash", "go", "graphql", "javascript", "json", "prisma", "typescript",
-    "tsx", "yaml", "csv", "psv", "vimdoc", "http"
+    "tsx", "yaml", "csv", "psv", "vimdoc", "http", 'helm'
 })
 
 vim.api.nvim_create_autocmd('FileType', {
